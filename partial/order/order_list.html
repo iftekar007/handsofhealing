@@ -1,0 +1,176 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+           Order Manager
+
+          </h1>
+          <ol class="breadcrumb">
+               <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+           <li><a href="javascript:void(0)" class="active">Manage Order </a></li>
+            
+          </ol>
+            <div class="clear"></div>
+            <div class="searchcon2 newsearch1">
+                <span style="float: left; margin:10px auto;">Search By Date :</span>
+                <input  class ="form-control" type="text" ng-focus="open1()" ng-blur="setDate()" max-date="maxDate" min-date="minDate" close-text="Close" show-weeks="false" ng-required="false" is-open="opened" uib-datepicker-popup="MM/dd/yyyy" ng-model="form.from_date" class="searchbox2 ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date ng-valid-required" style="margin:0 5px;" placeholder="From Date"><!-- ngIf: isOpen -->
+                <input  class ="form-control" type="text" ng-keydown="open11()" ng-keypress="open11()" ng-keyup="open11()" ng-focus="open11()" ng-blur="setDate1()" min-date="minDate1" show-weeks="false" close-text="Close" ng-required="false" is-open="opened1" uib-datepicker-popup="MM/dd/yyyy" ng-model="form.to_date" class="searchbox2 ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date ng-valid-required" style="margin:0 5px;" placeholder="To Date"><!-- ngIf: isOpen -->
+            </div>
+            <div class="searchcon3 newsearch3">
+                <span style="float: left; margin:10px auto;">Search By Transaction Id :</span>
+                <input class ="form-control" type="text" name="search3" ng-model="searchkey3" class="search1" placeholder="Search Order">
+            </div>
+            <div class="newblock1 newsearch2">
+ <!--<a ui-sref="add-admin" class="addfrinderbtn">Add Admin</a>-->
+            <!--<input type="text" name="search" ng-model="searchkey" class="search1" placeholder="Search General User">-->
+               <!-- Search By Affiliate : <select ng-change="searchbyaffiliate(affiliate)"   name="affiliate" class ="form-control" validate-on="dirty" ng-model = "affiliate"  ng-options="itemaffiliate.name for itemaffiliate in affiliatelist track by itemaffiliate.uid" style="background:#fff none repeat scroll 0 0 !important;  padding: 0 0 0 0px!important;"  >
+                <option value="">Select Affiliate Name</option>
+
+            </select>-->
+                <span style="float: left; margin:10px auto;">Search By Status :</span> <select ng-change="searchbyOrderStatus(orderstat)"   name="orderstat" class ="form-control" validate-on="dirty" ng-model = "orderstat"  ng-options="itemstatus.text for itemstatus in orderstatuslist track by itemstatus.id" style="background:#fff none repeat scroll 0 0 !important;  padding: 0 0 0 0px!important;"  >
+                <option value="">Select Order Status</option>
+
+            </select>
+
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Order List</h3>
+                </div><!-- /.box-header -->
+
+
+               <table ng-show="orderlist.length>0" id="example1" class="table table-bordered table-striped" >
+                    <thead>
+                      <tr>
+                          <th><a ng-click="order('transaction_id')" href="javascript:void(0);">Transaction Id</a>
+                              <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'transaction_id'"></span>
+                          </th>
+                          <th><a ng-click="order('lname')" href="javascript:void(0);">Order By</a>
+                              <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'lname'"></span>
+                          </th>
+                          <th><a ng-click="order('order_total')" href="javascript:void(0);">Order Total</a>
+                              <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'order_total'"></span>
+                          </th>
+                          <th><a ng-click="order('order_time')" href="javascript:void(0);">Order Date</a>
+                              <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'order_time'"></span>
+                          </th>
+                         <!-- <th><a ng-click="order('mobile_no')" href="javascript:void(0);">Affiliate Name</a>
+                              <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'mobile_no'"></span>
+                          </th>-->
+                          <th><a ng-click="order('order_status')" href="javascript:void(0);">Status</a>
+                              <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'order_status'"></span>
+                          </th>
+
+                          <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr ng-repeat=" item in  filterResult = (orderlist |filter:search3 | filter:search|filter:search1|filter:searchdate) | startFrom:(currentPage-1)*perPage | limitTo:perPage | orderBy:predicate:reverse">
+
+                          <td  ng-bind="item.transaction_id"></td>
+                          <td ng-bind="item.fname+' '+item.lname"></td>
+                          <td ng-bind="item.order_total|number:2"></td>
+                          <td ng-bind="item.order_time | date:'MM/dd/yyyy'"></td>
+                         <!-- <td>{{item.affiliatename}}</td>
+-->
+
+
+
+
+                          <td>
+                              <select ng-change="changeOrderStatus(item)"   name="order_status" class ="form-control" validate-on="dirty" ng-model = "item.dd_order_status"  ng-options="itemstatus.text for itemstatus in orderstatuslist track by itemstatus.id" style="background:#fff none repeat scroll 0 0 !important;  padding: 0 0 0 0px!important;"  >
+
+
+                              </select>
+
+                              </td>
+                          <td><a href="javascript:void(0)" ui-sref="order-details({orderid:item.id})" >Order Details</a>&nbsp;&nbsp;<a href="javascript:void(0)" ng-click="duplicate_mail(item.id)" >Duplicate Mail</a></td>
+                      </tr>
+
+                    </tbody>
+                    
+                  </table>
+
+                  <div ng-show="filterResult.length > perPage" class="paginationblock">
+                      <uib-pagination total-items="filterResult.length" ng-model="currentPage" items-per-page="perPage" max-size="4"></uib-pagination>
+                  </div>
+
+                  <!--<div ng-if="orderlist.length > perPage" class="paginationblock">
+                  <uib-pagination total-items="orderlist.length" ng-model="currentPage" items-per-page="perPage" max-size="4" ng-change="pageChanged()"></uib-pagination>
+                  </div>-->
+<!--
+                  <div ng-if="orderlist.length == null" class="paginationblock">
+                    <span class="error_msg1">No Records Found!</span>
+                  </div>
+-->
+
+                  <div ng-if="orderlist.length == 0" class="callout callout-danger">
+                      <h4>Sorry</h4>
+
+                      <p>No Order exists in system right now !!.</p>
+                  </div>
+
+
+              </div><!-- /.box -->
+
+
+
+            </div>
+           
+          </div>   <!-- /.row -->
+        </section><!-- /.content -->
+      </div>
+
+
+<script type="text/ng-template" id="delconfirm.html">
+    <div class="confirm_delpopup" >
+        <a ng-click="cancel()" class="shutter-close2 ng-scope"  href="javascript:void(0)"><img  src="images/popup-Close.png"> </a>
+        <div class="clearfix"></div>
+        <h2 class="ng-scope">Are you sure you want to delete this account?</h2>
+        <div class="confirm_delbtn ng-scope text-center">
+            <input type="button" ng-click="confirmdeladmin()" class="subbtn" value="Confirm">
+            <input type="button" ng-click="cancel()" class="subbtn" value="Cancel">
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="mailsuccess.html">
+
+    <div class="newlogin-box">
+
+        <a href="javascript:void(0);" ng-click="cancel123()" ><img style="top:-37px;right:-17px;" src=images/newloginclose.png alt=#  class="closebtn"/></a>
+        <div class="newloginwrapper">
+            <div class="newaccountbtnwrapper">
+                <h2>Mail Sent Successfully !</h2>
+
+                <!--<h2>Your account activation has been successfull</h2>-->
+            </div>
+        </div>
+
+
+        <!-- <div class="newloginwrapper" style="padding-left:5%; padding-right:5%;">
+
+
+             <h2 style="text-align:center; font-size: 24px; ">Your account activation has been successfull</h2>
+
+
+         </div>
+ -->
+    </div>
+
+</script>

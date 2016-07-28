@@ -1,0 +1,78 @@
+<!--navbar-->
+
+<div class="container-fluid matopblock">
+    <div class="container-fluid topblock">
+        <div class="row">
+        <div class="container">
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 homelogo">
+                <a ui-sref="index"> <!--<img src="images/logo.png" alt="#"> --> <content name='mainlogo6' id='6' > </content></a>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 menublock">
+
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <span class="responsivemenu">MENU</span>
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li ng-class="{active: pagename == 'index'}"><a ui-sref="index"> Home </a></li>
+                            <li ng-class="{active: pagename == 'treatmentandservices'}"> <a ui-sref="treatmentandservices"> Treatments and Services   </a> </li>
+                            <li ng-class="{active: pagename == 'products'}"> <a ui-sref="products"> Products   </a> </li>
+                            <li ng-class="{active: pagename == 'aboutus'}"><a ui-sref="aboutus"> About the Spa</a> </li>
+                            <li ng-class="{active: pagename == 'reviews'}"> <a ui-sref="reviews">  Reviews    </a> </li>
+                            <li ng-class="{active: pagename == 'newsletter'}"><a ui-sref="newsletter"> Newsletter</a> </li>
+                            <li ng-class="{active: pagename == 'locations'}"><a ui-sref="locations"> Locations   </a></li>
+                            <li ng-class="{active: pagename == 'contactus'}"><a ui-sref="contactus"> Contact   </a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </nav>
+            </div>
+
+
+            <div class="clearfix"></div>
+
+        </div>
+
+    </div>
+    </div>
+<!--navbar end -->
+</div>
+<div class="container-fluid maloginlogout">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 topphoneblock1">
+                     <!--   <a class="btn" data-toggle="dropdown" href="#">
+                            <img src="images/icon-user.png" class="user-image" alt="User Image">
+                            <span class="hidden-xs ng-binding" ng-bind="userfullname">Lorem Ipsum</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="ddmenuleft">
+                                <img src="../images/icon-user_lrg.png">
+                            </div>
+                            <div class="ddmenuright">
+                                <ul>
+                                    <li><span class="hidden-xs ng-binding">Lorem Ipsum</span></li>
+                                    <li><a href="#" class="btn btn-default btnsignout">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </ul>-->
+                        <a class="btn" href="#">
+                            <img src="images/icon-user.png" class="user-image" alt="User Image">
+                            <span class="hidden-xs ng-binding" ng-bind="userfullname">Lorem Ipsum</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

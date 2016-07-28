@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - influxiq_hhealing@influxiq.com" uuid="2ec56b18-a19b-4a68-9781-531f2c468d6a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - influxiq_hhealing@influxiq.com [2]" uuid="d16f14db-51db-42ee-8ef6-92d156517e37">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

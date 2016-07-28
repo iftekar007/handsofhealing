@@ -1,0 +1,62 @@
+<div  class="admincontain profileinfoblock">
+    <div class="mah2block">
+        <h3>Profile Information:</h3>
+        <div class="madivider"></div>
+        <div class="clear"></div>
+        <div class="maDownloadstable">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label >First Name</label>
+                        <span class="form-control-static">&#58; {{userdetails.fname}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label >Last Name</label>
+                        <span class="form-control-static">&#58; {{userdetails.lname}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label >Email address</label>
+                        <span class="form-control-static">&#58; {{userdetails.email}}</span>
+                    </div>
+                     <div class="form-group">
+                        <label >Telephone number</label>
+                        <span class="form-control-static">&#58; {{userdetails.phone_no}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label >Mobile Number</label>
+                        <span class="form-control-static">&#58; {{userdetails.mobile_no}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label >Address</label>
+                        <span class="form-control-static">&#58; {{userdetails.address}}</span>
+                    </div>
+                    <div ng-show="userrole==5" class="form-group">
+                        <label >Country</label>
+                        <span class="form-control-static">&#58; {{userdetails.country}}</span>
+                    </div>
+                    <div ng-show="userrole==5" class="form-group">
+                        <label >State</label>
+                        <span class="form-control-static">&#58; {{userdetails.state}}</span>
+                    </div>
+                    <div ng-show="userrole==5" class="form-group">
+                        <label >Date of Birth</label>
+                        <span class="form-control-static">&#58; {{userdetails.dob}}</span>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div ng-show="userrole==5" class="form-group">
+                        <label>Gender</label>
+                        <span class="form-control-static">&#58; {{userdetails.gender}}</span>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <a href="javascript:void(0)" ui-sref="edit-profile" class="btn btn-primary btn-edit">Edit Profile</a> <a href="javascript:void(0)" ui-sref="user-change-password" class="btn btn-primary btn-password">Change Password</a>
+<!--
+                    <button type="button" class="btn btn-primary btn-edit">Edit Profile</button>
+                    <button type="button" class="btn btn-primary btn-password">Change Password</button>
+-->
+                </div>
+
+        </div>
+    </div>
+</div>
+

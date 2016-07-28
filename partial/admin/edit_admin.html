@@ -1,0 +1,173 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+
+            <h1 ng-show="uType=='auditor'">Auditor Manager</h1>
+            <h1 ng-hide="uType=='auditor'">Admin Manager</h1>
+
+          <ol class="breadcrumb">
+         <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+              <li ng-show="uType=='auditor'"><a ui-sref="auditorlist">Manage Auditor</a></li>
+              <li ng-hide="uType=='auditor'"><a ui-sref="admin-list">Manage Admin </a></li>
+              <li ng-show="uType=='auditor'" class="active">Edit Auditor</li>
+              <li ng-hide="uType=='auditor'" class="active">Edit Admin</li>
+          </ol>
+        </section>
+
+
+
+    
+        <section class="content">
+          <div class="row">
+           
+        
+            <!-- left column -->
+            <div class="col-md-12">
+            
+              <!-- general form elements -->
+              <div class="box box-primary" style="overflow:hidden; padding-bottom:40px;">
+            
+                <div class="box-header with-border">
+                  <h3 class="box-title"></h3>
+                    <h3 ng-show="uType=='auditor'" class="box-title">Edit Auditor</h3>
+                    <h3 ng-hide="uType=='auditor'" class="box-title">Edit Admin</h3>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                
+                  <div class="formsection">
+                <form angular-validator-submit="update()" id="add_Admin" name="add_Admin" role="form" novalidate angular-validator>
+                  <div class="box-body">
+
+
+                    <div class="form-group">
+                    <label >First Name* :</label>
+                    <input type="text" class="form-control" placeholder="First Name" name="fname"
+
+                           ng-model="form.fname"
+                           required-message="'first name can not be blank.'"
+                           required>
+
+                    <!-- <span class="errormsg">erroe msg</span>-->
+                  </div>
+                    <div class="form-group">
+                      <label >Last Name* :</label>
+                      <input type="text" class="form-control" placeholder="Last Name" name="lname"
+
+                             ng-model="form.lname"
+                             required-message="'Last name can not be blank.'"
+                             required>
+
+                      <!-- <span class="errormsg">erroe msg</span>-->
+                    </div>
+
+
+                    <div class="form-group email_div">
+                      <label >Email address* :</label>
+                      <input type="email" class="form-control" placeholder="Enter email" name="email" ng-readonly="true"
+
+                         ng-model="form.email"
+                          required-message="'Email can not be blank.'"
+                          invalid-message="'Enter valid email address.'"
+
+                          required>
+
+                     <!-- <span class="errormsg">erroe msg</span>-->
+                    </div>
+                     <div class="form-group">
+                      <label >Address :</label>
+                      <input type="text" class="form-control" placeholder="Address" name="address"
+
+                             ng-model="form.address"
+                          >
+                      <!-- <span class="errormsg">erroe msg</span>-->
+                    </div>
+                    <div class="form-group">
+                      <label >Telephone number* :</label>
+                      <input type="text" class="form-control" placeholder="Telephone Number" name="phone_no"
+
+                             ng-model="form.phone_no"
+                             required-message="'Phone number can not be blank.'"
+                             required
+                              >
+
+                      <!-- <span class="errormsg">erroe msg</span>-->
+                    </div>
+                    <div class="form-group">
+                      <label >Mobile Number* :</label>
+                      <input type="text" class="form-control" placeholder="Mobile Number" name="mobile_no"
+
+                             ng-model="form.mobile_no"
+                             required-message="'Mobile number can not be blank.'"
+                             required
+                              >
+
+                      <!-- <span class="errormsg">erroe msg</span>-->
+                    </div>
+
+
+
+
+                   <!-- <div class="form-group">
+                    
+                      
+                       <label>Text Disabled</label>
+                        <input type="text" class="form-control" placeholder="Enter ...">
+
+                    </div>
+                    
+                    
+                    
+                       <div class="form-group">
+                    
+                    <label>Textarea Disabled</label>
+                      <textarea class="form-control" rows="3" placeholder="Enter ..."  style="resize:none;"></textarea>
+
+                      
+                      </div>
+                      
+                      <div class="form-group">
+                      <label>Select</label>
+                      <select class="form-control">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                        <option>option 5</option>
+                      </select>
+
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="exampleInputFile" style="font-size:13px;">File input</label>
+                      <input type="file" id="exampleInputFile" style="font-size:13px;">
+
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> <span style="font-size:13px;">Check me out</span>
+                      </label>
+                      
+                      <label>
+                        <input type="radio"> <span style="font-size:13px;">Check me out</span>
+                      </label>
+                      
+                    </div>
+                  -->
+                  </div><!-- /.box-body -->
+
+                  <div class="box-footer" style="background:none; height:auto; padding-bottom:0px; padding-top:0px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div><!-- /.box -->
+
+
+ <div style="clear:both;"></div>
+            </div>
+           
+          </div>   <!-- /.row -->
+            </div>
+        </section>
+        
+      
+      </div>

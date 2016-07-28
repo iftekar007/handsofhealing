@@ -1,0 +1,85 @@
+<!--navbar-->
+
+<div  ng-mouseover="headhover($event)" class="container-fluid topblock">
+    <div class="row">
+
+        <div class="container">
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 homelogo"><a   ui-sref="index"> <!--<img src="images/logo.png" alt="#"> --> <content  name='mainlogo6' id='6' > </content></a></div>
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 topphoneblock">
+                <h2><!--Book An apointment--><content name='topheadertext17' id='7' > </content></h2>
+                <h3><!--510.533.8487--><content name='topheaderphoneno8' id='8' > </content></h3>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 menublock">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <span class="responsivemenu">MENU</span>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li ng-class="{active: pagename == 'index'}"><a ui-sref="index"> Home </a></li>
+                            <li ng-class="{active: pagename == 'treatmentandservices'}"> <a ui-sref="treatmentandservices"> Treatments and Services   </a> </li>
+                            <li ng-class="{active: pagename == 'products'}"> <a ui-sref="products"> Products   </a> </li>
+                            <li ng-class="{active: pagename == 'aboutus'}"><a ui-sref="aboutus"> About the Spa</a> </li>
+                            <li ng-class="{active: pagename == 'reviews'}"> <a ui-sref="reviews">  Reviews    </a> </li>
+                            <li ng-class="{active: pagename == 'newsletter'}"><a ui-sref="newsletter"> Newsletter</a> </li>
+                            <li ng-class="{active: pagename == 'locations'}"><a ui-sref="locations"> Locations   </a></li>
+                            <li ng-class="{active: pagename == 'contactus'}"><a ui-sref="contactus"> Contact   </a></li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </nav>
+                <div class="carthome">
+                    <a  class="dropdown-toggle" data-toggle="dropdown"><div class="cart"><label class="ng-binding">{{totalquantity}}</label></div></a>
+                    <div class="dropdown-menu">
+                        <h2>Shopping Bag</h2>
+                        <div class="divider"></div>
+                        <div class="clearfix"></div>
+                        <!-- item in cart -->
+                        <div class="row itemlist ng-scope" ng-repeat="item in cartarray">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 itemimg">
+                                <a ng-show="item.parent_cat!=12" ui-sref="productdetails({id:item.id,name:caturl(item.product_name)})" ><img src="nodeserver/uploads/{{item.product_file}}"></a>
+                                <a ng-show="item.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:item.category_id,name:caturl(item.cat_name)})" ><img src="nodeserver/uploads/{{item.product_file}}"></a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 iteminfo">
+                                <a ng-show="item.parent_cat!=12" ui-sref="productdetails({id:item.id,name:caturl(item.product_name)})" ><h4 ng-bind="item.product_name"></h4></a>
+                                <a ng-show="item.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:item.category_id,name:caturl(item.cat_name)})" ><h4 ng-bind="item.product_name"></h4></a>
+
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 itemprice">
+                                <span>{{item.qty}}x${{item.price}}</span>
+                            </div>
+                        </div><!-- end item in cart -->
+                        <div class="clearfix"></div>
+                        <div class="divider"></div>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 itemtotal">
+                                <span>Total</span>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 items text-center">
+                                <span class="ng-binding">{{totalquantity}} Items</span>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 totalprice">
+                                <span class="ng-binding">${{totalprice}}</span>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <a  class="btn btn-default btn-block btnshoppingbag" ui-sref="shoppingcart">shopping bag</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+<!--navbar end -->
+

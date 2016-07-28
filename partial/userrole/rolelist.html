@@ -1,0 +1,106 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+              Role Manager
+
+          </h1>
+          <ol class="breadcrumb">
+               <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+           <li><a href="javascript:void(0)" class="active">Manage Role </a></li>
+            
+          </ol>
+            <div class="newblock1">
+                <input type="text" name="search" ng-model="searchkey" class="search1" placeholder="Search Role">
+ <a ui-sref="add-role" class="addcontent">Add Role</a>
+
+               
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Role List</h3>
+                </div><!-- /.box-header -->
+
+
+                  <table ng-if="rolelist.length > 0" id="example1" class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+
+                          <th><a ng-click="order('role')" href="javascript:void(0);">Role</a>
+                              <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'role'"></span>
+                          </th>
+                          <th>Action</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                     <!-- item in rolelist | filter:search-->
+                      <tr ng-repeat="item in  filterResult = (rolelist | filter:search) | startFrom:(currentPage-1)*perPage | limitTo:perPage | orderBy:predicate:reverse">
+
+
+                          <td>{{item.role}}</td>
+                          <!--<td ng-bind-html="item.content |sanitize123" class="editcontenttd"></td>-->
+                           <td> <a style="max-width:200px" ui-sref="edit-role({id:item.id})" >Edit</a>&nbsp;&nbsp;&nbsp;<a style="max-width:200px" href="javascript:void(0)" ng-click="delrole(item)" >Delete</a>
+
+
+
+
+                          </td>
+                      </tr>
+
+                      </tbody>
+                    
+                  </table>
+
+
+
+                  <!--<div ng-if="userlist.length > perPage" class="paginationblock">
+                  <uib-pagination total-items="userlist.length" ng-model="currentPage" items-per-page="perPage" max-size="4" ng-change="pageChanged()"></uib-pagination>
+                  </div>-->
+                  <!--
+                  <div ng-if="userlist.length == null" class="paginationblock">
+                    <span class="error_msg1">No Records Found!</span>
+                  </div>
+-->
+
+                  <div ng-show="rolelist.length == 0" class="callout callout-danger">
+                      <h4>Sorry</h4>
+
+                      <p>No Role exists in system right now !!.</p>
+                  </div>
+
+
+              </div><!-- /.box -->
+
+
+
+            </div>
+           
+          </div>   <!-- /.row -->
+        </section><!-- /.content -->
+      </div>
+
+
+<script type="text/ng-template" id="roledelconfirm.html">
+    <div class="confirm_delpopup" >
+        <a ng-click="cancel()" class="shutter-close2 ng-scope" href="javascript:void(0)"><img src="images/popup-Close-sml.png"> </a>
+        <div class="clearfix"></div>
+        <h2 class="ng-scope">Are you sure you want to delete this role?</h2>
+        <div class="confirm_delbtn ng-scope text-center">
+            <input type="button" ng-click="role_delete()" class="subbtn" value="Confirm">
+            <input type="button" ng-click="cancel()" class="subbtn" value="Cancel">
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</script>

@@ -1,0 +1,93 @@
+<div class="container-fluid mainbanner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <!-- <img src="../images/topshoppingcartbanner.jpg">-->
+                <div class="mainimgbg">
+                    <content name='topshoppingcartbanner262' id='262' > </content>
+                </div>
+                <div class="maininnercontent">
+                    <div class="maininnercontentleft">
+                        <div class="maininnercontentleftimage">
+                            <content name='innerbannerlogo223' id='223' > </content>
+                        </div>
+                    </div>
+                    <div class="maininnercontentright">
+                        <h2><content name='checkoutconfirmationbannerh2269' id='269' > </content></h2>
+                        <h4><content name='checkoutconfirmationbannerh4270' id='270' > </content></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container checkoutconfirmation_wrapper">
+    <h2  class="productheading"><content name='confirmationheading173' id='173' > </content></h2>
+    <div class="checkoutconfirmation_table">
+
+        <h4>CART CONTENTS</h4>
+        <table width="100%" border="1">
+            <tr ng-repeat="item in product_det">
+                <td align="left" valign="middle">{{item.product_name}} </td>
+                <td align="left" valign="middle">{{item.qty}}X${{item.price}} </td>
+                <td align="right" valign="middle"><strong>${{subtotal(item.qty,item.price)}}</strong></td>
+            </tr>
+
+        </table>
+
+
+       <!-- <h5>SHIPPING</h5>
+        <table width="100%" border="1">
+            <tr>
+                <td align="left" valign="middle">LOREM IPSSUN   </td>
+                <td align="right" valign="middle"><strong>$ 00.00</strong></td>
+            </tr>
+
+        </table>-->
+
+
+
+        <h6>DELIVERY INFORMATION</h6>
+        <table width="100%" border="1">
+            <tr>
+                <td align="left" valign="middle"> NAME </td>
+                <td align="right" valign="middle"><strong>{{shipform.bname}}</strong></td>
+            </tr>
+
+            <tr>
+                <td align="left" valign="middle"> ADDRESS </td>
+                <td align="right" valign="middle"><strong>{{shipform.address}}</strong></td>
+            </tr>
+
+            <tr>
+                <td align="left" valign="middle"> STATE </td>
+                <td align="right" valign="middle"><strong>{{statename}}</strong></td>
+            </tr>
+
+            <tr>
+                <td align="left" valign="middle"> CITY </td>
+                <td align="right" valign="middle"><strong>{{shipform.city}}</strong></td>
+            </tr>
+
+
+            <tr>
+                <td align="left" valign="middle"> ZIP </td>
+                <td align="right" valign="middle"><strong>{{shipform.zip}}</strong></td>
+            </tr>
+
+        </table>
+
+
+        <div class="confirmation_btnwrapper">
+            <a ui-sref="checkout"> back</a>
+            <a href="javascript:void(0)" ng-click="addorder()"> place order</a>
+            <div class="clearfix"></div>
+        </div>
+
+
+
+
+
+    </div>
+</div>

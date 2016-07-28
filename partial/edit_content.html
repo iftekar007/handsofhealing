@@ -1,0 +1,206 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+              Content Manager
+
+          </h1>
+          <ol class="breadcrumb">
+            <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a ui-sref="admin-list">Manage Content </a></li>
+            <li class="active">Add Content</li>
+          </ol>
+        </section>
+
+
+
+    
+    <section class="content">
+        <div class="row">
+           
+        
+            <!-- left column -->
+            <div class="col-md-12">
+            
+                <!-- general form elements -->
+                <div class="box box-primary" style="overflow:hidden; padding-bottom:40px;">
+            
+                    <div class="box-header with-border">
+                        <h3 class="box-title"></h3>
+                        <h3 class="box-title">Add Content</h3>
+                    </div><!-- /.box-header -->
+                    <!-- form start -->
+                
+                    <div class="formsection">
+                        <form angular-validator-submit="submitadminForm()" id="add_Admin" name="add_Admin" role="form" novalidate angular-validator>
+                            <div class="box-body">
+
+
+                                <div class="form-group">
+                                    <label >Content Name* :</label>
+                                    <input type="text" class="form-control" placeholder="Content Name" name="cname" disabled="disabled"
+
+                                           ng-model="form.cname"
+                                           required-message="'content name  can not be blank.'"
+                                           required>
+
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+
+
+
+
+
+                                <div class="form-group">
+                                    <label >Description :</label>
+                                    <input type="text" class="form-control" placeholder="Description" name="description"
+
+                                           ng-model="form.description"
+                                            >
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Select Type</label>
+                                    <select class="form-control"  name="ctype" ng-change = "ctype(form.ctype)"
+
+                                            ng-model="form.ctype"
+                                            required-message="'content type  can not be blank.'"
+                                            required>
+                                        <option value="">Select a content type</option>
+                                        <option value="text">Text</option>
+                                        <option value="html">Html</option>
+                                        <option value="image">Image</option>
+                                        <option value="video">Video</option>
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="form-group" ng-show="false">
+                                    <label >Multiple ?</label>
+                                    <div >
+                                        <section>
+                                            <label>Yes</label>
+                                            <input type=radio ng-click="caclismultiple()" value=yes name=drone ng-model=form.ismultiple validator="contentValidator() === true"invalid-message=contentValidator()>
+                                        </section>
+                                        <section>
+                                            <label>No</label>
+                                            <input type=radio ng-click="caclismultiple()" value=no name=drone ng-model=form.ismultiple validator="contentValidator() === true"invalid-message=contentValidator(form.ismultiple)>
+                                        </section>
+                                        <span class="clearfix validationMessage"ng-show=" drone_error">Please select atleast one option !!</span>
+                                        <div class=clearfix></div>
+                                    </div>
+                                    <div class=clearfix></div>
+                                </div>
+
+
+
+                                <div class="form-group chtml" ng-show="chtml">
+                                    <label >Put Html Content  :</label>
+                                    <div class="copyarea" ng-if="chtml">
+                                        <textarea  ui-tinymce="tinymceOptions"   name="chtml[0]" indexval="0"
+
+                                                   ng-model="form.chtml[0]" required
+                                                   required-message="' content   can not be blank. '"
+
+                                                ></textarea>
+
+                                        <div class="clearfix"></div>
+                                        <button  ng-click="delcopy($event)" class="btn delb btn-primary">Delete</button>
+                                    </div>
+                                    <div class="clearfix clearfix1"></div>
+                                    <button  ng-click="addcopy($event)" class="btn btn-primary" ng-show="ismultipleval">Add</button>
+
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+
+                                <div class="form-group ctext" ng-show="ctext">
+                                    <label >Put Text Content  :</label>
+                                    <div class="copyarea" ng-if="ctext">
+                                        <textarea   name="ctext[0]"
+
+                                                    ng-model="form.ctext[0]" indexval="0" required
+                                                    required-message="'content   can not be blank.'"
+
+                                                ></textarea>
+
+                                        <div class="clearfix"></div>
+                                        <button  ng-click="delcopy($event)" class="btn delb btn-primary">Delete</button>
+                                    </div>
+                                    <div class="clearfix clearfix1"></div>
+                                    <button type="button" ng-click="addcopy($event)" class="btn btn-primary" ng-show="ismultipleval">Add</button>
+
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+
+
+                                <div class="form-group uploadbtn_main" ng-show="cimage">
+                                    <div class="copyarea imgc">
+
+                                        <input
+                                                type="file"
+                                                ngf-select
+                                                ng-model="cfile"
+                                                name="cfile"
+                                                ngf-pattern="'image/*'"
+                                                accept="image/*"
+                                                />
+
+                                        <span class="clearfix f1  " ><img src="/nodeserver/uploads/{{form.image_url_url}}" /></span>
+                                        <span  ng-repeat=" item in form.resumearrn track by $index " class="clearfix  f1 " >
+                                            <div>
+                                                {{item}}
+
+                                            </div>
+
+
+                                            <button type="button" ng-click="delcopy($event)" class="btn delb btn-primary">Delete</button>
+
+
+
+                                        </span>
+                                        <div class="clearfix"></div>
+
+                                    </div>
+                                    <div class="clearfix clearfix1"></div>
+
+                                    <button type="button" ng-click="addcopy($event)" class="btn btn-primary" ng-show="ismultipleval">Add</button>
+
+
+
+                                </div>
+
+
+
+
+
+                            </div><!-- /.box-body -->
+
+                            <div class="box-footer" style="background:none; height:auto; padding-bottom:0px; padding-top:0px;">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div><!-- /.box -->
+
+
+                    <div style="clear:both;"></div>
+                </div>
+           
+            </div>   <!-- /.row -->
+        </div>
+    </section>
+        
+      
+</div>
+
+
+
+<!--<content  name = "asdasd12"></content>
+<content  name = "dfdsf13"></content>
+<content  name = "text114"></content>-->
+<!--<content name = "ssd9"></content>-->
+
+

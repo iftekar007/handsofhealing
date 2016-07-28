@@ -1,0 +1,298 @@
+<!--<style>
+    .textcon1:nth-child(n+4) {
+        display: none!important;
+    }
+</style>-->
+<div class="container-fluid mainbanner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                    <div class="mainimg">
+                        <div class="mainimgbg">
+                            <content name='toptreatmentnservicesbanner1248' id='248' > </content>
+                        </div>
+                        <div class="maininnercontent">
+                            <div class="maininnercontentleft">
+                                <div class="maininnercontentleftimage">
+                                    <content name='innerbannerlogo223' id='223' > </content>
+                                </div>
+                            </div>
+                            <div class="maininnercontentright">
+                                <h2><content name='treatmentnservicesbannerh2249' id='249' > </content></h2>
+                                <h4><content name='treatmentnservicesbannerh4250' id='250' > </content></h4>
+                                <div class="bannerbuttons">
+                                    <!--<a ui-sref="productdetails({id:11,name:caturl('BRONZE')})" class="btn btn-primary btnbronz"><span><content name='bannerbuttonsone199' id='199' > </content></span></a>-->
+                                    <a ui-sref="treatmentandservicesinnerpage({id:16,name:caturl('spa packages')})" class="btn btn-primary btnbronz"><span><content name='bannerbuttonsone199' id='199' > </content></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<content name='treatmentnservicesbanner170' id='170' > </content>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid treatmentnservicesblock1">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row treatmentnservicesblock1wrapper">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 treatmentnservicesblock1left">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 treatmentblock1wrapper block1left">
+                                            <div class="upper_left"></div>
+                                            <div class="upper_right"></div>
+                                            <div class="lower_left"></div>
+                                            <div class="lower_right"></div>
+                                            <h1>Home</h1>
+                                            <h2>Treatments And Services</h2>
+                                            <ul>
+                                                <li ng-repeat=" itemleft in  filterResult = (servicecategorylist |filter:{status:1})  | orderBy:priority:reverse"><a ui-sref="treatmentandservicesinnerpage({id:itemleft.id,name:caturl(itemleft.cat_name)})" ng-bind="itemleft.cat_name"></a></li>
+                                                <!--<li><a href="">Skin Therapy</a></li>
+                                                <li><a href="">Nail Services</a></li>
+                                                <li><a ui-sref="treatmentandservicesinnerpage">Spa Packages</a></li>
+                                                <li><a href="">Waxing</a></li>
+                                                <li><a href="">Treatments</a></li>
+                                                <li><a href="">SaunaGen Infrared Sauna</a></li>
+                                                <li><a href="">Mini Facials</a></li>
+                                                <li><a href="">Makeup & Eyelashes</a></li>-->
+                                            </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 treatmentblock1wrapper block2left">
+                                        <div class="upper_left"></div>
+                                        <div class="upper_right"></div>
+                                        <div class="lower_left"></div>
+                                        <div class="lower_right"></div>
+                                        <a target="_blank" href="https://hohspaskin.jeunesseglobal.com/"><h2>Jeunesse</h2></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 treatmentblock1wrapper block3left">
+                                        <div class="upper_left"></div>
+                                        <div class="upper_right"></div>
+                                        <div class="lower_left"></div>
+                                        <div class="lower_right"></div>
+                                        <a target="_blank" href="http://www.mydoterra.com/hohspa"><h2>Doterra</h2></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 treatmentblock1wrapper block4left">
+                                        <div class="upper_left"></div>
+                                        <div class="upper_right"></div>
+                                        <div class="lower_left"></div>
+                                        <div class="lower_right"></div>
+                                        <a ui-sref="productlisting({id:0})"><h2>Hands of Healing</h2></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 treatmentblock1wrapper block5left">
+                                        <div class="upper_left"></div>
+                                        <div class="upper_right"></div>
+                                        <div class="lower_left"></div>
+                                        <div class="lower_right"></div>
+                                        <a target="_blank" href="http://youniqueproducts.com/HOHSpalashes"><h2>Younique</h2></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block6left">
+                                        <img src="../images/treatmentleftimage1.jpg">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 treatmentnservicesblock1right">
+
+                            <div class="row" ng-repeat=" item in  filterResult = (servicecategorylist |filter:{status:1})  | limitTo:1 | orderBy:priority:reverse">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block1right">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 imgblock">
+                                           <!-- <img src="nodeserver/uploads/{{item.cat_image}}" alt="treatment gallery">-->
+                                            <content name='treatmentandservicesmainimage201' id='201' > </content>
+                                          <!--  <img src="../images/treatmentblock1rightgallery.jpg" alt="treatment gallery">-->
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 textblock">
+                                            <h2  ng-bind="item.cat_name"></h2>
+                                            <!--<h2>Spa Packages</h2>-->
+                                            <div class="col-md-4_textcon">
+                                                <div class="textcon1" ng-repeat=" item1 in  serviceproductlist  | limitTo:3 | orderBy:priority:reverse"  ng-show="item1.category_id==item.id">
+                                                    <h4><a ui-sref="productdetails({id:item1.id,name:caturl(item1.product_name)})"><strong ng-bind="item1.product_name"></strong></a>
+                                                    <span>${{item1.price}}</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p ng-bind-html="trustAsHtml(item1.product_desc)"></p>
+                                               <!-- <p>Full Body Massage Observation Facial </p>-->
+                                                </div>
+
+                                                <!--<h4><strong>Silver</strong><span>$145</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>½ Body Massage Observation/Maintenance Facial Manicure Pedicure Light Lunch and Beverage </p>
+
+                                                <h4><strong>Gold</strong><span>$245</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Full Body Massage Body Scrub Observation/Maintenance Facial Manicure Pedicure Light Lunch and Beverage</p>
+                                            -->
+                                            </div>
+                                            <div class="viewmorelink"><a ui-sref="treatmentandservicesinnerpage({id:item.id,name:caturl(item.cat_name)})">View More</a></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="clearfix"></div>
+                            <div class="divider"></div>
+                            <div class="clearfix"></div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block2right">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 textblock" ng-repeat=" itemcat in  filterResult1 = (servicecategorylist |filter:{status:1})| startFrom:1  | orderBy:priority:reverse">
+                                           <div class="itmimage"> <img src="nodeserver/uploads/{{itemcat.cat_image}}" alt="messgae therapy"></div>
+                                            <!--<img src="../images/messagetherapy.jpg" alt="messgae therapy">-->
+                                            <h2 ng-bind="itemcat.cat_name"></h2>
+                                            <div class="col-md-4_textcon">
+                                                <div class="textcon1" ng-repeat="itemproduct in  serviceproductlist | orderBy:priority:reverse"  ng-if="itemproduct.category_id==itemcat.id">
+                                                    <h4><a ui-sref="productdetails({id:itemproduct.id,name:caturl(itemproduct.product_name)})"><strong ng-bind="itemproduct.product_name"></strong></a><span>${{itemproduct.price}}</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p ng-bind-html="trustAsHtml(itemproduct.product_desc)"></p>
+                                                </div>
+                                               <!-- <h4><strong>Swedish/Deep Tissue - 50 mins</strong><span>$75</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>This firm-pressure technique is custom to your specific needs.</p>
+
+                                                <h4><strong>Prenatal</strong><span>$75</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>A gentle massage geared to relieving muscle cramps, spasms, lower back, hips, and leg pain</p>-->
+                                            </div>
+                                            <div class="viewmorelink"><a ui-sref="treatmentandservicesinnerpage({id:itemcat.id,name:caturl(itemcat.cat_name)})">View More</a></div>
+                                            <div class="clearfix"></div>
+                                            <div class="divider"></div>
+                                        </div>
+
+                                      <!--  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 textblock">
+                                            <img src="../images/skintherapy.jpg" alt="Skin Therapy">
+                                            <h2>Skin Therapy</h2>
+                                            <div class="col-md-4_textcon">
+                                                <h4><strong>Basic Make-up Application</strong><span>$35</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+                                                <h4><strong>Special Occasion and Full Application</strong><span>$50</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                                                <h4><strong>Bridal Make-Up Application</strong><span>$150</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                            </div>
+                                            <div class="viewmorelink">View More</div>
+                                            <div class="clearfix"></div>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 textblock">
+                                            <img src="../images/nailservices.jpg" alt="Nail Services">
+                                            <h2>Nail Services</h2>
+                                            <div class="col-md-4_textcon">
+                                                <h4><strong>Signature Mani</strong><span>$15</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                                                <h4><strong>Luxury Mani</strong><span>$20</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                                                <h4><strong>Gel Mani</strong><span>$35</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                            </div>
+                                            <div class="viewmorelink">View More</div>
+                                            <div class="clearfix"></div>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 textblock">
+                                            <img src="../images/waxing.jpg" alt="Waxing">
+                                            <h2>Waxing</h2>
+                                            <div class="col-md-4_textcon">
+                                                <h4><strong>Brow Design & Tweeze/ Lip Wax</strong><span>$10</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                                                <h4><strong>& Lip/ Chin Wax</strong><span>$15</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                                                <h4><strong>Underarms</strong><span>$20</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                            </div>
+                                            <div class="viewmorelink">View More</div>
+                                            <div class="clearfix"></div>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 textblock">
+                                            <img src="../images/treatment.jpg" alt="Treatments">
+                                            <h2>Treatments</h2>
+                                            <div class="col-md-4_textcon">
+                                                <h4><strong>Back Treatment</strong><span>$45</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>A relaxing steam cleanse, exfoliating scrub, back and neck massage ,heated mud mask,</p>
+
+                                                <h4><strong>Body Scrub</strong><span>$75</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>A soothing spa scrub that will enhance your look by exfoliating the dead skin cells on the body.</p>
+
+                                                <h4><strong>Soothing Foot Soak</strong><span>$25</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>A refreshing 15-minute soak in a warm foot tub filled with Herbal Infused Salts and hot stones.</p>
+                                            </div>
+                                            <div class="viewmorelink">View More</div>
+                                            <div class="clearfix"></div>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 textblock">
+                                            <img src="../images/minifacials.jpg" alt="minifacials">
+                                            <h2>Mini Facials</h2>
+                                            <div class="col-md-4_textcon">
+                                                <h4><strong>Dermalogica MicroZone Facials</strong><span>$35</span>
+                                                    <div class="clearfix"></div>
+                                                </h4>
+                                                <p>Target your most pressing skin care concerns in a snap with a 20 minute facial treatment! It's quick, simple, and effective.<br><br> $35 for a 20 minute session. Includes free face mapping. Twelve different options to choose for your skin needs:<br><br> Flash Exfoliation - Resurface, renew and brighten with maximum strength exfoliation treatment! Hydroxy acids and Retinol lift away dull surface cells a nourishing cocktail of vitamins, peptides and botanical extracts help reverse visible signs of aging, revealing healthy, glowing skin</p>
+                                            </div>
+                                            <div class="viewmorelink">View More</div>
+                                            <div class="clearfix"></div>
+                                            <div class="divider"></div>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

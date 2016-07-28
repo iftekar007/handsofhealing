@@ -1,0 +1,105 @@
+<!--<div  class="admincontain"><img src="images/backend_downloads.png" alt="#" style="width:100%;"> </div>-->
+
+
+
+<div  class="admincontain">
+  <div class="mah2block">
+    <h3>Add Product:</h3>
+    <div class="maDownloadstable">
+      <form role="form" angular-validator-submit="addproductsubmit()" name="addproductform" novalidate angular-validator>
+        <div class="box-body">
+          <div class="form-group">
+            <label >Product Name</label>
+            <input type="text" class="form-control"  placeholder="Product Name" name="product_name"
+                   ng-model="form.product_name"
+                   required-message="'Product Name can not be blank.'"
+                   required>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+          </div>
+          <div  class="form-group">
+            <label>Product Description</label>
+            <textarea ui-tinymce="tinymceOptions" name="cat_desc" placeholder="Product Description" class="form-control" rows="3" ng-model="form.product_desc" required-message="'Product description can not be blank.'" required></textarea>
+          </div>
+          <div class="form-group">
+            <label >Category * :</label>
+
+            <select multiple="multiple"  name="category_id" class ="form-control" validate-on="dirty" ng-model = "form.category_id" required-message="'Select category'" required ng-options="item.cat_name for item in categorylist track by item.id" style="background:#fff none repeat scroll 0 0 !important;  padding: 0 0 0 0px!important;"  >
+              <option value="" style="padding-left:5px; ">Select  Category</option>
+
+            </select>
+            <!--required-message="'Select parent category.'" required-->
+
+            <div class="clearfix"></div>
+
+
+          </div>
+          <div class="form-group" >
+            <!--ng-show="form.category_id.type=='Stock Image' || form.category_id.type=='Stock Video'"-->
+            <label >Product file(jpg,png,gif,mp4)* :</label>
+            <div class="clearfix"></div>
+            <div class="playerdiv">
+              <img ng-if="product_img_src!=false" src="{{product_img_src}}">
+              <img ng-if="is_video==1" class="picon" ng-click="showvideo(video_url1222)" src="/images/palyicon.png">
+            </div>
+
+
+
+
+            <!--<div ng-if="product_video_src!=false" id="maintvDiv"></div>-->
+
+
+            <div class="clearfix"></div>
+            <input type="button" class="uploadbtn btn  btn-md"   value="Upload" ngf-drop ngf-select ng-model="product_upload" ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}" ngf-multiple="false" ngf-allow-dir="true" accept="'video/*'" ngf-drop-available="dropAvailable" ngf-capture="camera">
+            <div class="progress" ng-show="product_upload[0].progress >= 0"> <div style="width:{{product_upload[0].progress}}%; background:#00c0ef;" ng-bind="product_upload[0].progress + '%'"></div></div>
+            <div class="clearfix"></div>
+            <span class="errormsg has-error validationMessage"></span>
+          </div>
+          <div class="form-group">
+            <label >Priority</label>
+            <input type="text" class="form-control"  placeholder="Priority" name="priority"
+                   ng-model="form.priority"
+                   required-message="'Priority can not be blank.'"
+                   required>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+          </div>
+          <div class="form-group">
+            <label >Price</label>
+            <input type="text" class="form-control"  placeholder="Price" name="price"
+                   ng-model="form.price"
+                   required-message="'Price can not be blank.'"
+                   required>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+          </div>
+          <div class="form-group">
+            <label >Payout</label>
+            <input type="text" class="form-control"  placeholder="payout" name="payout"
+                   ng-model="form.payout"
+                   required-message="'Payout can not be blank.'"
+                   required>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+          </div>
+          <div class="form-group">
+            <label >Credits</label>
+            <input type="text" class="form-control"  placeholder="credits" name="credits"
+                   ng-model="form.credits"
+                   required-message="'Credits can not be blank.'"
+                   required>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+          </div>
+
+
+        </div>
+
+
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary dropdown-toggle">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

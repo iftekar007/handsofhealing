@@ -1,0 +1,4 @@
+host:'influxiq.com',
+user:'influxiq_urbanh',
+password:'P@ss7890',
+database:'influxiq_hhealing'

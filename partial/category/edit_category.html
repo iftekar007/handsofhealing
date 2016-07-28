@@ -1,0 +1,125 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Category Manager
+
+        </h1>
+        <!--<ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Forms</a></li>
+            <li class="active">General Elements</li>
+        </ol>-->
+    </section>
+
+
+
+
+
+    <section class="content">
+        <div class="row">
+
+            <!-- left column -->
+            <div class="col-md-12">
+
+                <!-- general form elements -->
+                <div class="box box-primary" style="overflow:hidden; padding-bottom:40px;">
+
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Edit Category</h3>
+                    </div><!-- /.box-header -->
+                    <!-- form start -->
+
+                    <div class="formsection">
+                        <form role="form" angular-validator-submit="editformsubmit()" name="addform" novalidate angular-validator>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label >Category Name</label>
+                                    <input type="text" class="form-control"  placeholder="Category Name" name="cat_name"
+                                           ng-model="form.cat_name"
+                                           required-message="'Category Name can not be blank.'"
+                                           required>
+
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+                                <div class="form-group">
+                                    <label >Category Url</label>
+                                    <input type="text" class="form-control"  placeholder="Category Url" name="cat_url"
+                                           ng-model="form.cat_url"
+                                           required-message="'Category url can not be blank.'"
+                                           required>
+
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+                                <div  class="form-group">
+                                    <label>Category Description</label>
+                                    <textarea ui-tinymce="tinymceOptions" name="cat_desc" placeholder="Category Description" class="form-control" rows="3" ng-model="form.cat_desc" required-message="'Category description can not be blank.'" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label >Parent Category * :</label>
+
+                                    <select   name="parent_cat" class ="form-control" validate-on="dirty" ng-model = "form.parent_cat"  ng-options="item.cat_name for item in categorylist track by item.id" style="background:#fff none repeat scroll 0 0 !important;  padding: 0 0 0 0px!important;"  >
+
+                                    </select>
+
+
+                                    <div class="clearfix"></div>
+
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label >Category Image* :</label>
+                                    <input type="button" class="searchbtn btn  btn-md"   value="Upload" ngf-drop ngf-select ng-model="picturupload" ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}" ngf-multiple="false" ngf-allow-dir="true" accept="'image/*'" ngf-drop-available="dropAvailable" ngf-capture="camera">
+                                    <div class="progress" ng-show="picturupload[0].progress >= 0"> <div style="width:{{picturupload[0].progress}}%; background:#00c0ef;" ng-bind="picturupload[0].progress + '%'"></div></div>
+                                    <div class="clearfix"></div>
+                                    <div ng-if="form.file"><img src="nodeserver/uploads/{{form.file}}" style="max-width:100%;" /></div>
+                                    <div class="clearfix"></div>
+                                    <input type="hidden" class="form-control"  name="picture"
+                                           ng-model="form.file"
+                                           required-message="'Please upload a image'"
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <label >Priority</label>
+                                    <input type="text" class="form-control"  placeholder="Priority" name="priority"
+                                           ng-model="form.priority"
+                                           required-message="'Priority can not be blank.'"
+                                           required>
+
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+                                <!-- <div class="form-group">
+                                     <label >Type:</label>
+                                     <select   class="form-control input1 selectboxnew"  name="type" required-message="'Select type.'" required
+                                               ng-model = "form.type"
+                                               required-message="'Select type.'"
+                                               required>
+                                         <option value="">Select Type</option>
+                                         <option value="General">General</option>
+                                         <option value="Stock Video">Stock Video</option>
+                                         <option value="Stock Image">Stock Image</option>
+                                     </select>
+                                 </div>-->
+
+                            </div>
+
+
+                            <div class="box-footer" style="background:none; height:auto; padding-bottom:0px; padding-top:0px;">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div><!-- /.box -->
+
+
+                    <div style="clear:both;"></div>
+                </div>
+
+            </div>   <!-- /.row -->
+        </div>
+    </section>
+
+
+</div>
+

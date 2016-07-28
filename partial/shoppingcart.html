@@ -1,0 +1,196 @@
+<div class="container-fluid mainbanner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+               <!-- <img src="../images/topshoppingcartbanner.jpg">-->
+                <div class="mainimgbg">
+                    <content name='topshoppingcartbanner262' id='262' > </content>
+                </div>
+                <div class="maininnercontent">
+                    <div class="maininnercontentleft">
+                        <div class="maininnercontentleftimage">
+                            <content name='innerbannerlogo223' id='223' > </content>
+                        </div>
+                    </div>
+                    <div class="maininnercontentright">
+                        <h2><content name='shoppingcartbannerh2263' id='263' > </content></h2>
+                        <h4><content name='shoppingcartbannerh4264' id='264' > </content></h4>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid shoppingcartblock1">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textblock text-center">
+                        <h2>Cart</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="borderline"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid shoppingcartblock2">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 vcenter" >
+                       <div class="shopproductdetaillist" ng-repeat="cartitem in cartarray">
+                           <div class="shopproductwrapper">
+                               <!--<a ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})"><img src="nodeserver/uploads/{{cartitem.product_file}}">-->
+                                   <a ng-show="cartitem.parent_cat!=12" ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})" ><img src="nodeserver/uploads/{{cartitem.product_file}}"></a>
+                                   <a ng-show="cartitem.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:cartitem.category_id,name:caturl(cartitem.cat_name)})" ><img src="nodeserver/uploads/{{cartitem.product_file}}"></a>
+                            <!--<img src="../images/img-shopcartlist.jpg">-->
+                                   </a>
+                        </div>
+
+                        <div class="shopproductdetailinfo">
+                            <a ng-show="cartitem.parent_cat!=12" ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})"><h2  ng-bind="cartitem.product_name"></h2></a>
+                            <a ng-show="cartitem.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:cartitem.category_id,name:caturl(cartitem.cat_name)})"><h2  ng-bind="cartitem.product_name"></h2></a>
+                            <div class="stockpriceqty">
+                                <div class="stock-price">
+                                    UNIT PRICE : ${{cartitem.price}}
+                                </div>
+                                <div class="stock-qty">
+                                    <label>Quantity</label>
+                                    <div class="stock-qty-incdec">
+                                        <a class="Quantitybtn" ng-click="delqty(cartitem.pid)"  href="javascript:void(0)">-</a>
+                                        <input type="text" class="Quantity_value qtyi8" id="cartquantity{{cartitem.pid}}" value="{{cartitem.qty}}">
+                                        <a class="Quantitybtn" ng-click="addqty(cartitem.pid)"  href="javascript:void(0)">+</a>
+                                    </div>
+                                </div>
+                                <div class="instock">
+                                    in stock
+                                </div>
+                            </div>
+                            <div class="stockvalue">
+                                <div class="stock-subtotal-price">
+                                    SUBTOTAL : <span>${{subtotal(cartitem.qty,cartitem.price)}}</span>
+                                </div>
+                                <div  class="stock-action">
+                                    <a ng-click="removecart(cartitem.pid)">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                       </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 vcenter">
+                       <div class="shopcartdetails">
+                           <h2>SHOPPING SUMMARY</h2>
+                        <div class="clearfix"></div>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td align="left" valign="middle">TOTAL QUANTITY</td>
+                                <td align="right" valign="middle">{{totalquantity}}</td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="middle"><span>PRODUCT TOTAL</span></td>
+                                <td align="right" valign="middle">${{totalprice}}</td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="middle">SHIPPING</td>
+                                <td align="right" valign="middle">${{shippingprice}}</td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="middle">SALES TAX</td>
+                                <td align="right" valign="middle">${{saletax}}</td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="middle"><span>SUBTOTAL</span></td>
+                                <td align="right" valign="middle">${{alltotalprice}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a  ui-sref="checkout"  class="shopcartbtn">CHECKOUT</a>
+                                    <a  ui-sref="productlisting({id:0})" class="shopcartbtn">CONTINUE SHOPPING</a>
+                                </td>
+                                <!--ng-click="chklogin()"-->
+                            </tr>
+                            </tbody>
+                        </table>
+                       </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container shopproduct_wrapper">
+    <div class="shopproduct_bottom_gallery_wrapper">
+        <h4>We think you'll love these too ...</h4>
+        <div class="outside">
+            <span id="slider-prev"></span> <span id="slider-next"></span>
+        </div>
+        <div class="shopproduct_gallery_contain">
+          <ul class="bxslider">
+                <li>
+                    <div class="shopproduct_box2">
+                        <div class="shopproimg2">
+                            <img src="../images/proimg1.png" >
+                        </div>
+                        <div class="shopproprice2">$00.00</div>
+                        <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="shopproduct_box2">
+                        <div class="shopproimg2">
+                            <img src="../images/proimg2.png" >
+                        </div>
+                        <div class="shopproprice2">$00.00</div>
+                        <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="shopproduct_box2">
+                        <div class="shopproimg2">
+                            <img src="../images/proimg3.png" >
+                        </div>
+
+                        <div class="shopproprice2">$00.00</div>
+
+                        <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="shopproduct_box2">
+                        <div class="shopproimg2">
+                            <img src="../images/proimg4.png" >
+                        </div>
+                        <div class="shopproprice2">$00.00</div>
+                        <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="shopproduct_box2">
+                         <div class="shopproimg2">
+                            <img src="../images/proimg1.png" >
+                         </div>
+                         <div class="shopproprice2">$00.00</div>
+                         <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                    </div>
+                </li>
+          </ul>
+        <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

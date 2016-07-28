@@ -1,0 +1,202 @@
+<div class="container-fluid mainbanner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="mainimg">
+                    <div class="mainimgbg">
+                        <content name='newsletterbanner229' id='229' > </content>
+                    </div>
+                    <div class="maininnercontent">
+                        <div class="maininnercontentleft">
+                            <div class="maininnercontentleftimage">
+                                <content name='innerbannerlogo223' id='223' > </content>
+                            </div>
+                        </div>
+                        <div class="maininnercontentright">
+                            <h2><content name='newsletterbannerh2230' id='230' > </content></h2>
+                            <h4><content name='newsletterbannerh4231' id='231' > </content></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<img src="../images/topnewletterbanner.jpg" alt="topnewletterbanner">-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid newsletterblock1">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 newsletterblock1title text-center">
+                        <h4>Where beauty meets health meets news. Check out what’s happening now!</h4>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="container-fluid newsletterblock2">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <img src="../images/newletterblock2img1.jpg" alt="newletterblock2 image1">
+                        <p>Nestled in downtown Hayward, Hands of Healing Massage & Spa Studio is your local hidden retreat, allowing you to escape from your daily stressors.  Pamper yourself with a therapeutic massage, soothing facial, or an indulgent spa treatment.  Bask in the soothing sounds of ethereal fountains and tranquil music while resting on heated massage tables, surrounded by aroma therapeutic fragrances.  Our professional and courteous staff invites you to relax and pamper yourself at Hands of Healing Massage & Spa Studio.</p>
+                        <div class="clearfix"></div>
+                        <div class="newletterdivider">
+                            <h2><span>View More</span></h2>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<!--<div class="container-fluid newsletterblock3">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textblock text-center">
+                               <h2>OPI's latest collection</h2>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row collectionlists">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 singlecollection text-center">
+                                <img src="../images/singlecollection-main-img1.jpg" alt="main image1">
+                                <div class="colorcategory">
+                                    <img src="../images/singlecollection-color-img1.jpg" alt="color image1">
+                                </div>
+                                <h2>Coca - Cola</h2>
+                                <h3>Icons of Happiness</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 singlecollection text-center">
+                                <img src="../images/singlecollection-main-img2.jpg" alt="main image1">
+                                <div class="colorcategory">
+                                    <img src="../images/singlecollection-color-img2.jpg" alt="color image1">
+                                </div>
+                                <h2>Nordic</h2>
+                                <h3>Set Your sights on the Northern Light <span>Fall / winter</span> </h3>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 singlecollection text-center">
+                                <img src="../images/singlecollection-main-img3.jpg" alt="main image1">
+                                <div class="colorcategory">
+                                    <img src="../images/singlecollection-color-img3.jpg" alt="color image1">
+                                </div>
+                                <h2>PEANUTS</h2>
+                                <h3>It’s a Charlic Brown!</h3>
+                            </div>
+                        </div>
+                        <p>Haute. Probably more than any other professional nail care product it produces, OPI is renowned globally for its Nail Lacquers, with each shade created by Weiss-Fischmann based on her impeccable color forecasting, sense of style, and instinct for what women want.  The brilliant, chip-resistant, professional OPI Nail Lacquer formula is available in over 200 fashion-forward colors.</p>
+                        <p>With clever names that customers look forward to with each new Collection, OPI Nail Lacquers are beloved around the world, and trusted by professionals. Neither OPI Nail Lacquers nor any other OPI product or service are subject to animal testing.</p>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 newletterdivider text-center">
+                                <h2><span>View More</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="container-fluid newsletterblock4" ng-repeat="item in  filterResult = (itemlist | filter:{status:1})| orderBy:predicate:reverse | startFrom:(currentPage-1)*perPage | limitTo:perPage">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textblock text-center">
+                        <h2 ng-bind="item.newsletter_name">Hands of Healing</h2>
+                       <!-- <h2>Hands of Healing</h2>-->
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <img src="nodeserver/uploads/{{item.newsletter_file}}" alt="newletterblock1 image1">
+                       <!-- <img src="../images/newletterblock2img1.jpg" alt="newletterblock1 image1">-->
+                        <p ng-bind-html="item.newsletter_desc | limitHtml: 200"></p>
+                       <!-- <p>Nestled in downtown Hayward, Hands of Healing Massage & Spa Studio is your local hidden retreat, allowing you to escape from your daily stressors.  Pamper yourself with a therapeutic massage, soothing facial, or an indulgent spa treatment.  Bask in the soothing sounds of ethereal fountains and tranquil music while resting on heated massage tables, surrounded by aroma therapeutic fragrances.  Our professional and courteous staff invites you to relax and pamper yourself at Hands of Healing Massage & Spa Studio.</p>-->
+                        <div class="clearfix"></div>
+                        <div class="newletterdivider">
+                            <h2><span><a ui-sref="newsletter-details({id:item.id})">View More</a></span></h2>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="filterResult.length > perPage" class="paginationblock">
+    <uib-pagination total-items="filterResult.length" ng-model="currentPage" items-per-page="perPage" max-size="4"></uib-pagination>
+</div>
+<!--
+<div class="container-fluid newsletterblock4">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textblock text-center">
+                        <h2>OPI's latest collection</h2>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <img src="../images/newletterblock3img1.jpg" alt="newsletterblock3 image1">
+                        <p>Haute. Probably more than any other professional nail care product it produces, OPI is renowned globally for its Nail Lacquers, with each shade created by Weiss-Fischmann based on her impeccable color forecasting, sense of style, and instinct for what women want.  The brilliant, chip-resistant, professional OPI Nail Lacquer formula is available in over 200 fashion-forward colors.</p>
+                        <p>With clever names that customers look forward to with each new Collection, OPI Nail Lacquers are beloved around the world, and trusted by professionals. Neither OPI Nail Lacquers nor any other OPI product or service are subject to animal testing.</p>
+                        <div class="clearfix"></div>
+                        <div class="newletterdivider">
+                            <h2><span><a ui-sref="newsletter-details">View More</a></span></h2>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid newsletterblock4">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textblock text-center">
+                        <h2>Makeup Lifeline</h2>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <img src="../images/newsletterblock4img1.jpg" alt="newsletterblock4 image1">
+                        <p>By: Sukari Dixon Ever wondered how long you should keep that eye shadow or mascara in your make up kit? Or what tools you need in your kit to create a fabulous face whenever you want? Check out this great list of make-up tips and tricks! </p>
+                        <div class="clearfix"></div>
+                        <div class="newletterdivider">
+                            <h2><span><a ui-sref="newsletter-details">View More</a></span></h2>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->

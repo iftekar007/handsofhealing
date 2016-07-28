@@ -1,0 +1,104 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+              Content Manager
+
+          </h1>
+          <ol class="breadcrumb">
+               <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+           <li><a href="javascript:void(0)" class="active">Manage Content </a></li>
+            
+          </ol>
+            <div class="newblock1">
+                <input type="text" name="search" ng-model="searchkey" class="search1" placeholder="Search Content">
+ <a ui-sref="addcontent" class="addcontent">Add Content</a>
+
+               
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Content List</h3>
+                </div><!-- /.box-header -->
+
+
+                  <table ng-if="contentlist.length > 0" id="example1" class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+                          <th>Content Name</th>
+                          <th>Content </th>
+                          <th>Type </th>
+                          <!-- <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Mobile Number</th>
+                        <th>Address</th>
+                         <th>Status</th>-->
+                          <th>Description</th>
+                          <th>Action</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+
+                      <tr ng-repeat=" item in contentlist track by item.id | filter:search" ng-if="item.parentid==0">
+
+                          <td>{{item.cname}}</td>
+                          <!--<td ng-bind-html="item.content |sanitize123" class="editcontenttd"></td>-->
+                          <td ng-if="contenttype[item.id]=='html' || contenttype[item.id]=='text' " >
+                              <div ng-repeat=" item1 in conf[item.id] track by $index" ng-bind-html="item1 |sanitizelimit"></div> ..
+                          </td>
+                          <td ng-if="contenttype[item.id]=='image' "> <img src="nodeserver/uploads/{{conf[item.id]}}"></td>
+                          <td> {{contenttype[item.id]}} </td>
+                          <td> {{item.description |sanitizelimit}} </td>
+                          <!--<td>{{item.description}}</td>-->
+                          <td> <a href="javascript:void(0)" ng-click="opencontentmodal('lg',{{item.id}})" >Edit</a>
+                              <input id="foo{{item.id}}" type="text" style="width:0px;" value="<content name='{{item.cname}}{{item.id}}' id='{{item.id}}' > </content>">
+                              <button class="btn" data-clipboard-action="copy" data-clipboard-target="#foo{{item.id}}">Copy</button>
+
+
+
+                          </td>
+                      </tr>
+
+                      </tbody>
+                    
+                  </table>
+
+
+
+                  <!--<div ng-if="userlist.length > perPage" class="paginationblock">
+                  <uib-pagination total-items="userlist.length" ng-model="currentPage" items-per-page="perPage" max-size="4" ng-change="pageChanged()"></uib-pagination>
+                  </div>-->
+                  <!--
+                  <div ng-if="userlist.length == null" class="paginationblock">
+                    <span class="error_msg1">No Records Found!</span>
+                  </div>
+-->
+
+                  <div ng-show="contentlist.length == 0" class="callout callout-danger">
+                      <h4>Sorry</h4>
+
+                      <p>No Content exists in system right now !!.</p>
+                  </div>
+
+
+              </div><!-- /.box -->
+
+
+
+            </div>
+           
+          </div>   <!-- /.row -->
+        </section><!-- /.content -->
+      </div>

@@ -1,0 +1,85 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+              Role Manager
+
+          </h1>
+          <ol class="breadcrumb">
+            <li><a ui-sref="dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a ui-sref="admin-list">Manage Role </a></li>
+            <li class="active">Add Role</li>
+          </ol>
+        </section>
+
+
+
+    
+    <section class="content">
+        <div class="row">
+           
+        
+            <!-- left column -->
+            <div class="col-md-12">
+            
+                <!-- general form elements -->
+                <div class="box box-primary" style="overflow:hidden; padding-bottom:40px;">
+            
+                    <div class="box-header with-border">
+                        <h3 class="box-title"></h3>
+                        <h3 class="box-title">Add Role</h3>
+                    </div><!-- /.box-header -->
+                    <!-- form start -->
+                
+                    <div class="formsection">
+                        <form angular-validator-submit="submitroleForm()"  name="add_role" role="form" novalidate angular-validator>
+                            <div class="box-body">
+
+
+                                <div class="form-group">
+                                    <label >Role* :</label>
+                                    <input type="text" class="form-control" placeholder="Role" name="role"
+
+                                           ng-model="form.role"
+                                           required-message="'Role can not be blank.'"
+                                           required>
+
+                                    <!-- <span class="errormsg">erroe msg</span>-->
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div><!-- /.box-body -->
+
+                            <div class="box-footer" style="background:none; height:auto; padding-bottom:0px; padding-top:0px;">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div><!-- /.box -->
+
+
+                    <div style="clear:both;"></div>
+                </div>
+           
+            </div>   <!-- /.row -->
+        </div>
+    </section>
+        
+      
+</div>
+
+
+
+<!--<content  name = "asdasd12"></content>
+<content  name = "dfdsf13"></content>
+<content  name = "text114"></content>-->
+<!--<content name = "ssd9"></content>-->
+
+

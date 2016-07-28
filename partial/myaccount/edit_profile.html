@@ -1,0 +1,119 @@
+<div  class="admincontain editprofileblock">
+    <div class="mah2block">
+        <h3>Edit Profile:</h3>
+        <div class="clear"></div>
+        <div class="maDownloadstable">
+            <form role="form" angular-validator-submit="editprofileformsubmit()" name="editprofileform" novalidate angular-validator>
+                <div class="box-body">
+                    <div class="form-group">
+                        <label >First Name</label>
+                        <input type="text" class="form-control" placeholder="First Name" name="fname"
+                               ng-model="form.fname"
+                               required-message="'first name can not be blank.'"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label >Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last Name" name="lname"
+                               ng-model="form.lname"
+                               required-message="'Last name can not be blank.'"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label >Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter Email" name="email" ng-readonly="true"
+                               ng-model="form.email"
+                               required-message="'Email can not be blank.'"
+                               invalid-message="'Enter valid email address.'"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label >Telephone number</label>
+                        <input type="text" class="form-control" placeholder="Telephone Number" name="phone_no"
+                               ng-model="form.phone_no"
+                               required-message="'Phone number can not be blank.'"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label >Mobile Number</label>
+                        <input type="text" class="form-control" placeholder="Mobile Number" name="mobile_no"
+                               ng-model="form.mobile_no"
+                               required-message="'Mobile number can not be blank.'"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label >Address</label>
+                        <input type="text" class="form-control" placeholder="Address" name="address"
+                               ng-model="form.address"
+                               required-message="'Address can not be blank.'"
+                               required>
+                    </div>
+                    <div class="form-group" ng-show="userrole==5">
+                        <label >Country</label>
+                        <select class="form-control" name="country" ng-model="form.country" required-message="'Please select country'" required ng-required="userrole==5">
+                            <option value="" >Slect Country</option>
+                            <option ng-repeat="item in countrylist" value="{{item.s_name}}">{{item.s_name}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group" ng-show="userrole==5">
+                        <label >State</label>
+                        <input type="text" class="form-control" placeholder="State" name="state" ng-required="userrole==5"
+                               ng-model="form.state"
+                               required-message="'State can not be blank.'"
+                               required>
+                    </div>
+                    <div class="form-group" ng-show="userrole==5">
+                        <label >Date of Birth</label>
+                        <input type="text" name="dob" placeholder="Date of Birth" ng-required="userrole==5"
+
+                               validate-on="blur"
+
+                               class = "form-control input-form"
+
+                               ng-model = "form.dob"
+
+                               uib-datepicker-popup="{{format}}"
+
+                               is-open="opened" ng-required="true" show-weeks="false"
+
+                               ng-focus="open1()"
+
+                               required-message="'Date of birth cannot be blank.'"
+
+                               required>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="form-group" ng-show="userrole==5">
+                        <label>Gender</label>
+                        <div class="col-md-12 " style="padding-left: 0px;">
+                         <span style="color: #333;">
+                             <input type="radio"  name="gender" value="Male" ng-model="form.gender" ng-required="userrole==5"
+
+
+
+                                     >
+
+                             Male
+                         </span>
+                         <span style="color: #333;">
+                             <input type="radio"  name="gender" value="Female" ng-model="form.gender"
+
+
+
+                                     >
+                             Female
+                         </span>
+                           <!-- <span class="clearfix validationMessage errormsg" ng-show="clientgenderValidatorerror"> Please select atleast one option !!</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary dropdown-toggle">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

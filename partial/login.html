@@ -1,0 +1,70 @@
+<div class="container-fluid mainbanner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="mainimg">
+                    <div class="mainimgbg">
+                        <content name='loginbanner254' id='254' > </content>
+                    </div>
+                    <div class="maininnercontent">
+                        <div class="maininnercontentleft">
+                            <div class="maininnercontentleftimage">
+                                <content name='innerbannerlogo223' id='223' > </content>
+                            </div>
+                        </div>
+                        <div class="maininnercontentright">
+                            <h2><content name='loginbannerh2255' id='255' > </content></h2>
+                            <h4><content name='loginbannerh4256' id='256' > </content></h4>
+                        </div>
+                    </div>
+                </div>
+
+               <!--<content name='loginbanner2161' id='161' > </content>-->
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="container login_wrapper">
+
+    <h2><content name='logintext162' id='162' > </content></h2>
+    <span class="error"></span>
+    <form angular-validator-submit="submitForm()"  name="add_form" role="form" novalidate angular-validator>
+        <div class="form-group">
+    <input type="text" class="form-control" placeholder="User Email" name="email" ng-model="form.email"
+           ng-model="form.email"
+           required-message="'Email can not be blank.'"
+           invalid-message="'Enter valid email address.'"
+           required>
+
+</div>
+        <div class="form-group">
+    <input type="password" class="form-control" placeholder="User Password" name="password"
+
+           ng-model="form.password"
+           required-message="'Password can not be blank. '"
+           required>
+            </div>
+
+   <!-- <div class="remembermediv">
+
+        <input type="checkbox" value="" class="checkboxdiv">
+        <label>Remember me </label>
+        <div class="clearfix"></div>
+
+    </div>-->
+
+    <a class="forgotpassword" ui-sref="forgot-password">Forgot your password?</a>
+        <div class="form-group">
+    <input type="submit" value="Login" class="loginbtn">
+            </div>
+
+
+</form>
+
+    </div>

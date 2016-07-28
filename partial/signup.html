@@ -1,0 +1,199 @@
+<div class="container-fluid mainbanner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="mainimg">
+                    <div class="mainimgbg">
+                        <content name='signupbanner258' id='258' > </content>
+                    </div>
+                    <div class="maininnercontent">
+                        <div class="maininnercontentleft">
+                            <div class="maininnercontentleftimage">
+                                <content name='innerbannerlogo223' id='223' > </content>
+                            </div>
+                        </div>
+                        <div class="maininnercontentright">
+                            <h2><content name='signupbannerh2259' id='259' > </content></h2>
+                            <h4><content name='signupbannerh4260' id='260' > </content></h4>
+                        </div>
+                    </div>
+                </div>
+                <!--<content name='signupbanner167' id='167' > </content>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container login_wrapper">
+
+    <h2><content name='signuptext166' id='166' > </content></h2>
+    <span class="error1" ng-show="errormsg"  ng-bind-html="trustAsHtml(errormsg)"></span>
+    <form angular-validator-submit="submitsignupForm()" id="signup" name="signup" role="form" novalidate angular-validator>
+        <!--<div ng-show="errormsg" class="alert alert-danger alert-dismissible" ng-bind-html="trustAsHtml(errormsg)"></div>-->
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="First Name" name="fname"
+
+               ng-model="form.fname"
+               required-message="'first name can not be blank.'"
+               required>
+
+        <!-- <span class="errormsg">erroe msg</span>-->
+    </div>
+
+        <div class="form-group">
+
+            <input type="text" class="form-control" placeholder="Last Name" name="lname"
+
+                   ng-model="form.lname"
+                   required-message="'Last name can not be blank.'"
+                   required>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+
+
+        <div class="form-group email_div">
+
+            <input type="email" class="form-control" placeholder="Enter email" name="email"
+
+                   ng-model="form.email"
+                   required-message="'Email can not be blank.'"
+                   invalid-message="'Enter valid email address.'"
+
+                   required>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+        <div class="form-group">
+
+            <input type="password" class="form-control"  placeholder="Password" name="password"
+
+                   ng-model="form.password"
+                   required-message="'Password can not be blank. '"
+                   required>
+
+        </div>
+        <div class="form-group">
+
+            <input type="password" class="form-control"  placeholder="Re-Type Password" name="re_password"
+
+                   ng-model="form.re_password"
+                   required-message="'Re-Type password can not be blank. '"
+                   validator="form.re_password === form.password"
+                   invalid-message="'Passwords do not match!'"
+                   required>
+
+        </div>
+
+        <div class="form-group">
+
+            <input type="text" class="form-control" placeholder="Telephone Number" name="phone_no"
+
+                   ng-model="form.phone_no"
+                   required-message="'Phone number can not be blank.'"
+                   required
+            >
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" placeholder="Mobile Number" name="mobile_no"
+
+                   ng-model="form.mobile_no"
+                   required-message="'Mobile number can not be blank.'"
+                   required
+            >
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+
+        <div class="form-group">
+
+            <input type="text" class="form-control2" placeholder="Address" name="address" required-message="'Address can not be blank'" required
+
+                   ng-model="form.address"
+            >
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" placeholder="City" name="city"
+
+                   ng-model="form.city"
+                   required-message="'City can not be blank.'"
+                   required
+            >
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+        <div class="form-group">
+
+            <select id="state" class="form-control3"  name="state" ng-model = "form.state" required-message="'State cannot be blank.'" required ng-options="item.s_st_name for item in stateList track by item.id">
+                <option value="" style="padding-left:5px; ">Select Your State</option>
+            </select>
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" placeholder="Zip" name="zip"
+
+                   ng-model="form.zip"
+                   required-message="'zip  can not be blank.'"
+                   required
+                    >
+
+            <!-- <span class="errormsg">erroe msg</span>-->
+        </div>
+
+    <input type="submit" value="Sign Up" class="loginbtn">
+
+</form>
+
+
+</div>
+
+<script type="text/ng-template" id="signupsuccess.html">
+
+    <div class="newlogin-box">
+
+        <a href="javascript:void(0);" ng-click="cancel()" ><img src=images/newloginclose.png alt=#  class="closebtn"/></a>
+
+        <div class="newloginwrapper">
+            <div class="newaccountbtnwrapper">
+                <h2>Please check your email to activate the account!</h2>
+            </div>
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/ng-template" id="acountsuccess.html">
+
+    <div class="newlogin-box">
+
+        <a href="javascript:void(0);" ng-click="cancel123()" ><img src=images/newloginclose.png alt=#  class="closebtn"/></a>
+        <div class="newloginwrapper">
+            <div class="newaccountbtnwrapper">
+                <h2>Your account is successfully activated.</h2>
+
+                <!--<h2>Your account activation has been successfull</h2>-->
+            </div>
+        </div>
+
+
+        <!-- <div class="newloginwrapper" style="padding-left:5%; padding-right:5%;">
+
+
+             <h2 style="text-align:center; font-size: 24px; ">Your account activation has been successfull</h2>
+
+
+         </div>
+ -->
+    </div>
+
+</script>

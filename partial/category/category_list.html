@@ -1,0 +1,106 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Category Manager
+        </h1>
+        <!--<ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Tables</a></li>
+            <li class="active">Data tables</li>
+        </ol>-->
+        <div class="newblock1">
+            <a ui-sref="add-category" class="addfrinderbtn">Add Category</a>
+            <input type="text" name="search" ng-model="searchkey" class="search1" placeholder="Search Category">
+
+            <div class="clear"></div>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Category List</h3>
+                    </div><!-- /.box-header -->
+                    <table id="example1" class="table table-bordered table-striped" ng-show="itemlist.length>0">
+                        <thead>
+                        <tr>
+                            <th><a ng-click="order('cat_name')" href="javascript:void(0);">Category Name</a>
+                                <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'cat_name'"></span></th>
+                            <th><a ng-click="order('parent_name')" href="javascript:void(0);">Parent Category Name</a>
+                                <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'parent_name'"></span></th>
+                            <th><a ng-click="order('cat_url')" href="javascript:void(0);">Category Url</a>
+                                <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'cat_url'"></span></th>
+                            <th><a ng-click="order('cat_desc')" href="javascript:void(0);">Category Description</a>
+                                <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'cat_desc'"></span></th>
+
+
+
+                            <th><a ng-click="order('priority')" href="javascript:void(0);">Priority</a>
+                                <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'priority'"></span>
+                            </th>
+                            <th><a ng-click="order('status')" href="javascript:void(0);">Status</a>
+                                <span class="sortorder" ng-class="{reverse:reverse}" ng-show="predicate === 'status'"></span>
+                            </th>
+
+
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!--<tr ng-repeat=" item in  filterResult = (categorylist | filter:search) | orderBy:predicate:reverse">-->
+                        <tr ng-repeat=" item in  filterResult = (itemlist | filter:search) | orderBy:predicate:reverse | startFrom:(currentPage-1)*perPage | limitTo:perPage">
+
+                            <td ng-bind="item.cat_name"></td>
+                            <td ng-bind="item.parent_name"></td>
+                            <td ng-bind="item.cat_url"></td>
+                            <td ng-bind-html="trustAsHtml(item.cat_desc)"></td>
+                            <td ng-bind="item.priority"></td>
+
+                            <td><a tooltip-placement="bottom" uib-tooltip="Click to change status" href="javascript:void(0)" ng-bind="getstatus(item.status)" ng-click="changestatus(item)"></a></td>
+
+                            <td><a tooltip-placement="bottom" href="javascript:void(0)" uib-tooltip="Click to edit category" ui-sref="edit-category({id:item.id})">Edit</a>&nbsp;&nbsp;&nbsp;<a tooltip-placement="bottom" uib-tooltip="Click to delete category" href="javascript:void(0)" ng-click="deleteitem(item)">Delete</a></td>
+                        </tr>
+
+                          </tbody>
+
+                    </table>
+                    <div ng-show="filterResult.length > perPage" class="paginationblock">
+                        <uib-pagination total-items="filterResult.length" ng-model="currentPage" items-per-page="perPage" max-size="4"></uib-pagination>
+                    </div>
+                    <div ng-show="itemlist.length == 0" class="callout callout-danger">
+                        <h4>Sorry</h4>
+
+                        <p>No category exists in system right now !!.</p>
+                    </div>
+
+                </div><!-- /.box -->
+
+
+
+            </div>
+
+        </div>   <!-- /.row -->
+    </section><!-- /.content -->
+</div>
+
+
+<script type="text/ng-template" id="delconfirm.html">
+    <div class="confirm_delpopup" >
+        <a ng-click="cancel()" class="shutter-close2 ng-scope" href="javascript:void(0)"><img src="images/popup-Close-sml.png"> </a>
+        <div class="clearfix"></div>
+        <h2 class="ng-scope">Are you sure you want to delete this category?</h2>
+        <div class="confirm_delbtn ng-scope text-center">
+            <input type="button" ng-click="confirmdelete()" class="subbtn" value="Confirm">
+            <input type="button" ng-click="cancel()" class="subbtn" value="Cancel">
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</script>

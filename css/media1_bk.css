@@ -1,0 +1,297 @@
+
+@media(max-width:1199px) {
+    .aboutusblock2gallery {
+        width: 48%;
+        float: left;
+    }
+    .aboutusblock2info {
+        width: 48%;
+        float: right;
+    }
+    .reviewsblock1title .yelpimg {
+        display: inline-block;
+        margin-top: -72px;
+        margin-left: 65%;
+    }
+    .reviewsblock2wrapper .col-lg-3.col-md-3.col-sm-12.col-xs-12 img {
+        float: none;
+        text-align: center;
+        margin-left: auto;
+        max-width: 100%;
+        display: block;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+    .reviewsblock2wrapper .col-lg-3.col-md-3{width: 100%;}
+
+    .reviewsblock2wrapper .col-lg-3.col-md-3.col-sm-12.col-xs-12 img {
+        float: none;
+        text-align: center;
+        margin-left: auto;
+        max-width: 100%;
+        display: block;
+        margin-right: auto;
+        margin-top: 30px;
+        border: 1px solid #dcdcdc;
+    }
+    .reviewsblock2wrapper .col-lg-3.col-md-3{width: 100%;}
+
+    .reviewsblock2wrapper .col-lg-9.col-md-9.col-sm-12.col-xs-12.reviewdocs {
+        float: none;
+    }
+    .reviewdocs {
+        margin: 30px auto !important;
+        width: 92%;
+        text-align: center;
+    }
+    .reviewdocs h4 {
+        font-family: 'ralewayblack';
+        display: block;
+        font-size: 14px;
+        line-height: 14px;
+        color: #353434;
+        float: none;
+    }
+    .reviewdocs img {
+        margin-top: 20px;
+    }
+    .reviewdocs p {
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: auto;
+    }
+
+    .treatmentnservicesblock1left {
+        width: 40%;
+    }
+    .treatmentnservicesblock1right {
+        float: none;
+        display: table-cell;
+        width: 60%;
+    }
+    .textblock .col-md-4_textcon {
+        height: 390px;
+    }
+
+}
+
+@media(max-width:991px) {
+    .mainbanner {
+        margin-top: 0px;
+    }
+    .container{width: 90%; margin-left: auto !important; margin-right: auto !important;}
+    .aboutusblock1{width: 100%; margin-left: auto !important; margin-right: auto !important;}
+    .aboutusblock2{width: 100%; margin-left: auto !important; margin-right: auto !important;}
+    .aboutusblock2info {float: none; text-align: center; width: 100%;}
+    .aboutusblock2gallery {width: 100%; float: none; clear: both;  margin-bottom: 30px;}
+    .aboutusblock2text h2 {
+        font-size: 30px;
+    }
+    .aboutusblock2gallery {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .aboutusblock2info {
+        width: 100%;
+        border: 1px solid #cbcbcb;
+        float: none;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .aboutusblock2 {
+        padding-top: 0px;
+        padding-bottom: 36px;
+    }
+    .aboutusblock2gallery {
+        margin-bottom: 36px;
+    }
+    .aboutusblock2text h2 {
+        margin-top: 14px;
+        margin-bottom: 30px;
+    }
+    .aboutusblock2text .divider {
+        margin-top: 30px;
+        margin-bottom: 18px;
+    }
+    .logohandsofhealing img{
+        max-width:100%;}
+    .contactusblock2left img{max-width: 100%;}
+
+    .contactusform{max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contactusblock2left {
+        float: left;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 49%;
+    }
+    .contactusblock2right {
+        float: right;
+        margin-right: 0 !important;
+        width: 49%;
+    }
+
+
+
+    .contactusblock2left img {
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+    .contactusform .btnsubmit {
+        margin-right: 0px;
+    }
+
+    .contactusblock2right .form-inline .form-control {
+        width: 32%;
+    }
+    .contactusform .form-inline label {
+        margin-left: 0;
+    }
+    .reviewsblock1title .yelpimg {
+        display: block;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .treatmentnservicesblock1right {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .treatmentnservicesblock1left {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .textblock {
+        padding: 10px 2% !important;
+        width: 96%;
+    }
+    .block2right .textblock {
+        padding: 10px 2% !important;
+       width: 96%;;
+    }
+    .block6left img, .block7left img {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .block1right img {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .treatmentnservicesblock1left {
+        background: none;
+    }
+    .block2right .textblock img {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .textblock .col-md-4_textcon {
+        height: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width:767px) {
+    .contactusblock2right {
+        width: 100%;
+        float: none;
+        margin-right: 0px !important;
+    }
+    .contactusblock2left {
+        width: 90%;
+        float: none;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .contactusblock2left ul {
+        border-left: 2px solid #dddbdb;
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 15px;
+    }
+    .contactusblock2 {
+        padding-top: 0px;
+        padding-bottom: 46px;
+    }
+    .contactusblock2wrapper {
+        padding: 13px;
+    }
+    .logohandsofhealing {
+        margin-bottom: 30px;
+    }
+    .contactusblock2left img {
+        margin-top: 8px;
+        margin-bottom: 30px;
+    }
+    .contactusblock2wrapper {
+        padding: 13px 30px 30px 30px;
+    }
+    .contactusform .btnsubmit {
+        margin-top: 22px;
+    }
+
+}
+
+
+@media(max-width:580px) {
+
+}
+
+@media(max-width:640px) {
+
+}
+
+
+@media(max-width:480px) {
+    .aboutusblock2text h2 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .contactusblock2left ul {
+        list-style-type: none;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    .contactusblock2left ul {
+        border-left: 0px solid #dddbdb;
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .contactusblock2left ul li i.fa-map-marker, .contactusblock2left ul li i.fa-globe, .contactusblock2left ul li i.fa-phone {
+        color: #5584fc;
+        width: 30px;
+        font-size: 20px;
+        height: 18px;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contactusblock2left ul li{margin-bottom: 20px;}
+    .contactusblock2left ul li:last-of-type{
+        margin-bottom: 0px !important;
+    }
+    .contactusblock2left {
+        width: 90%;
+        float: none;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }
+}

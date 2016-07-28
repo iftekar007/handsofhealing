@@ -1,0 +1,153 @@
+<div class="container-fluid mainbanner">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="mainimg">
+                    <div class="mainimgbg">
+                        <content name='topproductlistingbanner241' id='241' > </content>
+                    </div>
+                    <div class="maininnercontent">
+                        <div class="maininnercontentleft">
+                            <div class="mainannercontentleftimage">
+                                <content name='innerbannerlogo223' id='223' > </content>
+                            </div>
+                        </div>
+                        <div class="maininnercontentright">
+                            <h2><content name='productlistingbannerh2242' id='242' > </content></h2>
+                            <h4><content name='productlistingbannerh4243' id='243' > </content></h4>
+                        </div>
+                    </div>
+                </div>
+                <!--<content name='productlistingbanner168' id='168' > </content>-->
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="container product_wrapper">
+
+    <h2  class="productheading"><content name='productlistingheading169' id='169' > </content></h2>
+
+    <div class="product_topmenu">
+        <!--<div class="pro_menudiv" ng-repeat=" itemcategory in  filterResult = (categorylist |filter:{status:1})  | limitTo:3 | orderBy:priority:reverse"><a href="javascript:void(0)" ng-bind="itemcategory.cat_name"></a> </div>-->
+
+
+        <div class="doc-list-wrapper" data-docs="docs" style="margin-top: 25px;margin-right: auto;margin-left: auto"></div>
+
+
+        <!--<div class="pro_menudiv"><a href="javascript:void(0)">Make-Up </a> </div>
+        <div class="pro_menudiv"><a href="javascript:void(0)" class="active"> Nail Care</a> </div>-->
+       <!-- <div class="pro_menudiv"><a href="javascript:void(0)"> Others</a> </div>-->
+
+
+        <div class="clearfix"></div>
+    </div>
+
+
+
+
+    <div class="product_box_wrapper">
+
+
+        <div class="product_box" ng-repeat="itemproduct in  productlist | orderBy:priority:reverse" >
+            <a ui-sref="productdetails({id:itemproduct.id,name:caturl(itemproduct.product_name)})"><div class="proimg">
+                <img src="nodeserver/uploads/{{itemproduct.product_file}}" >
+               <!-- <img src="../images/proimg1.png" >-->
+            </div></a>
+
+            <div class="proprice">${{itemproduct.price}}</div>
+
+            <a href="javascript:void(0)" ng-click="addtocart(itemproduct.id)" class="procartbtn">Add to Cart</a>
+        </div>
+
+ <!--       <div class="product_box">
+            <div class="proimg">
+                <img src="../images/proimg2.png" >
+            </div>
+
+            <div class="proprice">$00.00</div>
+
+            <a href="javascript:void(0)" class="procartbtn">Add to Cart</a>
+        </div>
+        <div class="product_box">
+            <div class="proimg">
+                <img src="../images/proimg3.png" >
+            </div>
+
+            <div class="proprice">$00.00</div>
+
+            <a href="javascript:void(0)" class="procartbtn">Add to Cart</a>
+        </div>
+        <div class="product_box">
+            <div class="proimg">
+                <img src="../images/proimg4.png" >
+            </div>
+
+            <div class="proprice">$00.00</div>
+
+            <a href="javascript:void(0)" class="procartbtn">Add to Cart</a>
+        </div>
+        <div class="product_box">
+            <div class="proimg">
+                <img src="../images/proimg1.png" >
+            </div>
+
+            <div class="proprice">$00.00</div>
+
+            <a href="javascript:void(0)" class="procartbtn">Add to Cart</a>
+        </div>
+        <div class="product_box">
+            <div class="proimg">
+                <img src="../images/proimg2.png" >
+            </div>
+
+            <div class="proprice">$00.00</div>
+
+            <a href="javascript:void(0)" class="procartbtn">Add to Cart</a>
+        </div>
+        <div class="product_box">
+            <div class="proimg">
+                <img src="../images/proimg3.png" >
+            </div>
+
+            <div class="proprice">$00.00</div>
+
+            <a href="javascript:void(0)" class="procartbtn">Add to Cart</a>
+        </div>
+        <div class="product_box">
+            <div class="proimg">
+                <img src="../images/proimg4.png" >
+            </div>
+
+            <div class="proprice">$00.00</div>
+
+            <a href="javascript:void(0)" class="procartbtn">Add to Cart</a>
+        </div>-->
+
+        <div class="clearfix"></div>
+
+    </div>
+
+
+
+
+
+</div>
+
+<!--<div class="doc-list-wrapper" data-docs="docs" style="margin-top: 25px;margin-right: auto;margin-left: auto"></div>-->
+<script type="text/ng-template" id="tmpl-doc-list-wrapper">
+    <ul class="doc-list" bx-slider>
+        <li class="doc-thumbnail" ng-repeat="doc in docs" bx-slider-item style="height: 124px;">
+
+
+
+            <div class="pro_menudiv" ><a ui-sref="productlisting({id:doc.id})" href="javascript:void(0)" ng-bind="doc.cat_name"></a> </div>
+        </li>
+    </ul>
+</script>

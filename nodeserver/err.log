@@ -1,0 +1,6 @@
+(node) warning: possible EventEmitter memory leak detected. 11 listeners added. Use emitter.setMaxListeners() to increase limit.
+Trace
+    at Socket.EventEmitter.addListener (events.js:160:15)
+    at Socket.Readable.on (_stream_readable.js:653:33)
+    at Socket.EventEmitter.once (events.js:179:8)
+    at TCP.onread (net.js:527:26)

@@ -1,0 +1,108 @@
+<aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="images/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p style="color: #fff;">{{userfullname}}</p>
+              <!-- Status -->
+                <br/>
+              <!--<a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>-->
+            </div>
+          </div>
+
+          <!-- search form (Optional) -->
+          <!--<form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>-->
+          <!-- /.search form -->
+
+          <!-- Sidebar Menu -->
+          <ul class="sidebar-menu">
+           <!-- <li class="header">HEADER</li>-->
+            <!-- Optionally, you can add icons to the links -->
+           <!-- <li class="active"><a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Link</span></a></li>-->
+ <li><a ui-sref="dashboard"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+            <li class="treeview" ng-if="userroleid==2">
+              <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Admin Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu left_treemenu">
+                <li><a  ui-sref="add-admin">Add Admin</a></li>
+                <li><a  ui-sref="admin-list">Admin List</a></li>
+              </ul>
+            </li>
+              <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>General User Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+
+                      <li><a  ui-sref="generaluser-list">Generl User List</a></li>
+                  </ul>
+              </li>
+              <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Contact Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+
+                      <li><a  ui-sref="contact-list">Contact List</a></li>
+                  </ul>
+              </li>
+              <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Role Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+                      <li><a  ui-sref="add-role">Add Role</a></li>
+                      <li><a  ui-sref="role-list">Role List</a></li>
+                  </ul>
+              </li>
+              <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Category Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+                      <li><a  ui-sref="add-category">Add Category</a></li>
+                      <li><a  ui-sref="category-list">Category List</a></li>
+                  </ul>
+              </li>
+
+              <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Product Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+                      <li><a  ui-sref="add-product">Add Product</a></li>
+                      <li><a  ui-sref="product-list">Product List</a></li>
+                  </ul>
+              </li>
+              <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Newsletter Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+                      <li><a  ui-sref="add-newsletter">Add Newsletter</a></li>
+                      <li><a  ui-sref="newsletter-list">Newsletter List</a></li>
+                  </ul>
+              </li>
+              <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Order Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+
+                      <li><a  ui-sref="order-list">Order List</a></li>
+                  </ul>
+              </li>
+               <li class="treeview" ng-if="userroleid==2">
+                  <a href="javascript:void(0)"><i class="fa fa-link"></i> <span>Content Manager</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu left_treemenu">
+                      <li><a ui-sref="addcontent">Add Content</a></li>
+                      <li><a ui-sref="contentlist">Content List</a></li>
+                  </ul>
+              </li>
+
+
+
+                  <li><a style="cursor: pointer" ng-click="logout()"><i class="fa fa-link"></i> <span>Logout</span></a></li>
+
+          </ul><!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>

@@ -1,0 +1,44 @@
+<div  class="admincontain maaffiliateblock">
+    <div class="mah2block">
+        <h3>Affiliate Manager:</h3>
+        <div class="clear"></div>
+        <div class="maDownloadstable">
+            <div class="matablewrapper table-responsive">
+                <table class="table table-bordered" ng-show="affiliatestring">
+                    <thead>
+                    <tr>
+                        <th>Page Name</th>
+                        <th>Grab Url</th>
+                     </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Home Page</td>
+                        <td><a href="javascript:void(0)" tooltip-placement="bottom" uib-tooltip="Get product affiliate url" ng-click="accountaffiliatecode()">Get Affiliate URL</a></td>
+
+                     </tr>
+                    <tr ng-repeat="item in productlist">
+                        <td>{{item.product_name}}</td>
+                        <td><a href="javascript:void(0)" tooltip-placement="bottom"  ng-click="productaffiliatecode(item.id)">Get Affiliate URL</a></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="accountffiliate.html">
+    <div class="confirm_delpopup" >
+        <a ng-click="cancel()" class="shutter-close2 ng-scope" href="javascript:void(0)"><img src="images/popup-Close.png"> </a>
+        <div class="clearfix"></div>
+        <h2 class="ng-scope"><input id="url_product_affiliate" type="text" name="productcode"  value="{{productcode}}" ></h2>
+        <div class="confirm_delbtn text-center ng-scope">
+            <input type="button" ngclipboard data-clipboard-target="#url_product_affiliate"  class="subbtn" value="COPY TO CLIPBOARD">
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</script>

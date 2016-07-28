@@ -1,0 +1,184 @@
+<div  class="admincontain profileinfoblock">
+    <div class="mah2block">
+        <h3>Order Details:</h3>
+        <div class="clear"></div>
+        <div class="maDownloadstable">
+                <div class="box-body">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                        <tr>
+                            <td  align="left" valign="middle" style=" font-size:18px; color:#40bbaf; padding:15px 0 0 30px;;">Order Date : <span>{{orderdetails.order_timee}}</span></td>
+                        </tr>
+                        <tr>
+                            <td  align="left" valign="middle" style=" font-size:18px; color:#40bbaf; padding:15px 0 0 30px;;">Order Status : <span>{{orderdetails.order_status1}}</span></td>
+                        </tr>
+                        <tr ng-show="orderdetails.affiliate_name">
+                            <td  align="left" valign="middle" style=" font-size:18px; color:#40bbaf; padding:15px 0 0 30px;;">Affiliate Name : <span>{{orderdetails.affiliate_name}}</span></td>
+                        </tr>
+                        <tr ng-show="orderdetails.aff_commission_value && orderdetails.affiliate_name">
+                            <td  align="left" valign="middle" style=" font-size:18px; color:#40bbaf; padding:15px 0 0 30px;;">Affiliate Commission : <span>{{orderdetails.aff_commission_value}}%</span></td>
+                        </tr>
+                        <tr ng-show="orderdetails.aff_commission_amount && orderdetails.affiliate_name">
+                            <td  align="left" valign="middle" style=" font-size:18px; color:#40bbaf; padding:15px 0 0 30px;;">Affiliate Commission Amount : <span>${{orderdetails.aff_commission_amount}}</span></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" align="center" valign="middle" style=" font-size:18px; color:#40bbaf; padding:15px 0;">Shipping Method: Standard Shipping (Residential)</td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="2" align="center" valign="middle">
+
+                                <table width="96%" border="0" cellspacing="0" cellpadding="0" style="margin:5px 0; border:solid 1px #c6c6c6; border-bottom:none; font-size:13px;">
+                                    <tr>
+                                        <th width="15%"  align="left" valign="middle" style="background:#40bbaf; color:#fff; font-size:14px; padding:10px 2%;">Item</th>
+                                        <th   width="15%" align="left" valign="middle"  style="background:#40bbaf; color:#fff; font-size:14px; padding:10px 2%;">Name</th>
+                                        <th  width="34%" align="left" valign="middle"  style="background:#40bbaf; color:#fff; font-size:14px; padding:10px 2%;">Quantity</th>
+                                        <th  width="36%" align="right" valign="middle"  style="background:#40bbaf; color:#fff; font-size:14px; padding:10px 2%;">Amount</th>
+                                    </tr>
+                                    <tr ng-repeat="item in orderdetails.productdet">
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">{{item.id}}</td>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >{{item.product_name}}</td>
+                                        <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >{{item.quantity}}</td>
+                                        <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"><span style="display:inline-block; text-align:right; width:76px;">${{item.product_subtotal}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
+                                        <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
+                                        <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <span style="display:inline-block; padding-right:5px; text-align:right; width:76px;">Sub total</span>          <span style="display:inline-block; text-align:right;  width:76px;">${{orderdetails.order_subtotal}}</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
+                                        <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
+                                        <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <span style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Shipping </span>          <span style="display:inline-block; text-align:right; width:76px;"> ${{orderdetails.shipping_charge}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
+                                        <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
+                                        <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <span style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Tax Rate </span>           <span style="display:inline-block; text-align:right; width:76px;">${{orderdetails.tax}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
+                                        <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
+                                        <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
+                                        <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <span style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Total </span>           <span style="display:inline-block; text-align:right; width:76px;">${{orderdetails.order_total}}</span></td>
+                                    </tr>
+                                </table>
+
+
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <!--                        <td align="center">
+                                                        <table width="600" border="0" cellspacing="0" cellpadding="0" style="font-family:Arial, Helvetica, sans-serif; font-size:14px;">
+                          -->
+                        <tr>
+                            <td colspan="2" align="center" valign="middle" style=" font-size:18px; color:#40bbaf; padding:15px 0;">Billing Shipping Information</td>
+                        </tr>
+
+                        <tr>
+                            <td style=" width:48%; padding:0px 0 0 2%;" align="left" valign="top">
+
+                                <table width="94%" border="0" cellspacing="5" cellpadding="0" style="border:solid 1px #e0e0e0; font-size:14px; color:#929292; padding:1%;">
+                                    <tr>
+                                        <td style=" width:48%; padding:0" align="left" valign="top">
+                                            <span style="background:#40bbaf; width:98%; padding:8px 1% 7px 1%;  font-size:18px; color:#fff; display:block;">Bill To</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Name : {{orderdetails.bill_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Address : {{orderdetails.bill_address}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">City : {{orderdetails.bill_city}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">State : {{orderdetails.bill_state}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Zip : {{orderdetails.bill_zip}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Country : {{orderdetails.bill_country}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Email : {{orderdetails.bill_email}}</td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                            <td style=" width:48%; padding:0px 2% 0 0;" align="right">
+
+                                <table width="94%" border="0" cellspacing="5" cellpadding="0" style="border:solid 1px #e0e0e0; font-size:14px; color:#929292; padding:1%;">
+                                    <tr>
+                                        <td style=" width:48%; padding:0" align="right" >
+                                            <span style="background:#40bbaf; width:98%; padding:8px 1% 7px 1%;  font-size:18px; color:#fff; text-align:left; display:block;">Ship To</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Name : {{orderdetails.ship_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Address : {{orderdetails.ship_address}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">City : {{orderdetails.ship_city}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">State : {{orderdetails.ship_state}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Zip : {{orderdetails.ship_zip}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">Country : {{orderdetails.ship_country}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="background:#ececec; width:90%; padding:6px;">&nbsp;</td>
+                                    </tr>
+
+                                    <!--
+
+                                                                              </table>
+
+
+
+                                                                          </td>
+                                    -->
+                                    </tr>
+
+
+
+
+
+
+                                </table>
+
+
+                            </td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                    </table>
+                 </div>
+
+        </div>
+    </div>
+</div>
+

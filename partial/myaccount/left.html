@@ -1,0 +1,16 @@
+<!--<div class="adminleft"><img src="images/backend_left.png" alt="#" style="width:100%;"></div>-->
+
+<div class="adminleft">
+    <h2>My Account</h2>
+    <ul>
+        <li><a ui-sref="profile">Profile Information</a></li>
+        <li ><a ui-sref="edit-profile">Edit Profile</a></li>
+        <li><a ui-sref="user-change-password">Change Password</a></li>
+        <li ng-show="userrole==6"><a  ui-sref="myaccount-affiliate">Affiliate Manager</a></li>
+        <li><a ui-sref="myaccount-order">My Order</a></li>
+        <li ng-show="userrole==6"><a ui-sref="myaccount-order-manager">Order Manager</a></li>
+        <li><a href="javascript:void(0)" ng-click="logout()">Log Out</a></li>
+       <!-- <li ng-if="userrole==9 || userrole==4"><a ui-sref="myaccount-order-manager">Order Manager</a></li>-->
+    </ul>
+
+</div>

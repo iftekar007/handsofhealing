@@ -1,0 +1,202 @@
+.contentbind{
+    display: inline !important;
+}
+
+/*---Fonts--*/
+
+@font-face {
+    font-family:'OpenSans-bold';
+    src: url('../fonts/OpenSans-Bold_gdi.eot');
+    src: url('../fonts/OpenSans-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Bold_gdi.woff') format('woff'),
+    url('../fonts/OpenSans-Bold_gdi.ttf') format('truetype'),
+    url('../fonts/OpenSans-Bold_gdi.svg#OpenSans-Bold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+
+/*---AboutUs--*/
+
+.aboutusblock1{padding-top: 36px; padding-bottom: 30px;}
+.aboutusblock1title img {margin: 0 0 25px 0; padding: 0 0 0px 0;}
+.aboutusblock1title h4 { font-family: 'yeseva_oneregular'; font-size: 21px; line-height: 24px; color: #cc9a02; margin-top: 0px; margin-bottom: 0px;}
+.aboutusblock2{padding-top: 30px; padding-bottom: 46px;}
+.aboutusblock2gallery{width:603px; float: left;}
+.aboutusblock2gallery img{max-width: 100%;}
+.aboutusblock2info{width:550px; border: 1px solid #cbcbcb; float: right;}
+.aboutusblock2text{padding: 15px;}
+.aboutusblock2text h2{font-family: 'playfair_displaybold_italic';font-size: 36px; line-height: 24px; color: #9b4a00; margin-top: 0px; margin-bottom: 28px;}
+.aboutusblock2text p{font-family: 'raleway-regular';font-size: 18px; line-height: 24px; color: #2a2929;}
+.aboutusblock2text .divider{background-color: #9b4a00; width: 190px; height: 2px; margin-right: auto; margin-left: auto;margin-top: 61px;}
+
+
+/*---ContactUs--*/
+.contactusblock1{padding-top: 36px; padding-bottom: 30px;}
+.contactusblock1 img {margin: 0 0 25px 0; padding: 0 0 0px 0;}
+.contactusblock1 h4 { font-family: 'yeseva_oneregular'; font-size: 21px; line-height: 24px; color: #cc9a02; margin-top: 0px; margin-bottom: 0px;}
+.contactusblock2{padding-top: 30px; padding-bottom: 36px;}
+.contactusblock2wrapper{padding: 38px; border: 1px solid #c9c9c9; max-width: 890px; margin-left: auto !important; margin-right: auto !important; float: none;}
+.upper_left {
+    width:18px; height: 17px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background-image: url("../images/upper-left.png");
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+
+.upper_right {
+    width: 18px; height: 17px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-image: url("../images/upper-right.png");
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.lower_left {
+    width: 18px;
+    height: 17px;
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    background-image: url("../images/lower-left.png");
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.lower_right {
+    width: 18px;
+    height: 17px;
+    bottom: -1px;
+    right: -1px;
+    position: absolute;
+    background-image: url("../images/lower-right.png");
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.contactusblock2left {width: 372px; float: left;  margin-left: 63px !important;}
+.contactusblock2left img{margin-top: 22px;}
+.contactusblock2right{width: 368px; float: right; margin-right: 70px !important;}
+.contactusblock2left ul{border-left: 2px solid #dddbdb; padding-left: 17px; list-style-type: none;}
+.contactusblock2left ul li{color: #262626; font-size: 13px; padding-right:15px; width: 100%; line-height: 32px;}
+.contactusblock2left ul li i.fa-map-marker, .contactusblock2left ul li i.fa-globe,
+.contactusblock2left ul li i.fa-phone { color: #5584fc; width: 30px;  font-size: 20px;  height: 18px;}
+.contactusblock2left ul li{padding-left: 0px;}
+.logohandsofhealing{margin-bottom: 75px;}
+.contactusform .form-control {font-family: 'arial'; font-size: 14px; line-height: 34px; color: #3c3c3c; background-color: #ededed;  border-color: #b4b4b4;}
+.contactusform .form-inline label{margin-left: 12px;}
+.contactusform .form-inline img{margin-left: 8px;}
+.contactusform .form-inline .form-control{float: right;}
+.contactusform .btnsubmit {background-color: #75b6ab; padding: 0px 12px; width: 167px; height: 52px; margin-top: 30px; text-transform: uppercase; color: #fff; font-family: 'opensans-bold'; font-size: 24px;  line-height: 50px; float: right; margin-right: -30px;}
+
+
+
+/*---Reviews--*/
+.reviewsblock1{padding-top: 36px; padding-bottom: 30px;}
+.reviewsblock1title img {margin: 0 0 25px 0; padding: 0 0 0px 0;}
+.reviewsblock1title h4 {font-family: 'yeseva_oneregular'; display: block; font-size: 21px; line-height: 24px; color: #cc9a02; margin-top: 0px; margin-bottom: 0px;}
+.reviewsblock1title .yelpimg {display: inline-block; margin-top: -72px; margin-left: 54%;}
+.reviewsblock1title .yelpimg img{margin: 0px; padding: 0 0 0px 0;}
+
+.reviewsblock2{padding-top: 0px; padding-bottom: 36px;}
+.reviewsblock2wrapper{padding: 3px 0px; border: 1px solid #c9c9c9; max-width: 100%; margin-left: auto !important; margin-right: auto !important; float: none;margin-top: 75px;}
+.reviewsblock2wrapper:first-of-type{margin-top: 46px;}
+.upper_center {width: 84px; height: 78px; position: absolute; top: -47px; left: 50%; background-image: url("../images/upper-center.png"); background-repeat: no-repeat;
+    background-color: #fff;  margin-left: -42px;}
+
+.reviewsblock2sample1 .col-lg-3.col-md-3.col-sm-12.col-xs-12{float: left;}
+.reviewsblock2sample1 .col-lg-3.col-md-3.col-sm-12.col-xs-12 img{float: left;padding-left: 3px;}
+.reviewsblock2sample1 .col-lg-9.col-md-9.col-sm-12.col-xs-12.reviewdocs{float: right;}
+
+.reviewsblock2sample2 .col-lg-3.col-md-3.col-sm-12.col-xs-12{float: right;}
+.reviewsblock2sample2 .col-lg-3.col-md-3.col-sm-12.col-xs-12 img{float: right;padding-right: 3px;}
+.reviewsblock2sample2 .col-lg-9.col-md-9.col-sm-12.col-xs-12.reviewdocs{float: left;}
+
+.reviewdocs {margin: 30px 16px !important; width: 72%;}
+.reviewdocs img{width: 51px; height: 51px; border-radius: 100%; -webkit-border-radius: 100%; -mox-border-radius: 100%; -o-border-radius: 100%;}
+.reviewdocs p {font-family: 'Raleway-Regular'; display: block; font-size: 16px; line-height: 24px; color: #353434; margin-left: 30px;}
+.reviewdocs h4{font-family: 'ralewayblack'; display: block; font-size: 14px; line-height: 14px; color: #353434; float: right;}
+.reviewdocs h4 span{margin-left: 15px; display: inline-block;}
+
+.reviewsblock2 .viewmore{font-family: 'MyriadPro-Regular'; display: block; font-size: 14px; line-height: 24px; color: #353434; text-transform: uppercase;text-align: center; margin-top:32px;}
+.reviewsblock2 a{text-decoration: none;}
+.reviewsblock2 a:hover.viewmore{color: #c0380e; text-decoration: none;}
+.reviewsblock2 .divider{margin-top: 9px; background-color:#ea0571; height: 1px; max-width: 96px; margin-left: auto; margin-right: auto; }
+
+
+/*---treatmentnservices--*/
+.treatmentnservicesblock1{padding-top: 36px; padding-bottom: 30px;}
+.treatmentnservicesblock1left{float: left;}
+.treatmentnservicesblock1left{background: url(../images/treatmentleftimage2.jpg) no-repeat; background-position: bottom;}
+.treatmentnservicesblock1wrapper {display: table;}
+.treatmentnservicesblock1left {float: none; display: table-cell;}
+.treatmentnservicesblock1right {float: none; display: table-cell;}
+
+.treatmentblock1wrapper {
+    padding: 15px;
+    border: 1px solid #c9c9c9;
+    max-width: 312px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none;
+}
+.block1left h1 {
+    margin: 10px 0 10px 0;
+    text-align: center;
+    font-family: 'playfair_displayitalic';
+    font-size: 36px;
+    color: #da4040;
+}
+
+.block1left h2 {
+    background: url(../images/devider.png) no-repeat center bottom;
+    margin: 0 0 20px 0;
+    padding: 0 0 32px 0;
+    text-align: center;
+    font-family: 'playfair_displayitalic';
+    font-size: 24px;
+    color: #4b4a4a;
+}
+
+.block1left ul {list-style-type: none; display: block; width: 94%; margin-left: auto; margin-right: auto;}
+.block1left ul li{display: block; line-height: 40px; border-bottom: 1px solid #e5ca7b; text-align: center;}
+.block1left ul li a{font-family: 'Raleway-Regular'; font-size: 18px; line-height: 30px; color: #353434;}
+.block1left ul li a:hover, .treatmentnservicesblock1wrapper ul li a:focus{color:#c0380e;}
+.block1left ul li .active{color:#c0380e;}
+.block1left ul li:last-of-type{border-bottom: 0px solid #e5ca7b;}
+
+.block2left,.block3left, .block4left, .block5left, .block6left, .block7left{margin-top: 19px;}
+.block6left img, .block7left img{max-width: 100%;}
+.block2left h2 {text-align: center; font-family: 'Raleway-ExtraBold'; font-size: 24px; line-height: 24px; color: #fff; background-color: #08bcd3; margin-top: 0px; margin-bottom: 0px; max-width: 87%; margin-left: auto; margin-right: auto; padding-top: 19px; padding-bottom: 19px; border: none;}
+.block3left h2 {text-align: center; font-family: 'Raleway-ExtraBold'; font-size: 24px; line-height: 24px; color: #fff; background-color: #a4ae3e; margin-top: 0px; margin-bottom: 0px; max-width: 87%; margin-left: auto; margin-right: auto; padding-top: 19px; padding-bottom: 19px; border: none;}
+.block4left h2 { text-align: center; font-family: 'Raleway-ExtraBold'; font-size: 24px; line-height: 24px; color: #fff; background-color: #9b8375; margin-top: 0px; margin-bottom: 0px;  max-width: 87%; margin-left: auto; margin-right: auto; padding-top: 19px; padding-bottom: 19px; border: none;}
+.block5left h2 {text-align: center;font-family: 'Raleway-ExtraBold'; font-size: 24px; line-height: 24px;  color: #fff; background-color: #e5c9c3; margin-top: 0px; margin-bottom: 0px; max-width: 87%; margin-left: auto; margin-right: auto; padding-top: 19px; padding-bottom: 19px; border: none;}
+
+
+.block1right img{max-width: 100%;}
+.textblock {padding: 10px 2% !important; width: 37%;}
+.textblock h2 {background: url(../images/devider.png) no-repeat center bottom; margin: 10px 0 20px 0; padding: 0 0 32px 0; text-align: center; font-family: 'playfair_displayitalic'; font-size: 26px; color: #da4040;}
+.textblock .col-md-4_textcon {height: 330px;}
+.textblock .col-md-4_textcon h4 strong {display: block; width: 80%; float: left; font-weight: normal;}
+.textblock .col-md-4_textcon h4 span {display: block; width: 19.5%; float: right; text-align: right;}
+.textblock .viewmorelink {display: block; float: right; width: 160px; text-align: center; background-color: #be4622; color:#fff; font-family: 'playfair_displayitalic';  font-size: 24px;}
+.textblock .col-md-4_textcon h4 {font-family: 'yeseva_oneregular'; background: url(../images/devider4.png) repeat-x left bottom; font-size: 17px; color: #c89f2d; margin: 0 0 0 0; padding: 10px 0;}
+.imgblock{padding-right: 27px;}
+
+.treatmentnservicesblock1right .divider{margin-top: 34px; margin-bottom: 31px; background-color:#e0e1e2; height: 4px; width: 100%;}
+
+.block2right .textblock {padding: 10px 2% !important; width: 48%;}
+.block2right .textblock img{max-width: 100%;}
+.block2right .textblock:first-of-type {padding-left: 0px !important;}
+.block2right .textblock:last-of-type {padding-right: 0px !important;}
+
+
+
