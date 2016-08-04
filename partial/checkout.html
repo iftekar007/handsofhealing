@@ -4,7 +4,9 @@
             <div class="item active">
                <!-- <img src="../images/topshoppingcartbanner.jpg">-->
                 <div class="mainimgbg">
-                    <content name='topshoppingcartbanner262' id='262' > </content>
+                    <a style="display: block;" ng-mouseover="editlogo($event)">
+                        <content name='topshoppingcartbanner262' id='262' > </content>
+                    </a>
                 </div>
                 <div class="maininnercontent">
                     <div class="maininnercontentleft">
@@ -151,10 +153,10 @@
                         <div class="form-group checkbox">
                             <div class="form-group radiobox2">
                                 <!--<span><input type="radio" value=""> <img src="images/chakeout_icon2.png" alt="#" ></span>-->
-                                <span> <img src="images/chakeout_icon3.png" alt="#" ></span>
-                                <span> <img src="images/chakeout_icon4.png" alt="#" ></span>
-                                <span> <img src="images/chakeout_icon5.png" alt="#" ></span>
-                                <span> <img src="images/chakeout_icon6.png" alt="#" ></span>
+                                <span><input ng-model="cartform.card_type" name="card_type"  type="radio" value="1">  <img src="images/chakeout_icon3.png" alt="#" ></span>
+                                <span><input ng-model="cartform.card_type"  name="card_type"  type="radio" value="2">  <img src="images/chakeout_icon4.png" alt="#" ></span>
+                                <span><input ng-model="cartform.card_type"  name="card_type"  type="radio" value="3">  <img src="images/chakeout_icon5.png" alt="#" ></span>
+                                <span> <input ng-model="cartform.card_type"  name="card_type"  type="radio" value="4"> <img src="images/chakeout_icon6.png" alt="#" ></span>
                             </div>
                         </div>
 
@@ -194,9 +196,9 @@
                             <div class="clearfix"></div>
                         </div>
                     </div>
-                    <div class="chakeout_blog2 reviewpurchase" style="border: none;">
+                    <div class="chakeout_blog2 reviewpurchase table-responsive" style="border: none;">
                         <h2><img src="../images/icon_reviewinfo.png">Review Purchase</h2>
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
                             <tr>
                                 <th align="left" valign="middle">ITEM</th>
                                 <th align="center" valign="middle" style="text-align: center">Quantity</th>
@@ -204,7 +206,7 @@
                                 <!--<th align="right" valign="middle" style="text-align: right">Subtotal</th>-->
                             </tr>
                             <tr ng-repeat="cartitem in cartarray">
-                                <td align="left" valign="middle">{{cartitem.product_name}}</td>
+                                <td align="left" valign="middle">{{cartitem.cat_name+' - '+cartitem.product_name}}</td>
                                 <td align="center" valign="middle">{{cartitem.qty}}</td>
                                 <td align="right" valign="middle"><span>${{subtotal(cartitem.qty,cartitem.price)}}</span></td>
                                 <!--<td align="right" valign="middle"><span>${{item.subtotal}}</span></td>-->
@@ -253,4 +255,15 @@
 
 
 
+<script type="text/ng-template" id="checkoutlogin.html">
 
+    <div class="newlogin-box">
+
+        <a href="javascript:void(0);" ng-click="cancel123()" ><img src=images/newloginclose.png alt=#  class="closebtn closebtncont"/></a>
+        <div class="newloginwrapper">
+            <div class="newaccountbtnwrapper">
+                <h2>In order to continue please login.</h2>
+                <!--<h2>Your account activation has been successfull</h2>-->
+            </div>
+        </div>
+</div></script>

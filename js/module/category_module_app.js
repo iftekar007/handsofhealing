@@ -30,8 +30,10 @@ category_module_app.controller('categorylist', function($scope,$state,$http,$coo
     }) .success(function(data) {
         $rootScope.stateIsLoading = false;
        // console.log(data);
+       // var obj={'id':0,'cat_name':'Select category'};
         $scope.itemlist=data;
-        console.log($scope.itemlist);
+      //  $scope.itemlist.push(obj);
+       // console.log($scope.itemlist);
 
 
     });
@@ -131,6 +133,7 @@ category_module_app.controller('ModalInstanceCtrlcategory', function ($scope,$st
 });
 
 category_module_app.controller('addcategory', function($scope,$state,$http,$cookieStore,$rootScope,$window,contentservice,Upload) {
+    $('.imgclass').css('display','none');
     $http({
         method  :   'GET',
         async   :   false,
@@ -141,7 +144,9 @@ category_module_app.controller('addcategory', function($scope,$state,$http,$cook
 
     }).success(function(data){
         $scope.categorylist=data;
-
+       // var obj={'id':0,'cat_name':'Select category'};
+        $scope.itemlist=data;
+       // $scope.itemlist.push(obj);
         //var item={id:0,cat_name:'Parent category'}
         //$scope.categorylist.splice(0, 0, item);
 
@@ -177,7 +182,7 @@ category_module_app.controller('addcategory', function($scope,$state,$http,$cook
 
                 $scope.form.file=response.data.filename;
 
-
+            $('.imgclass').css('display','none');
 
 
             } else {
@@ -189,6 +194,9 @@ category_module_app.controller('addcategory', function($scope,$state,$http,$cook
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.imgclass').css('display','block');
+
+
         });
     };
     // $state.go('login');
@@ -221,7 +229,7 @@ category_module_app.controller('addcategory', function($scope,$state,$http,$cook
 
 
 category_module_app.controller('editcategory', function($scope,$state,$http,$cookieStore,$rootScope,Upload,$stateParams,$window,contentservice){
-
+    $('.imgclass').css('display','none');
     $http({
         method  :   'GET',
         async   :   false,
@@ -280,7 +288,7 @@ category_module_app.controller('editcategory', function($scope,$state,$http,$coo
                 //console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ');
 
                 $scope.form.file=response.data.filename;
-
+                $('.imgclass').css('display','none');
 
 
 
@@ -293,6 +301,7 @@ category_module_app.controller('editcategory', function($scope,$state,$http,$coo
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.imgclass').css('display','block');
         });
     };
     $scope.editformsubmit = function () {

@@ -4,7 +4,9 @@
             <div class="item active">
                 <div class="mainimg">
                     <div class="mainimgbg">
-                        <content name='toptreatmentnservicesinnerpagebanner251' id='251' > </content>
+                        <a style="display: block;" ng-mouseover="editlogo($event)">
+                            <content name='toptreatmentnservicesinnerpagebanner251' id='251' > </content>
+                        </a>
                     </div>
                     <div class="maininnercontent">
                         <div class="maininnercontentleft">
@@ -82,7 +84,7 @@
                                         <div class="upper_right"></div>
                                         <div class="lower_left"></div>
                                         <div class="lower_right"></div>
-                                        <a ui-sref="productlisting({id:0})"><h2>Hands of Healing</h2></a>
+                                        <a ui-sref="productlisting({id:0,name:'all'})"><h2>Hands of Healing</h2></a>
                                        <!-- <h2>Hands of Healing</h2>-->
                                     </div>
                                 </div>
@@ -116,8 +118,8 @@
                                                 <img src="nodeserver/uploads/{{categorydetails[0].cat_image}}" alt="spa messgae therapy">
                                             </div>
 
-                                            <div class="col-md-4_textcon">
-                                                <div class="single_col-md-4_textcon" ng-repeat="itemproduct in  servicecategorywiseproductlist |  orderBy:predicate:reverse">
+                                            <div class="col-md-4_textcon" >
+                                                <div   class="single_col-md-4_textcon" ng-repeat="itemproduct in  servicecategorywiseproductlist |  orderBy:predicate:reverse">
                                                     <h4><strong ng-bind="itemproduct.product_name"></strong><span>${{itemproduct.price}}</span>
                                                         <div class="clearfix"></div>
                                                     </h4>

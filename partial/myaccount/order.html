@@ -30,11 +30,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat=" item in  filterResult = (orderlist | filter:search|filter:search1|filter:searchdate) | startFrom:(currentPage-1)*perPage | limitTo:perPage | orderBy:predicate:reverse">
+                    <tr ng-repeat=" item in  filterResult = (orderlist | orderBy:predicate:reverse | filter:search|filter:search1|filter:searchdate) | startFrom:(currentPage-1)*perPage | limitTo:perPage">
 
                         <td  ng-bind="item.transaction_id"></td>
 
-                        <td ng-bind="item.order_total|number:2"></td>
+                        <td>${{item.order_total|number:2}}</td>
                         <td ng-bind="item.order_time | date:'MM/dd/yyyy'"></td>
                         <td ng-bind="getstatus(item.order_status)"></td>
                         <td><a href="javascript:void(0)" ui-sref="myaccount-order-details({id:item.id})" >Order Details</a></td>

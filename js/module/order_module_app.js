@@ -86,7 +86,7 @@ order_module_app.controller('orderlist', function($scope,$state,$http,$cookieSto
         },
         {
             'id':4,
-            'text':'Canceled'
+            'text':'Cancelled '
         }
 
     ]
@@ -100,7 +100,8 @@ order_module_app.controller('orderlist', function($scope,$state,$http,$cookieSto
     $scope.perPage=10;
 
     $scope.totalItems = 0;
-
+    $scope.statename='';
+    $scope.shipstatename='';
     $scope.filterResult = [];    $http({
         method  : 'POST',
         async:   false,
@@ -111,6 +112,9 @@ order_module_app.controller('orderlist', function($scope,$state,$http,$cookieSto
         $rootScope.stateIsLoading = false;
         $scope.orderlist=data;
         // $scope.userlistp = $scope.userlist.slice($scope.begin, parseInt($scope.begin+$scope.perPage));
+
+
+
 
 
 
@@ -260,7 +264,27 @@ order_module_app.controller('orderdetails', function($scope,$state,$http,$cookie
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
     }) .success(function(data) {
         $scope.orderdetails=data;
-        console.log($scope.orderdetails.productdet);
+        $http({
+            method:'POST',
+            async:false,
+            url:$scope.adminUrl+'statelist',
+            data    : $.param({'country_id':254}),
+            headers :   { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }).success(function(data2){
+            console.log(data2);
+            angular.forEach(data2,function(value){
+                if(value.id == data.bill_state){
+                    $scope.statename = value.s_st_name;
+                }
+                if(value.id == data.ship_state){
+                    $scope.shipstatename = value.s_st_name;
+                }
+            });
+        });
+
+
+
+
 
     });
     $scope.getstatus=function(status) {
@@ -275,7 +299,7 @@ order_module_app.controller('orderdetails', function($scope,$state,$http,$cookie
             stat = 'Shipped';
         }
         if (status == 4) {
-            stat = 'Canceled';
+            stat = 'Cancelled ';
         }
         return stat;
     }

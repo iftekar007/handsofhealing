@@ -83,6 +83,13 @@ app.use(function(req, res, next) { //allow cross origin requests
 });
 
 
+var EventEmitter = require('events').EventEmitter;
+
+const emitter = new EventEmitter()
+//emitter.setMaxListeners(100)
+// or 0 to turn off the limit
+emitter.setMaxListeners(0)
+
 
 /** API path that will upload the files */
 app.post('/uploads', function(req, res) {
@@ -147,6 +154,7 @@ app.get('/listcontent', function (req, resp) {
             console.log('success full query');
             //resp.send('Hello'+rows[0].fname);
             resp.send(JSON.stringify(rows));
+	    //connection.end();
         }
 
     });
@@ -569,7 +577,7 @@ app.post('/deletecontact', function (req, resp) {
      var condition = {userid:req.body.userid,pid:req.body.pid};
      */
 
-    connection.query("DELETE FROM contact WHERE userid="+req.body.id,function(error,rows,fields){
+    connection.query("DELETE FROM contact WHERE id="+req.body.id,function(error,rows,fields){
 
         if(error) {
             console.log('error in db call ');
@@ -985,7 +993,7 @@ app.post('/changepasswords',function(req,resp){
                             <center>\
                             <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
                             <tr>\
-                            <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 24px;"\
+                            <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 24px;">\
                             You have changed your\
                         </td>\
                         </tr>\
@@ -1232,7 +1240,7 @@ app.post('/addrole', function (req, resp) {
 
     value1 = {role: req.body.role, addtime: addtime, role_status: role_status};
     console.log("Insert command");
-    connection.query('INSERT INTO user_role SET ?', value1, function (err,result) {
+    connection.query('INSERT INTO role SET ?', value1, function (err,result) {
         if (err) {
             console.log("ERROR IN QUERY");
         } else {
@@ -1282,7 +1290,7 @@ app.post('/deleterole', function (req, resp) {
 
 app.post('/roledetails', function (req, resp) {
 
-    connection.query("SELECT *  FROM user_role where id = ?",[req.body.id],function(error,rows,fields){
+    connection.query("SELECT ur.*,r.role  FROM user_role ur join role r on r.id=ur.role_id where ur.id = ?",[req.body.id],function(error,rows,fields){
 
         if(error) {
             console.log('error in db call ');
@@ -1302,7 +1310,7 @@ app.post('/roleupdates', function (req, resp) {
     var  value1 = {role: req.body.role};
     var condition = {id:req.body.id};
 
-    connection.query('UPDATE user_role SET ? WHERE ?', [value1, condition] ,function(error,rows,fields){
+    connection.query('UPDATE role SET ? WHERE ?', [value1, condition] ,function(error,rows,fields){
 
         if(error) {
             console.log('error in db call ');
@@ -1375,7 +1383,7 @@ app.get('/productcategorylist', function (req, resp) {
 
     //SELECT c.*, p.cat_name as parent_catename FROM category c LEFT JOIN category p ON c.parent_cat = p.id
 
-    connection.query("SELECT * from category where id!=12 and parent_cat!=12  ", function(error,rows,fields){
+    connection.query("SELECT * from category where id!=12 and parent_cat!=12 and status=1 ", function(error,rows,fields){
 
         if(!!error) console.log('error in db call ');
         else{
@@ -1521,16 +1529,40 @@ app.get('/productlist', function (req, resp) {
     });
 })
 app.post('/allproductlist', function (req, resp) {
-    var str;
+ /*   var str;
     if(req.body.id==0){
         str='';
     }
     else{
         str=" and p.category_id="+req.body.id;
     }
-//console.log("SELECT p.*,c.cat_name,c.cat_image,c.id as catid FROM category c  join product p on p.category_id=c.id where c.parent_cat!=12  "+str);
+*///console.log("SELECT p.*,c.cat_name,c.cat_image,c.id as catid FROM category c  join product p on p.category_id=c.id where c.parent_cat!=12  "+str);
     // connection.query("SELECT `c`.*,IFNULL(`p`.`cat_name`,'') AS `parent_name` FROM `category` AS `c` LEFT JOIN `category` AS `p` ON `p`.id = `c`.`parent_cat` ",function(error,rows,fields){
-    connection.query("SELECT p.*,c.cat_name,c.cat_image,c.id as catid FROM category c  join product p on p.category_id=c.id where c.parent_cat!=12  "+str, function (error, rows, fields) {
+    connection.query("SELECT p.*,c.cat_name,c.cat_image,c.id as catid FROM category c  left join product p on p.category_id=c.id where c.parent_cat!=12 and p.category_id!=12  ", function (error, rows, fields) {
+        if (!!error) console.log('error in db call ');
+        else {
+
+            console.log('success full query');
+            //resp.send('Hello'+rows[0].fname);
+            // console.log(JSON.stringify(rows.category_id))
+            resp.send(JSON.stringify(rows));
+            //connection.end();
+        }
+
+    });
+})
+app.post('/allproductlistbycategory', function (req, resp) {
+    var str;
+     if(req.body.id==0){
+     str='';
+     }
+     else{
+     str=" and p.category_id="+req.body.id;
+     }
+    /*
+     *///console.log("SELECT p.*,c.cat_name,c.cat_image,c.id as catid FROM category c  join product p on p.category_id=c.id where c.parent_cat!=12  "+str);
+    // connection.query("SELECT `c`.*,IFNULL(`p`.`cat_name`,'') AS `parent_name` FROM `category` AS `c` LEFT JOIN `category` AS `p` ON `p`.id = `c`.`parent_cat` ",function(error,rows,fields){
+    connection.query("SELECT p.*,c.cat_name,c.cat_image,c.id as catid FROM category c  left join product p on p.category_id=c.id where c.parent_cat!=12 and p.category_id!=12 "+str, function (error, rows, fields) {
         if (!!error) console.log('error in db call ');
         else {
 
@@ -1597,7 +1629,7 @@ app.post('/productdetails', function (req, resp) {
     });
 });
 app.post('/productupdates', function (req, resp) {
-    value1 = {product_name: req.body.product_name, product_desc: req.body.product_desc, category_id: req.body.category_id,product_file:req.body.file,priority:req.body.priority,price:req.body.price};
+    value1 = {product_name: req.body.product_name, product_desc: req.body.product_desc, category_id: req.body.category_id,product_file:req.body.file,priority:req.body.priority,price:req.body.price,addfile:req.body.addfile};
     var condition = {id:req.body.id};
 
     connection.query('UPDATE product SET ? WHERE ?', [value1, condition] ,function(error,rows,fields){
@@ -1793,7 +1825,7 @@ app.post('/orderlist', function (req, resp) {
         condition=" where o.id ="+req.body.userid;
     }
     // connection.query("SELECT `c`.*,IFNULL(`p`.`cat_name`,'') AS `parent_name` FROM `category` AS `c` LEFT JOIN `category` AS `p` ON `p`.id = `c`.`parent_cat` ",function(error,rows,fields){
-    connection.query("SELECT o.*,u.fname,u.lname FROM order_details o join user u on o.user_id=u.id "+condition, function (error, rows, fields) {
+    connection.query("SELECT o.*,IFNULL(u.fname,o.`bill_name`) as newfname,IFNULL(u.lname,'') as newlname FROM order_details o left join user u on o.user_id=u.id "+condition, function (error, rows, fields) {
         if (!!error) console.log('error in db call ');
         else {
 
@@ -1917,7 +1949,7 @@ app.post('/addtocart', function (req, resp) {
         function(err,rows){
             if (err) throw err;
 
-            connection.query("SELECT p.*,c.pid,c.qty FROM cart c  join product p on p.id=c.pid where c.userid = "+userid+" GROUP BY c.pid ", function (error, rows, fields) {
+            connection.query("SELECT p.*,ca.cat_name,ca.parent_cat,c.pid,c.qty FROM cart c  join product p on p.id=c.pid left join category ca on ca.id=p.category_id where c.userid = "+userid+" GROUP BY c.pid  ", function (error, rows, fields) {
                 if (!!error) console.log('error in db call ');
                 else {
 
@@ -2147,7 +2179,7 @@ app.post('/addorder', function (req, resp) {
                 if (rows.length  > 0) {
                     var orderDet = rows[0];
 
-                    connection.query("SELECT * FROM order_product_details WHERE order_id = ?",[order_id],function(error2,rows2,fields2){
+                    connection.query("SELECT opd.*,p.category_id,c.cat_name FROM order_product_details AS opd INNER JOIN product AS p ON p.id = opd.product_id INNER JOIN category AS c ON c.id = p.category_id WHERE order_id = ?",[order_id],function(error2,rows2,fields2){
                         if(rows2.length > 0){
                             var orderProduct = rows2;
 
@@ -2161,15 +2193,15 @@ app.post('/addorder', function (req, resp) {
 
                         var  product='';
                         var subtotal=0.00;
-                        var i=0;
+                        var i=1;
                         for(x in orderProduct){
                             subtotal = parseFloat(subtotal)+parseFloat(parseFloat(orderProduct[x].product_price)*parseFloat(orderProduct[x].quantity));
                             product +='<tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">'+i+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">'+orderProduct[x].product_name+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">'+orderProduct[x].quantity+'</td>\
-                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%">'+orderProduct[x].product_price.toFixed(2)+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">'+i+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">'+orderProduct[x].cat_name+' - '+orderProduct[x].product_name+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">'+orderProduct[x].quantity+'</td>\
+                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%">$'+orderProduct[x].product_price.toFixed(2)+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
                     </tr>';
                             i++;
                         }
@@ -2223,15 +2255,15 @@ app.post('/addorder', function (req, resp) {
                     <td colspan="2">\
                         <table style="margin:5px auto; width: 100% !important;padding: 0px 10px; background:#f3f3f3;" cellspacing="0" cellpadding="0">\
                         <tr>\
-                        <td style="width:48%;padding:25px 0 0 2%" align="left" valign="top">\
+                        <td style="width:48%;padding:25px 0 0 2%;" align="left" valign="top">\
                         <span style="background:#e59205;width:89%;padding:8px 0 7px 5%; text-transform: uppercase;font-weight: bold; font-size:18px;color:#fff;display:block">Billed To</span>\
                     </td>\
-                    <td style="width:48%;padding:25px 2% 0 0" align="right">\
+                    <td style="width:48%;padding:25px 2% 0 0;" align="right" valign="top">\
                         <span style="background:#e59205; text-transform: uppercase;font-weight: bold;width:89%;padding:8px 0 7px 5%;font-size:18px;color:#fff;text-align:left;display:block">Shipped To</span>\
                     </td>\
                     </tr>\
                     <tr>\
-                    <td style="width:48%;padding:0px 0 0 2%" align="left" valign="top">\
+                    <td style="width:48%;padding:0px 0 0 2%;" align="left" valign="top">\
                         <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="5" width="94%">\
                         <tbody><tr>\
                         <td style="background:#fff;width:90%;padding:6px">Name : '+retstatus.bill_name+'</td>\
@@ -2249,14 +2281,11 @@ app.post('/addorder', function (req, resp) {
                     <td style="background:#fff;width:90%;padding:6px">Zip : '+retstatus.bill_zip+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Country : United States</td>\
-                    </tr>\
-                    <tr>\
                     <td style="background:#fff;width:90%;padding:6px">Email : <a href="mailto:'+retstatus.bill_email+'" target="_blank">'+retstatus.bill_email+'</a></td>\
                     </tr>\
                     </tbody></table>\
                     </td>\
-                    <td style="width:48%;padding:0px 2% 0 0" align="right">\
+                    <td style="width:48%;padding:0px 2% 0 0;" align="right" valign="top">\
                         <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="5" width="94%">\
                         <tbody><tr>\
                         <td style="background:#fff;width:90%;padding:6px">Name : '+retstatus.ship_name+'</td>\
@@ -2283,39 +2312,39 @@ app.post('/addorder', function (req, resp) {
                     <td colspan="2" align="center" valign="middle">\
                         <table style="margin:25px 0;border:solid 1px #c6c6c6;border-bottom:none;font-size:13px; color:#4c4c4c; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="0" width="96%">\
                         <tbody><tr>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="10%">Item</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="20%">Name</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="5%">Qty</th>\
-                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="30%">Price</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="35%">Amount</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="15%">Item</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="40%">Name</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="10%">Qty</th>\
+                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="15%">Price</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="20%">Amount</th>\
                         </tr>'+product+'\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
+                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
                     </tr>\
                     </tbody>\
                         </table>\
@@ -2432,7 +2461,7 @@ app.post('/orderdetails', function (req, resp) {
                 if (rows.length  > 0) {
                     var orderDet = rows[0];
 
-                    connection.query("SELECT * FROM order_product_details WHERE order_id = ?",[req.body.order_id],function(error2,rows2,fields2){
+                    connection.query("SELECT opd.*,p.category_id,c.cat_name FROM order_product_details AS opd INNER JOIN product AS p ON p.id = opd.product_id INNER JOIN category AS c ON c.id = p.category_id WHERE order_id = ?",[req.body.order_id],function(error2,rows2,fields2){
                         if(rows2.length > 0){
                             var orderProduct = rows2;
 
@@ -2477,7 +2506,7 @@ app.post('/duplicatemail', function (req, resp) {
             if (rows.length  > 0) {
                 var orderDet = rows[0];
 
-                connection.query("SELECT * FROM order_product_details WHERE order_id = ?",[req.body.order_id],function(error2,rows2,fields2){
+                connection.query("SELECT opd.*,p.category_id,c.cat_name FROM order_product_details AS opd INNER JOIN product AS p ON p.id = opd.product_id INNER JOIN category AS c ON c.id = p.category_id WHERE order_id = ?",[req.body.order_id],function(error2,rows2,fields2){
                     if(rows2.length > 0){
                         var orderProduct = rows2;
 
@@ -2495,11 +2524,11 @@ app.post('/duplicatemail', function (req, resp) {
                     for(x in orderProduct){
                         subtotal = parseFloat(subtotal)+parseFloat(parseFloat(orderProduct[x].product_price)*parseFloat(orderProduct[x].quantity));
                         product +='<tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">'+i+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">'+orderProduct[x].product_name+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">'+orderProduct[x].quantity+'</td>\
-                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%">'+orderProduct[x].product_price.toFixed(2)+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">'+i+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">'+orderProduct[x].cat_name+' - '+orderProduct[x].product_name+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">'+orderProduct[x].quantity+'</td>\
+                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%">$'+orderProduct[x].product_price.toFixed(2)+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
                     </tr>';
                         i++;
                     }
@@ -2518,7 +2547,6 @@ app.post('/duplicatemail', function (req, resp) {
                     <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                         <tr>\
                         <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
-                        <center>\
                         <table cellspacing="0" cellpadding="0" width="600" class="w320">\
                         <tr>\
                         <td align="center" valign="top">\
@@ -2532,8 +2560,7 @@ app.post('/duplicatemail', function (req, resp) {
                         <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
                         <tr>\
                         <td style="background-color:#ffffff; padding-top: 15px;">\
-                        <center>\
-                        <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
+                        <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;"cellspacing="0" cellpadding="0">\
                         <tr>\
                         <td colspan="2" style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                         Your Order Details\
@@ -2553,10 +2580,10 @@ app.post('/duplicatemail', function (req, resp) {
                     <td colspan="2">\
                         <table style="margin:5px auto; width: 100% !important;padding: 0px 10px; background:#f3f3f3;" cellspacing="0" cellpadding="0">\
                         <tr>\
-                        <td style="width:48%;padding:25px 0 0 2%" align="left" valign="top">\
+                        <td style="width:48%;padding:25px 0 0 2%;" align="left" valign="top">\
                         <span style="background:#e59205;width:89%;padding:8px 0 7px 5%; text-transform: uppercase;font-weight: bold; font-size:18px;color:#fff;display:block">Billed To</span>\
                     </td>\
-                    <td style="width:48%;padding:25px 2% 0 0" align="right">\
+                    <td style="width:48%;padding:25px 2% 0 0;" align="right" valign="top">\
                         <span style="background:#e59205; text-transform: uppercase;font-weight: bold;width:89%;padding:8px 0 7px 5%;font-size:18px;color:#fff;text-align:left;display:block">Shipped To</span>\
                     </td>\
                     </tr>\
@@ -2610,39 +2637,39 @@ app.post('/duplicatemail', function (req, resp) {
                     <td colspan="2" align="center" valign="middle">\
                         <table style="margin:25px 0;border:solid 1px #c6c6c6;border-bottom:none;font-size:13px; color:#4c4c4c; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="0" width="96%">\
                         <tbody><tr>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="10%">Item</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="20%">Name</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="5%">Qty</th>\
-                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="30%">Price</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="35%">Amount</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="15%">Item</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="40%">Name</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="10%">Qty</th>\
+                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="15%">Price</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="20%">Amount</th>\
                         </tr>'+product+'\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="20%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="5%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="30%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="35% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
+                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
                     </tr>\
                     </tbody>\
                         </table>\
@@ -2912,10 +2939,12 @@ function getstate(id){
     function timeConverter(UNIX_timestamp){
        // var a = new Date(UNIX_timestamp * 1000);
         var a = new Date(UNIX_timestamp);
+       // var a = new Date(UNIX_timestamp * 1000);
         var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
         var year = a.getFullYear();
         var month = months[a.getMonth()];
         var date = a.getDate();
+       // var date = a.getDate()+1;
         var hour = a.getHours();
         var min = a.getMinutes();
         var sec = a.getSeconds();
@@ -2944,3 +2973,4 @@ var server = app.listen(port, function () {
 
 /*app.listen(port);
 console.log("App listening on port " + port);*/
+

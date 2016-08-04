@@ -11,29 +11,7 @@ r1headzappvar.run(function ($templateCache) {
 
 });
 
-r1headzappvar.directive('bxSlider', function () {
-    var BX_SLIDER_OPTIONS = {
-        minSlides:1 ,
-        maxSlides: 4,
-        slideWidth: 287,
-        infiniteLoop: false
-        //slideHeight:315
-    };
 
-    return {
-        restrict: 'A',
-        require: 'bxSlider',
-        priority: 0,
-        controller: function() {},
-        link: function (scope, element, attrs, ctrl) {
-            var slider;
-            ctrl.update = function() {
-                slider && slider.destroySlider();
-                slider = element.bxSlider(BX_SLIDER_OPTIONS);
-            };
-        }
-    }
-});
 
 
 r1headzappvar.filter('limitHtml', ['$sce',function($sce) {
@@ -73,6 +51,46 @@ r1headzappvar.filter('limitHtml1', ['$sce',function($sce) {
 }]);
 
 
+r1headzappvar.directive('bxSlider', function () {
+    /*var BX_SLIDER_OPTIONS = {
+        minSlides:1 ,
+        maxSlides: 4,
+        slideWidth: 287,
+        infiniteLoop: false
+        //slideHeight:315
+    };
+*/
+    return {
+        restrict: 'A',
+        require: 'bxSlider',
+        priority: 0,
+        controller: function() {},
+        link: function (scope, element, attrs, ctrl) {
+            console.log(attrs.class);
+            console.log(attrs.infiniteloop);
+            console.log(attrs.minslides);
+            console.log(attrs.maxslides);
+            console.log(attrs.slidewidth);
+            console.log(attrs);
+
+            var BX_SLIDER_OPTIONS = {
+                minSlides:attrs.minslides ,
+                maxSlides: attrs.maxslides,
+                slideWidth: attrs.slidewidth,
+                infiniteLoop: false
+                //slideHeight:315
+            };
+
+            console.log(BX_SLIDER_OPTIONS);
+            var slider;
+            ctrl.update = function() {
+                slider && slider.destroySlider();
+                slider = element.bxSlider(BX_SLIDER_OPTIONS);
+            };
+        }
+    }
+});
+
 r1headzappvar.directive('bxSliderItem', function($timeout) {
     return {
         require: '^bxSlider',
@@ -94,6 +112,15 @@ r1headzappvar.directive('docListWrapper', ['$timeout', function ($timeout) {
         }
     };
 }]);
+
+
+
+
+
+
+
+
+
 
 r1headzappvar.run(['$rootScope','$cookieStore','$state','contentservice','$uibModal','$log',function($rootScope,$cookieStore, $state,contentservice,$uibModal,$log){
 
@@ -571,6 +598,30 @@ r1headzappvar.config(function($stateProvider, $urlRouterProvider,$locationProvid
         }
     )
 
+        .state('appointment',{
+                url:"/appointment",
+                views: {
+
+                    'content': {
+                        templateUrl: 'partial/appointment.html' ,
+                        controller: 'appointment'
+                    },
+                    'header': {
+                        templateUrl: 'partial/header.html' ,
+                        controller: 'header'
+                    },
+                    'footer': {
+                        templateUrl: 'partial/footer.html' ,
+                        controller: 'header'
+                    },
+                    'modalview': {
+                        templateUrl: 'partial/modalview.html' ,
+                       // controller: 'reviews'
+                    },
+                }
+            }
+        )
+
         .state('newsletter',{
             url:"/newsletter",
             views: {
@@ -722,7 +773,7 @@ r1headzappvar.config(function($stateProvider, $urlRouterProvider,$locationProvid
 
 
         .state('productlisting',{
-            url:"/productlisting/:id",
+            url:"/productlisting/:id/:name",
             views: {
 
                 'content': {
@@ -2435,7 +2486,7 @@ r1headzappvar.controller('admin_header', function($compile,$scope,$state,$http,$
 
 });
 
-r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookieStore,$rootScope,Upload,$uibModal,$sce,$stateParams,$window,$timeout) {
+r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookieStore,$rootScope,Upload,$uibModal,$sce,$stateParams,$window,$timeout,$interval) {
     $rootScope.userrole='';
     $rootScope.userfullname='';
     $rootScope.useremail='';
@@ -2443,6 +2494,7 @@ r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookie
     $rootScope.userroleid=0;
     $rootScope.shippingprice=0.00;
     $rootScope.saletax=0.00;
+    $rootScope.cartarray='';
 
     if (typeof($cookieStore.get('userrole')) != 'undefined' && $cookieStore.get('userrole') > 0) {
         $rootScope.userrole = $cookieStore.get('userrole');
@@ -2507,7 +2559,7 @@ r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookie
             var totalquantity1=0;
             var totalprice1=0.00;
             $rootScope.cartarray = data;
-            console.log($rootScope.cartarray);
+           // console.log($rootScope.cartarray);
             angular.forEach($rootScope.cartarray, function (value, key) {
 
                 totalquantity1 +=parseInt(value.qty);
@@ -2522,6 +2574,7 @@ r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookie
     },2000);
 
     $rootScope.addtocart=function(pid){
+       // console.log(1);
          var quan;
         quan=$('.proqtyinput').val();
         if(typeof(quan)!='undefined'){
@@ -2587,9 +2640,15 @@ r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookie
             animation: true,
             templateUrl: 'appointmentmodal.html',
             controller: 'ModalInstanceCtrl',
-            size: 'md',
+            size: 'lg',
             scope: $scope
         });
+
+
+        
+
+
+
     }
 
     $rootScope.logout = function () {
@@ -2611,13 +2670,25 @@ r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookie
 
 
     }
+    $(function(){
+        $('.cart').click(function(){
+        if($rootScope.totalquantity==0){
+            $('.carthome ').addClass('open');
+        }
+        else{
+            $('.carthome ').removeClass('open');
+        }
+        })
+    })
+
     $rootScope.caturl=function(name){
-        var myStr;
-         myStr = name
-        myStr=myStr.toLowerCase();
-        myStr=myStr.replace(/(^\s+|[^a-zA-Z0-9 ]+|\s+$)/g,"");   //this one
-        myStr=myStr.replace(/\s+/g, "-");
-        return myStr;
+        $rootScope.var1=name;
+       // var myStr1;
+        //var myStr = $rootScope.var1;
+        $rootScope.var1= $rootScope.var1.toLowerCase();
+        $rootScope.var1= $rootScope.var1.replace(/(^\s+|[^a-zA-Z0-9 ]+|\s+$)/g,"");   //this one
+        $rootScope.var1= $rootScope.var1.replace(/\s+/g, "-");
+        return  $rootScope.var1;
     }
 
     $rootScope.editlogo=function(ev){

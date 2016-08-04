@@ -4,7 +4,9 @@
             <div class="item active">
                <!-- <img src="../images/topshoppingcartbanner.jpg">-->
                 <div class="mainimgbg">
-                    <content name='topshoppingcartbanner262' id='262' > </content>
+                    <a style="display: block;" ng-mouseover="editlogo($event)">
+                     <content name='topshoppingcartbanner262' id='262' > </content>
+                    </a>
                 </div>
                 <div class="maininnercontent">
                     <div class="maininnercontentleft">
@@ -67,12 +69,11 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family:'Raleway-Regular'; font-size:16px;  border: 1px solid #c6c6c6; border-bottom:none;">
 
                             <tr>
-                                <td  align="left" valign="middle" style=" font-size:16px; color:#333; padding:15px 15px;  border-bottom: 1px solid #c6c6c6;">Order Date : <span style="color:#e59205;">{{orderDet.order_time | date:'medium'}}</span></td>
+                                <td  align="left" valign="middle" style=" font-size:16px; color:#333; padding:15px 15px;  border-bottom: 1px solid #c6c6c6;">Order Date : <span style="color:#e59205;" >{{orderDet.order_time | date:'medium'}}</span></td>
                             </tr>
                             <tr>
-                                <td  align="left" valign="middle" style=" font-size:16px; color:#333; padding:15px 15px;  border-bottom: 1px solid #c6c6c6;">Order Status : <span style="color:#e59205;">{{orderDet.order_status}}</span></td>
+                                <td  align="left" valign="middle" style=" font-size:16px; color:#333; padding:15px 15px;  border-bottom: 1px solid #c6c6c6;">Order Status : <span style="color:#e59205;" ng-bind="getstatus(orderDet.order_status)"></span></td>
                             </tr>
-
 
 
 
@@ -80,41 +81,47 @@
                         <div style="font-family:'Raleway-Regular'; font-size:18px; color:#353434; padding:30px 0 15px 0; text-align:center;">Shipping Method: Standard Shipping (Residential)</div>
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family:'Raleway-Regular'; margin:5px 0; border:solid 1px #c6c6c6; border-bottom:none; font-size:13px;" class="shippingmethod">
                             <tr>
-                                <th width="15%"  align="left" valign="middle" style="background:#95a9a2; color:#fff; font-size:14px; padding:10px 2%;">Item</th>
-                                <th   width="15%" align="left" valign="middle"  style="background:#95a9a2; color:#fff; font-size:14px; padding:10px 2%;">Name</th>
-                                <th  width="34%" align="left" valign="middle"  style="background:#95a9a2; color:#fff; font-size:14px; padding:10px 2%;">Quantity</th>
-                                <th  width="36%" align="right" valign="middle"  style="background:#95a9a2; color:#fff; font-size:14px; padding:10px 2%; text-align:right;">Amount</th>
+                                <th width="15%"  align="left" valign="middle" style="background:#95a9a2; color:#fff; font-size:14px; padding:10px;">Item</th>
+                                <th   width="40%" align="left" valign="middle"  style="background:#95a9a2; color:#fff; font-size:14px; padding:10px;">Name</th>
+                                <th  width="10%" align="right" valign="middle"  style="background:#95a9a2; color:#fff; font-size:14px; padding:10px;text-align:right;">Qty</th>
+                                <th  width="15%" align="right" valign="middle"  style="background:#95a9a2; color:#fff; font-size:14px; padding:10px;text-align:right;">Price</th>
+                                <th  width="20%" align="right" valign="middle"  style="background:#95a9a2; color:#fff; font-size:14px; padding:10px; text-align:right;">Amount</th>
                             </tr>
                             <tr  ng-repeat="item in orderDet.orderProduct">
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">{{$index+1}}</td>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >{{item.product_name}}</td>
-                                <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >{{item.quantity}}</td>
-                                <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"><span style="display:inline-block; text-align:right; width:76px; color:#585a5b;">${{subtotal(item.quantity,item.product_price)}}</span></td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle">{{$index+1}}</td>
+                                <td  width="40%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle" >{{item.cat_name}} - {{item.product_name}}</td>
+                                <td  width="10%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;text-align:right;" align="right" valign="middle" >{{item.quantity}}</td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;text-align:right;" align="right" valign="middle" >{{item.product_price.toFixed(2)}}</td>
+                                <td  width="20% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;text-align:right;" align="right" valign="middle"><span style="display:inline-block; text-align:right; width:76px; color:#585a5b;">${{subtotal(item.quantity,item.product_price).toFixed(2)}}</span></td>
                             </tr>
                             <tr>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
-                                <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
-                                <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;">Sub total</strong>          <span style="display:inline-block; text-align:right;  width:76px; color:#313132;">${{orderDet.order_subtotal.toFixed(2)}}</span></td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle">&nbsp;</td>
+                                <td  width="40%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle" >&nbsp;</td>
+                                <td  width="10%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp; </td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp;<strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;">Sub total</strong>   </td>
+                                <td  width="20% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle">         <span style="display:inline-block; text-align:right;  width:76px; color:#313132;">${{orderDet.order_subtotal.toFixed(2)}}</span></td>
                             </tr>
 
                             <tr>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
-                                <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
-                                <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Shipping </strong>          <span style="display:inline-block; text-align:right; width:76px; color:#313132;"> ${{orderDet.shipping_charge.toFixed(2)}}</span></td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle">&nbsp;</td>
+                                <td  width="40%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle" >&nbsp;</td>
+                                <td  width="10%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp; </td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp;<strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Shipping </strong>  </td>
+                                <td  width="20% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle">          <span style="display:inline-block; text-align:right; width:76px; color:#313132;"> ${{orderDet.shipping_charge.toFixed(2)}}</span></td>
                             </tr>
                             <tr>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
-                                <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
-                                <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Tax Rate </strong>           <span style="display:inline-block; text-align:right; width:76px; color:#313132;">${{orderDet.tax.toFixed(2)}}</span></td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle">&nbsp;</td>
+                                <td  width="40%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle" >&nbsp;</td>
+                                <td  width="10%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp; </td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp;<strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Tax Rate </strong> </td>
+                                <td  width="20%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle">            <span style="display:inline-block; text-align:right; width:76px; color:#313132;">${{orderDet.tax.toFixed(2)}}</span></td>
                             </tr>
                             <tr>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">&nbsp;</td>
-                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp;</td>
-                                <td  width="34%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >&nbsp; </td>
-                                <td  width="36% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"> <strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Total </strong>           <span style="display:inline-block; text-align:right; width:76px; color:#313132; ">${{orderDet.order_total.toFixed(2)}}</span></td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle">&nbsp;</td>
+                                <td  width="40%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="left" valign="middle" >&nbsp;</td>
+                                <td  width="10%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp; </td>
+                                <td  width="15%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle" >&nbsp;<strong style="display:inline-block; padding-right:5px; text-align:right; width:76px;"> Total </strong>  </td>
+                                <td  width="20% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 10px;" align="right" valign="middle"> <span style="display:inline-block; text-align:right; width:76px; color:#313132; ">${{orderDet.order_total.toFixed(2)}}</span></td>
                             </tr>
                         </table>
                         <div style="font-family:'Raleway-Regular'; font-size:18px; color:#353434; padding:30px 0 15px 0; text-align:center;">Billing Shipping Information</div>

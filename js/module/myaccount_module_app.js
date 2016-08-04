@@ -387,6 +387,8 @@ myaccount_module_app.controller('myorder', function($scope,$state,$cookieStore,$
 });
 myaccount_module_app.controller('myorderdetails', function($scope,$state,$cookieStore,$rootScope,$http,$sce,$stateParams,contentservice) {
     $scope.orderid=$stateParams.id;
+    $scope.statename='';
+    $scope.shipstatename='';
     $http({
         method  : 'POST',
         async:   false,
@@ -396,6 +398,24 @@ myaccount_module_app.controller('myorderdetails', function($scope,$state,$cookie
     }) .success(function(data) {
         $scope.orderdetails=data;
         console.log($scope.orderdetails.productdet);
+        $http({
+            method:'POST',
+            async:false,
+            url:$scope.adminUrl+'statelist',
+            data    : $.param({'country_id':254}),
+            headers :   { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }).success(function(data2){
+            console.log(data2);
+            angular.forEach(data2,function(value){
+                if(value.id == data.bill_state){
+                    $scope.statename = value.s_st_name;
+                }
+                if(value.id == data.ship_state){
+                    $scope.shipstatename = value.s_st_name;
+                }
+            });
+        });
+
 
     });
     $scope.getstatus=function(status) {

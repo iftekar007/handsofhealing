@@ -4,7 +4,9 @@
             <div class="item active">
                 <div class="mainimg">
                     <div class="mainimgbg">
-                        <content name='topcontactbanner222' id='222' > </content>
+                        <a style="display: block;" ng-mouseover="editlogo($event)">
+                            <content name='topcontactbanner222' id='222' > </content>
+                        </a>
                     </div>
                     <div class="maininnercontent">
                         <div class="maininnercontentleft">
@@ -111,8 +113,8 @@
                                             <span class="captuatext" ng-bind="randomvalue"></span>
 
                                             <input type="text" class="form-control capturecont" id="codegen" placeholder="" name="captcha"
-                                                   ng-model="form.captcha"
-                                            >
+                                                   ng-model="form.captcha" >
+
                                            <a ng-click="randrefresh()" class="iconrefresh"> <img src="../images/icon-refresh.png"></a>
                                         </div>
                                     </div>
@@ -132,7 +134,7 @@
 
     <div class="newlogin-box">
 
-        <a href="javascript:void(0);" ng-click="cancel123()" ><img src=images/newloginclose.png alt=#  class="closebtn"/></a>
+        <a href="javascript:void(0);" ng-click="cancel123()" ><img src=images/newloginclose.png alt=#  class="closebtn closebtncont"/></a>
         <div class="newloginwrapper">
             <div class="newaccountbtnwrapper">
                 <h2>Thank You For Contacting Hands of Healing Wellness Spa. An associate will contact you shortly.</h2>

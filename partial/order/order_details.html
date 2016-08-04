@@ -69,7 +69,7 @@
                         </tr>
                         <tr ng-repeat="item in orderdetails.orderProduct">
                             <td  width="10%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle">{{$index+1}}</td>
-                            <td  width="20%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >{{item.product_name}}</td>
+                            <td  width="20%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="left" valign="middle" >{{item.cat_name}} - {{item.product_name}}</td>
                             <td  width="5%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle" >{{item.quantity}}</td>
                             <td  width="30%" style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle" >${{item.product_price|number:2}}</td>
                             <td  width="35% " style="border-bottom:solid 1px #c6c6c6;  padding:8px 2%;" align="right" valign="middle"><span style="display:inline-block; text-align:right; width:76px;">${{item.quantity*item.product_price|number:2}}</span></td>
@@ -136,7 +136,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td style="background:#ececec; width:90%; padding:6px; border-bottom:solid 1px #fff;">State : <span style=" color:#ed8a00 ;">{{orderdetails.bill_state}}</span></td>
+                                        <td style="background:#ececec; width:90%; padding:6px; border-bottom:solid 1px #fff;">State : <span style=" color:#ed8a00 ;">{{statename}}</span></td>
                                     </tr>
 
                                     <tr>
@@ -172,7 +172,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td style="background:#ececec; width:90%; padding:6px; border-bottom:solid 1px #fff;">State : <span style=" color:#ed8a00 ;">{{orderdetails.ship_state}}</span></td>
+                                        <td style="background:#ececec; width:90%; padding:6px; border-bottom:solid 1px #fff;">State : <span style=" color:#ed8a00 ;">{{shipstatename}}</span></td>
                                     </tr>
 
                                     <tr>

@@ -178,6 +178,8 @@ product_module_app.controller('ModalInstanceCtrlproduct', function ($scope,$stat
 });
 
 product_module_app.controller('addproduct', function($scope,$state,$http,$cookieStore,$rootScope,$window,contentservice,Upload) {
+    $('.imgclass').css('display','none');
+    $('.multipleimgclass').css('display','none');
     $http({
         method  :   'GET',
         async   :   false,
@@ -228,6 +230,7 @@ product_module_app.controller('addproduct', function($scope,$state,$http,$cookie
 
                 $scope.form.file=response.data.filename;
                 $scope.loader='hide';
+                $('.imgclass').css('display','none');
 
 
 
@@ -240,6 +243,7 @@ product_module_app.controller('addproduct', function($scope,$state,$http,$cookie
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.imgclass').css('display','block');
         });
     };
 
@@ -265,6 +269,7 @@ product_module_app.controller('addproduct', function($scope,$state,$http,$cookie
 
                 $scope.form.addfile= JSON.stringify($scope.addfilearr);
                 $scope.loader='hide';
+                $('.multipleimgclass').css('display','none');
 
 
 
@@ -277,6 +282,7 @@ product_module_app.controller('addproduct', function($scope,$state,$http,$cookie
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.multipleimgclass').css('display','block');
         });
     };
 
@@ -317,6 +323,8 @@ product_module_app.controller('addproduct', function($scope,$state,$http,$cookie
 
 
 product_module_app.controller('editproduct', function($scope,$state,$http,$cookieStore,$rootScope,$stateParams,Upload,$window,contentservice){
+    $('.imgclass').css('display','none');
+    $('.multipleimgclass').css('display','none');
 
     $http({
         method  :   'GET',
@@ -395,6 +403,7 @@ product_module_app.controller('editproduct', function($scope,$state,$http,$cooki
                 //console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ');
 
                 $scope.form.file=response.data.filename;
+                $('.imgclass').css('display','none');
 
 
 
@@ -403,11 +412,10 @@ product_module_app.controller('editproduct', function($scope,$state,$http,$cooki
                 console.log('an error occured');
             }
         }, function (resp) { //catch error
-            console.log('Error status: ' + resp.status);
-            console.log('Error status: ' + resp.status);
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.imgclass').css('display','block');
         });
     };
 
@@ -433,6 +441,7 @@ product_module_app.controller('editproduct', function($scope,$state,$http,$cooki
 
                 $scope.form.addfile= JSON.stringify($scope.addfilearr);
                 $scope.loader='hide';
+                $('.multipleimgclass').css('display','none');
 
 
 
@@ -445,6 +454,7 @@ product_module_app.controller('editproduct', function($scope,$state,$http,$cooki
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.multipleimgclass').css('display','block');
         });
     };
 

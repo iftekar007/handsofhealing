@@ -6,7 +6,9 @@
             <div class="item active">
                 <div class="mainimg">
                     <div class="mainimgbg">
-                        <content name='topproductlistingbanner241' id='241' > </content>
+                        <a style="display: block;" ng-mouseover="editlogo($event)">
+                            <content name='topproductlistingbanner241' id='241' > </content>
+                        </a>
                     </div>
                     <div class="maininnercontent">
                         <div class="maininnercontentleft">
@@ -55,7 +57,7 @@
     <div class="product_box_wrapper">
 
 
-        <div class="product_box" ng-repeat="itemproduct in  productlist | orderBy:priority:reverse" >
+        <div class="product_box" ng-repeat="itemproduct in  productlist| filter:{status:1} | orderBy:priority:reverse" >
             <a ui-sref="productdetails({id:itemproduct.id,name:caturl(itemproduct.product_name)})"><div class="proimg">
                 <img src="nodeserver/uploads/{{itemproduct.product_file}}" >
                <!-- <img src="../images/proimg1.png" >-->
@@ -142,12 +144,12 @@
 
 <!--<div class="doc-list-wrapper" data-docs="docs" style="margin-top: 25px;margin-right: auto;margin-left: auto"></div>-->
 <script type="text/ng-template" id="tmpl-doc-list-wrapper">
-    <ul class="doc-list" bx-slider>
-        <li class="doc-thumbnail" ng-repeat="doc in docs" bx-slider-item style="height: 124px;">
+    <ul class="doc-list" bx-slider minSlides="1" maxSlides="4" slideWidth="291" infiniteLoop="false">
+        <li class="doc-thumbnail" ng-repeat="doc in docs" bx-slider-item style="height: 126px;">
 
 
 
-            <div class="pro_menudiv" ><a ui-sref="productlisting({id:doc.id})" href="javascript:void(0)" ng-bind="doc.cat_name"></a> </div>
+            <div class="pro_menudiv" ><a ui-sref="productlisting({id:doc.id,name:doc.cat_name.replace(' ','-').toLowerCase()})" href="javascript:void(0)" ng-bind="doc.cat_name"></a> </div>
         </li>
     </ul>
 </script>

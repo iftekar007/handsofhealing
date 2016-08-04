@@ -1,4 +1,14 @@
 <div class="container-fluid mainbanner">
+
+
+
+
+
+
+
+
+
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
         <!-- Wrapper for slides -->
@@ -6,7 +16,9 @@
             <div class="item active">
                 <div class="mainimg">
                     <div class="mainimgbg">
-                        <content name='topproductdetailbanner244' id='244' > </content>
+                        <a style="display: block;" ng-mouseover="editlogo($event)">
+                            <content name='topproductdetailbanner244' id='244' > </content>
+                        </a>
                     </div>
                     <div class="maininnercontent">
                         <div class="maininnercontentleft">
@@ -53,12 +65,25 @@
         <div class="prodetail_left">
 
             <div class="prodetail_left_bigimg">
-               <img src="nodeserver/uploads/{{bigimage}}" style="max-width:215px;max-height:259px;">
+               <img src="nodeserver/uploads/{{bigimage}}" style="max-width:294px;max-height:259px;">
                <!--<img src="../images/proimg2.png">-->
             </div>
 
             <div class="prodetail_left_smallimg">
+                <ul class="imggalbxslider">
+                    <li  ng-repeat="item in productimage" ng-click="showImage(item)"><img   src="nodeserver/uploads/{{item}}" /></li>
+                   <!-- <li><img src="/images/170_200/tree_root.jpg" /></li>
+                    <li><img src="/images/170_200/houses.jpg" /></li>
+                    <li><img src="/images/170_200/hill_road.jpg" /></li>
+                    <li><img src="/images/170_200/me_trees.jpg" /></li>
+                    <li><img src="/images/170_200/hill_trees.jpg" /></li>
+                    <li><img src="/images/170_200/mountain.jpg" /></li>
+                    <li><img src="/images/170_200/houses.jpg" /></li>-->
+                </ul>
+
+<!--
                 <img ng-repeat="item in productimage" ng-click="showImage(item)" src="nodeserver/uploads/{{item}}" style="width: 100px; cursor: pointer;" >
+-->
 
                 <div class="clearfix"></div>
             </div>
@@ -69,7 +94,7 @@
 
             <div class="product_detailname">
                 <h2><span>Name:</span>  <span ng-bind="productdetails.product_name"></span></h2>
-                <h3>Price (US Dollar): ${{productdetails.price}}</h3>
+                <h3>Price : ${{productdetails.price}}</h3>
 
 
             </div>
@@ -108,25 +133,84 @@
 
     </div>
 
+        <div class="product_bottom_gallery_wrapper">
+            <h4>We think you'll love these too ...</h4>
+            <div class="outside">
+                <span id="slider-prev"></span> <span id="slider-next"></span>
+            </div>
+            <div class="shopproduct_gallery_contain">
+                <ul class="bxslider">
+                    <li  ng-repeat="product in products">
+                        <div class="shopproduct_box2">
+                            <div class="shopproimg2">
+                                <img src="nodeserver/uploads/{{product.product_file}}" >
+                            </div>
+                            <div class="shopproprice2">${{product.price.toFixed(2)}}</div>
+                            <a href="javascript:void(0)" ng-click="addtocart(product.id)" class="shopprocartbtn2">Add to Cart</a>
+                        </div>
+                    </li>
+                    <!--               <li>
+                                       <div class="shopproduct_box2">
+                                           <div class="shopproimg2">
+                                               <img src="../images/proimg2.png" >
+                                           </div>
+                                           <div class="shopproprice2">$00.00</div>
+                                           <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                                       </div>
+                                   </li>
+                                   <li>
+                                       <div class="shopproduct_box2">
+                                           <div class="shopproimg2">
+                                               <img src="../images/proimg3.png" >
+                                           </div>
 
-    <div class="product_bottom_gallery_wrapper">
+                                           <div class="shopproprice2">$00.00</div>
+
+                                           <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                                       </div>
+                                   </li>
+                                   <li>
+                                       <div class="shopproduct_box2">
+                                           <div class="shopproimg2">
+                                               <img src="../images/proimg4.png" >
+                                           </div>
+                                           <div class="shopproprice2">$00.00</div>
+                                           <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                                       </div>
+                                   </li>
+                                   <li>
+                                       <div class="shopproduct_box2">
+                                            <div class="shopproimg2">
+                                               <img src="../images/proimg1.png" >
+                                            </div>
+                                            <div class="shopproprice2">$00.00</div>
+                                            <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                                       </div>
+                                   </li>
+                   -->          </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+
+  <!--  <div class="product_bottom_gallery_wrapper">
         <h4>We think you'll love these too ...</h4>
 
         <div class="product_gallery_contain">
 
-            <div class="doc-list-wrapper" data-docs="productlist" style="margin-top: 25px;margin-right: auto;margin-left: auto"></div>
+            &lt;!&ndash;<div class="doc-list-wrapper" data-docs="productlist" style="margin-top: 25px;margin-right: auto;margin-left: auto"></div>&ndash;&gt;
 
-
-        <div class="product_box2">
+          &lt;!&ndash;  <div class="doc-list-wrapper" data-docs="products" style="margin-top: 25px;margin-right: auto;margin-left: auto"></div>&ndash;&gt;
+      <div class="product_box2" ng-repeat="product in products |limitTo:4">
             <div class="proimg2">
-                <img src="../images/proimg1.png" >
+                <img src="nodeserver/uploads/{{product.product_file}}" >
             </div>
 
-            <div class="proprice2">$00.00</div>
+            <div class="proprice2">${{product.price.toFixed(2)}}</div>
 
-            <a href="javascript:void(0)" class="procartbtn2">Add to Cart</a>
+            <a href="javascript:void(0)" ng-click="addtocart(product.id)" class="procartbtn2">Add to Cart</a>
         </div>
-        <div class="product_box2">
+       &lt;!&ndash; <div class="product_box2">
             <div class="proimg2">
                 <img src="../images/proimg2.png" >
             </div>
@@ -134,25 +218,25 @@
             <div class="proprice2">$00.00</div>
 
             <a href="javascript:void(0)" class="procartbtn2">Add to Cart</a>
-        </div>
-        <div class="product_box2">
-            <div class="proimg2">
-                <img src="../images/proimg3.png" >
-            </div>
+        </div>&ndash;&gt;
+            &lt;!&ndash; <div class="product_box2">
+               <div class="proimg2">
+                   <img src="../images/proimg3.png" >
+               </div>
 
-            <div class="proprice2">$00.00</div>
+               <div class="proprice2">$00.00</div>
 
-            <a href="javascript:void(0)" class="procartbtn2">Add to Cart</a>
-        </div>
-        <div class="product_box2">
-            <div class="proimg2">
-                <img src="../images/proimg4.png" >
-            </div>
+               <a href="javascript:void(0)" class="procartbtn2">Add to Cart</a>
+           </div>
+           <div class="product_box2">
+               <div class="proimg2">
+                   <img src="../images/proimg4.png" >
+               </div>
 
-            <div class="proprice2">$00.00</div>
+               <div class="proprice2">$00.00</div>
 
-            <a href="javascript:void(0)" class="procartbtn2">Add to Cart</a>
-        </div>
+               <a href="javascript:void(0)" class="procartbtn2">Add to Cart</a>
+           </div>&ndash;&gt;
 
    <div class="clearfix"></div>
 
@@ -160,19 +244,50 @@
 
 
 
-        </div>
+        </div>-->
 
 
 
 </div>
 
+
+
+
+
 <script type="text/ng-template" id="tmpl-doc-list-wrapper">
-    <ul class="doc-list" bx-slider>
+    <ul class="doc-list" bx-slider minSlides="1" maxSlides="4" slideWidth="292" infiniteLoop="false">
         <li class="doc-thumbnail" ng-repeat="doc in docs" bx-slider-item style="height: 124px;">
 
 
 
-            <div class="pro_menudiv" ><a ui-sref="productlisting({id:doc.id})" href="javascript:void(0)" ng-bind="doc.cat_name"></a> </div>
+            <div class="pro_menudiv" ><a ui-sref="productlisting({id:doc.id,name:doc.cat_name.replace(' ','-').toLowerCase()})" href="javascript:void(0)" ng-bind="doc.cat_name"></a> </div>
         </li>
     </ul>
 </script>
+
+
+<!--<script type="text/ng-template" id="tmpl-doc-list-wrapper">
+    <ul class="doc-list" bx-slider minSlides="1" maxSlides="4" slideWidth="287" infiniteLoop="false">
+        <li class="doc-thumbnail" ng-repeat="product in products" bx-slider-item style="height: 124px;">
+            <div class="product_box2">
+                <div class="proimg2">
+                    <img src="nodeserver/uploads/images/{{product.product_file}}" >
+                </div>
+
+                <div class="proprice2">${{product.product_price}}</div>
+
+                <a href="javascript:void(0)" class="procartbtn2">Add to Cart</a>
+            </div>
+
+
+           &lt;!&ndash; <div class="pro_menudiv" ><a ui-sref="productlisting({id:doc.id})" href="javascript:void(0)" ng-bind="doc.cat_name"></a> </div>&ndash;&gt;
+        </li>
+    </ul>
+</script>-->
+
+
+
+<!--<div class="container">
+    &lt;!&ndash;<div ng-include="'partial/productslider.html'"></div>&ndash;&gt;
+    <ng-include ng-controller="productsliderCtrl" src="'partial/productslider.html'"></ng-include>
+</div>-->

@@ -4,7 +4,9 @@
             <div class="item active">
                <!-- <img src="../images/topshoppingcartbanner.jpg">-->
                 <div class="mainimgbg">
-                    <content name='topshoppingcartbanner262' id='262' > </content>
+                    <a style="display: block;" ng-mouseover="editlogo($event)">
+                        <content name='topshoppingcartbanner262' id='262' > </content>
+                    </a>
                 </div>
                 <div class="maininnercontent">
                     <div class="maininnercontentleft">
@@ -59,8 +61,8 @@
                         </div>
 
                         <div class="shopproductdetailinfo">
-                            <a ng-show="cartitem.parent_cat!=12" ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})"><h2  ng-bind="cartitem.product_name"></h2></a>
-                            <a ng-show="cartitem.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:cartitem.category_id,name:caturl(cartitem.cat_name)})"><h2  ng-bind="cartitem.product_name"></h2></a>
+                            <a ng-show="cartitem.parent_cat!=12" ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})"><h2  ng-bind="cartitem.cat_name+' - '+cartitem.product_name"></h2></a>
+                            <a ng-show="cartitem.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:cartitem.category_id,name:caturl(cartitem.cat_name)})"><h2  ng-bind="cartitem.cat_name+' - '+cartitem.product_name"></h2></a>
                             <div class="stockpriceqty">
                                 <div class="stock-price">
                                     UNIT PRICE : ${{cartitem.price}}
@@ -101,24 +103,24 @@
                             </tr>
                             <tr>
                                 <td align="left" valign="middle"><span>PRODUCT TOTAL</span></td>
-                                <td align="right" valign="middle">${{totalprice}}</td>
+                                <td align="right" valign="middle">${{totalprice.toFixed(2)}}</td>
                             </tr>
                             <tr>
                                 <td align="left" valign="middle">SHIPPING</td>
-                                <td align="right" valign="middle">${{shippingprice}}</td>
+                                <td align="right" valign="middle">${{shippingprice.toFixed(2)}}</td>
                             </tr>
                             <tr>
                                 <td align="left" valign="middle">SALES TAX</td>
-                                <td align="right" valign="middle">${{saletax}}</td>
+                                <td align="right" valign="middle">${{saletax.toFixed(2)}}</td>
                             </tr>
                             <tr>
-                                <td align="left" valign="middle"><span>SUBTOTAL</span></td>
-                                <td align="right" valign="middle">${{alltotalprice}}</td>
+                                <td align="left" valign="middle"><span>TOTAL</span></td>
+                                <td align="right" valign="middle">${{alltotalprice.toFixed(2)}}</td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a  ui-sref="checkout"  class="shopcartbtn">CHECKOUT</a>
-                                    <a  ui-sref="productlisting({id:0})" class="shopcartbtn">CONTINUE SHOPPING</a>
+                                    <a  href="javascript:void(0)" ng-click="chklogin()" class="shopcartbtn">CHECKOUT</a>
+                                    <a  ui-sref="productlisting({id:0,name:'all'})" class="shopcartbtn1">CONTINUE SHOPPING</a>
                                 </td>
                                 <!--ng-click="chklogin()"-->
                             </tr>
@@ -142,16 +144,16 @@
         </div>
         <div class="shopproduct_gallery_contain">
           <ul class="bxslider">
-                <li>
+                <li  ng-repeat="product in products">
                     <div class="shopproduct_box2">
                         <div class="shopproimg2">
-                            <img src="../images/proimg1.png" >
+                            <img src="nodeserver/uploads/{{product.product_file}}" >
                         </div>
-                        <div class="shopproprice2">$00.00</div>
-                        <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
+                        <div class="shopproprice2">${{product.price.toFixed(2)}}</div>
+                        <a href="javascript:void(0)" ng-click="addtocart(product.id)" class="shopprocartbtn2">Add to Cart</a>
                     </div>
                 </li>
-                <li>
+ <!--               <li>
                     <div class="shopproduct_box2">
                         <div class="shopproimg2">
                             <img src="../images/proimg2.png" >
@@ -189,8 +191,28 @@
                          <a href="javascript:void(0)" class="shopprocartbtn2">Add to Cart</a>
                     </div>
                 </li>
-          </ul>
+-->          </ul>
         <div class="clearfix"></div>
         </div>
     </div>
 </div>
+
+
+<script type="text/ng-template" id="chkloginpopup">
+    <div class="newlogin-box">
+        <a href="javascript:void(0);"  ng-click="cancel111()" >
+            <img src=images/newloginclose.png alt=#  class="closebtn"/>
+        </a>
+        <div class="newloginwrapper">
+            <div class="newaccountbtnwrapper">
+                <!-- <h2>Please Log In.</h2>-->
+
+                <!--  <a ui-sref="login" class="cartbtnnew1">Continue</a>-->
+
+                <a href="javascript:void(0);" ng-click="chkasguest()" class="cartbtnnew1">Checkout As Guest</a>
+                <a href="javascript:void(0);" ui-sref="login" href="javascript:void(0)" class="cartbtnnew1"> Login To Account</a>
+                <a href="javascript:void(0);" ng-click="cancel111()" class="cartbtnnew1">Cancel</a>
+            </div>
+        </div>
+    </div>
+</script>

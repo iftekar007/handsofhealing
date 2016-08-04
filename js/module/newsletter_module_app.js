@@ -141,6 +141,7 @@ newsletter_module_app.controller('ModalInstanceCtrlnewsletter', function ($scope
 
 newsletter_module_app.controller('addnewsletter', function($scope,$state,$http,$cookieStore,$rootScope,$window,contentservice,Upload) {
     $scope.loader='hide';
+    $('.imgclass').css('display','none');
     $scope.tinymceOptions = {
         trusted: true,
         theme: 'modern',
@@ -177,6 +178,7 @@ newsletter_module_app.controller('addnewsletter', function($scope,$state,$http,$
 
 
                 $scope.form.file=response.data.filename;
+                $('.imgclass').css('display','none');
                 $scope.loader='hide';
 
 
@@ -190,6 +192,7 @@ newsletter_module_app.controller('addnewsletter', function($scope,$state,$http,$
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.imgclass').css('display','block');
         });
     };
 
@@ -222,7 +225,7 @@ newsletter_module_app.controller('addnewsletter', function($scope,$state,$http,$
 
 
 newsletter_module_app.controller('editnewsletter', function($scope,$state,$http,$cookieStore,$rootScope,$stateParams,Upload,$window,contentservice){
-
+    $('.imgclass').css('display','none');
     $scope.tinymceOptions = {
         trusted: true,
         theme: 'modern',
@@ -278,6 +281,7 @@ newsletter_module_app.controller('editnewsletter', function($scope,$state,$http,
                 //console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ');
 
                 $scope.form.file=response.data.filename;
+                $('.imgclass').css('display','none');
 
 
 
@@ -291,6 +295,7 @@ newsletter_module_app.controller('editnewsletter', function($scope,$state,$http,
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             file.progress = progressPercentage;
+            $('.imgclass').css('display','block');
         });
     };
 

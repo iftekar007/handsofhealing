@@ -4,7 +4,9 @@
             <div class="item active">
                 <!-- <img src="../images/topshoppingcartbanner.jpg">-->
                 <div class="mainimgbg">
-                    <content name='topshoppingcartbanner262' id='262' > </content>
+                    <a style="display: block;" ng-mouseover="editlogo($event)">
+                        <content name='topshoppingcartbanner262' id='262' > </content>
+                    </a>
                 </div>
                 <div class="maininnercontent">
                     <div class="maininnercontentleft">
@@ -29,11 +31,30 @@
         <h4>CART CONTENTS</h4>
         <table width="100%" border="1">
             <tr ng-repeat="item in product_det">
-                <td align="left" valign="middle">{{item.product_name}} </td>
-                <td align="left" valign="middle">{{item.qty}}X${{item.price}} </td>
-                <td align="right" valign="middle"><strong>${{subtotal(item.qty,item.price)}}</strong></td>
+                <td align="left" valign="middle">{{item.cat_name+' - '+item.product_name}} </td>
+                <td align="left" valign="middle">{{item.qty}}X${{item.price.toFixed(2)}} </td>
+                <td align="right" valign="middle"><strong>${{subtotal(item.qty,item.price).toFixed(2)}}</strong></td>
             </tr>
-
+            <tr>
+                <td align="left" valign="middle">&nbsp;</td>
+                <td align="left" valign="middle" class="chkconfirm">Sub-Total</td>
+                <td align="right" valign="middle">${{totalprice.toFixed(2)}}</td>
+            </tr>
+            <tr>
+                <td align="left" valign="middle">&nbsp;</td>
+                <td align="left" valign="middle" class="chkconfirm">Shipping</td>
+                <td align="right" valign="middle">${{shippingprice.toFixed(2)}}</td>
+            </tr>
+            <tr>
+                <td align="left" valign="middle">&nbsp;</td>
+                <td align="left" valign="middle" class="chkconfirm">Tax</td>
+                <td align="right" valign="middle">${{saletax.toFixed(2)}}</td>
+            </tr>
+            <tr>
+                <td align="left" valign="middle" class="totalbg">&nbsp;</td>
+                <td align="left" valign="middle" class="chkconfirm totalbg">Total</td>
+                <td align="right" valign="middle" class="totalbg">${{alltotalprice.toFixed(2)}}</td>
+            </tr>
         </table>
 
 
@@ -62,7 +83,7 @@
 
             <tr>
                 <td align="left" valign="middle"> STATE </td>
-                <td align="right" valign="middle"><strong>{{statename}}</strong></td>
+                <td align="right" valign="middle"><strong>{{shipstatename}}</strong></td>
             </tr>
 
             <tr>

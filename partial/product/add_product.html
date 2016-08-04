@@ -62,6 +62,7 @@
                                 <div class="form-group">
                                     <label >Product Image* :</label>
                                     <input type="button" class="searchbtn btn  btn-md"   value="Upload" ngf-drop ngf-select ng-model="picturupload" ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}" ngf-multiple="false" ngf-allow-dir="true" accept="'image/*'" ngf-drop-available="dropAvailable" ngf-capture="camera">
+                                    <div><img class="imgclass" src="images/loading.gif" ></div>
                                     <div class="progress" ng-show="picturupload[0].progress >= 0"> <div style="width:{{picturupload[0].progress}}%; background:#00c0ef;" ng-bind="picturupload[0].progress + '%'"></div></div>
                                    <!--<div ng-if="loader=='show'"><img src="images/progress.gif"></div>-->
                                     <div class="clearfix"></div>
@@ -74,6 +75,7 @@
                                 <div class="form-group">
                                     <label >Additional Image* :</label>
                                     <input type="button" class="searchbtn btn  btn-md"   value="Upload" ngf-drop ngf-select ng-model="picturupload1" ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}" ngf-multiple="false" ngf-allow-dir="true" accept="'image/*'" ngf-drop-available="dropAvailable" ngf-capture="camera">
+                                    <div><img class="multipleimgclass" src="images/loading.gif" ></div>
                                     <div class="progress" ng-show="picturupload1[0].progress >= 0"> <div style="width:{{picturupload[0].progress}}%; background:#00c0ef;" ng-bind="picturupload1[0].progress + '%'"></div></div>
                                     <!--<div ng-if="loader=='show'"><img src="images/progress.gif"></div>-->
                                     <div class="clearfix"></div>

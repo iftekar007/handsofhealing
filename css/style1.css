@@ -163,7 +163,7 @@ a{cursor: pointer;}
 .contactusform .form-inline img{margin-left: 8px;}
 .contactusform .form-inline .form-control{float: right;}
 .contactusform .form-inline .capturecont{float: none; margin-left: 8px; margin-top: -12px;}
-.contactusform .btnsubmit {background-color: #75b6ab; padding: 0px 12px; width: 167px; height: 52px; margin-top: 30px; text-transform: uppercase; color: #fff; font-family: 'opensans-bold'; font-size: 24px;  line-height: 50px; float: right; margin-right: -30px;}
+.contactusform .btnsubmit {background-color: #be4622; padding: 6px 10px; width: 167px; margin-top: 30px; text-transform: uppercase; color: #fff; font-family: 'Raleway-bold'; font-size: 24px;  float: right; margin-right: -30px;}
 
 
 
@@ -194,7 +194,7 @@ a{cursor: pointer;}
 .reviewdocs h4{font-family: 'ralewayblack'; display: block; font-size: 14px; line-height: 14px; color: #353434; float: right;}
 .reviewdocs h4 span{margin-left: 15px; display: inline-block;}
 
-.reviewsblock2 .viewmore{font-family: 'MyriadPro-Regular'; font-size: 14px; line-height: 24px; color: #353434; text-transform: uppercase;text-align: center; margin-top:32px;}
+.reviewsblock2 .viewmore{font-family: 'Raleway-bold'; font-size: 24px; color: #fff; text-transform: uppercase; text-align: center; margin-top:32px; padding: 3px 10px; text-decoration: none; background-color: #be4622;}
 .reviewsblock2 a{text-decoration: none;}
 .reviewsblock2 a:hover.viewmore{color: #c0380e; text-decoration: none;}
 .reviewsblock2 .divider{margin-top: 0px; background-color: #ea0571; height: 1px; max-width: 66px;}
@@ -262,7 +262,13 @@ a{cursor: pointer;}
 .textblock .col-md-4_textcon {min-height: 295px; overflow: hidden;}
 .textblock .col-md-4_textcon h4 strong {display: block; width: 80%; float: left; font-weight: normal;}
 .textblock .col-md-4_textcon h4 span {display: block; width: 19.5%; float: right; text-align: right;}
-.textblock .viewmorelink {display: block; float: right; width: 160px; text-align: center; background-color: #be4622; color:#fff; font-family: 'playfair_displayitalic';  font-size: 24px;}
+.textblock .viewmorelink {display: block; float: right;
+    font-family: 'Raleway-bold';
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #be4622;
+    padding: 3px 10px;text-transform: uppercase;}
 .textblock .col-md-4_textcon h4 {font-family: 'yeseva_oneregular'; background: url(../images/devider4.png) repeat-x left bottom; font-size: 17px; color: #c89f2d!important; margin: 0 0 0 0; padding: 10px 0;}
 .imgblock{padding-right: 27px;}
 .textblock .col-md-4_textcon h4 a {font-family: 'yeseva_oneregular'; background: url(../images/devider4.png) repeat-x left bottom; font-size: 17px; color: #c89f2d!important; margin: 0 0 0 0; padding: 10px 0;}
@@ -340,21 +346,29 @@ a{cursor: pointer;}
 .innerpagetextblock .col-md-4_textcon .single_col-md-4_textcon {
     display: inline-block;
     float: left;
-    padding: 10px 4% !important;
+    padding: 5px 4% !important;
     width: 42%;
     vertical-align: top;
     zoom: 1;
-    min-height: 270px;
+    min-height: 240px;
 }
 
 
 .innerpagetextblock .single_col-md-4_textcon h4 strong {display: block; width: 80%; float: left; font-weight: normal;}
 .innerpagetextblock .single_col-md-4_textcon h4 span {display: block; width: 19.5%; float: right; text-align: right;}
 .innerpagetextblock .viewmorelink {display: block; float: right; width: 160px; text-align: center; background-color: #be4622; color:#fff; font-family: 'playfair_displayitalic';  font-size: 24px;}
-.innerpagetextblock .single_col-md-4_textcon h4, .innerpagetextblock .single_col-md-4_textcon h4 a {font-family: 'yeseva_oneregular'; background: url(../images/devider4.png) repeat-x left bottom; font-size: 21px; color: #c89f2d; margin: 0 0 0 0; padding: 10px 0;}
-.innerpagetextblock .single_col-md-4_textcon p {text-align: left; font-family: 'Raleway-Regular'; font-size: 16px; line-height: 24px; color: #4c4c4c;}
-.innerpagetextblock .single_col-md-4_textcon .btnadd, .innerpagetextblock .single_col-md-4_textcon .btnadd a {font-family: 'Raleway-bold';  font-size: 21px; line-height: 24px; color: #dc4d4d; text-transform: uppercase; text-align: right;}
-
+.innerpagetextblock .single_col-md-4_textcon h4, .innerpagetextblock .single_col-md-4_textcon h4 a {font-family: 'yeseva_oneregular'; background: url(../images/devider4.png) repeat-x left bottom; font-size: 21px; color: #c89f2d; margin: 0 0 0 0; padding: 10px 0 6px 0px;; min-height: 48px;}
+.innerpagetextblock .single_col-md-4_textcon p {text-align: left; font-family: 'Raleway-Regular'; font-size: 16px; line-height: 24px; min-height: 168px; color: #4c4c4c;}
+.innerpagetextblock .single_col-md-4_textcon .btnadd{font-family: 'Raleway-bold';
+    font-size: 24px;
+    color: #fff !important;
+    text-transform: uppercase;
+    background-color: #be4622;
+    text-align: right;
+    padding: 6px 10px;
+    width: 68px;
+    float: right;}
+.innerpagetextblock .single_col-md-4_textcon .btnadd a, .innerpagetextblock .single_col-md-4_textcon .btnadd a:hover{color:#fff !important;}
 .innerpageimgblock{padding-right: 27px;}
 
 .treatmentnservicesinnerpageblock1right .divider{margin-top: 34px; margin-bottom: 31px; background-color:#e0e1e2; height: 4px; width: 100%;}
@@ -412,7 +426,7 @@ a{cursor: pointer;}
     margin-bottom: 0px;
 }
 .productsblock2boxbottom h2 span{color: #fc8248;font-family: 'opensans-bold';}
-.btnbuynow{float: right;text-align: center; background-color: #fc8248; width: 326px; padding: 28px 5px; font-family: 'opensans-bold'; font-size: 48px; line-height: 18px; color: #fff; text-transform: uppercase;}
+.btnbuynow{float: right;text-align: center; background-color: #be4622; width: 326px; padding: 28px 5px; font-family: 'Raleway-bold'; font-size: 48px; line-height: 18px; color: #fff; text-transform: uppercase;}
 .btnbuynow .fa{color:#fff;}
 .btnbuynow a{color:#fff;}
 
@@ -485,20 +499,20 @@ a{cursor: pointer;}
 .newletterdivider h2 {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #f9c045;
+    border-top: 1px solid #f9c045;
     line-height: 0px;
     margin-top: 20px;
     margin-bottom: 16px;
 }
 
 .newletterdivider h2 span {
-    background: #8f961d;
-    padding: 11px 32px 11px 32px;
-    font-family: 'PlayfairDisplay-Regular';
+    background: #be4622;
+    padding: 6px 10px;
+    font-family: 'Raleway-bold';
     font-size: 24px;
     line-height: 0px;
     color: #fff;
-    text-transform: capitalize;
+    text-transform: uppercase;
     border-left: 22px solid #fff;
     border-right: 22px solid #fff;
 }
@@ -652,19 +666,31 @@ a{cursor: pointer;}
     text-transform: uppercase;
     text-align: center;
 }
-.shopcartdetails .shopcartbtn{display: block; width: 40%;
+.shopcartdetails .shopcartbtn{display: block; width: 43%;
     text-align: center;
-    background: #dd4f12;
+    background: #3d3c3c;
     color: #fff !important;
-    padding: 5px 8px;
+    padding: 6px 10px;
     border-radius: 0px;
     margin: 1px;
     text-transform: uppercase;
     display: inline-block;
-    font-family: 'raleway-bold';
-    font-size: 14px;
+    font-family: 'Raleway-bold';
+    font-size: 15px;
 }
 
+.shopcartdetails .shopcartbtn1{display: block; width: 43%;
+    text-align: center;
+    background: #be4622;
+    color: #fff !important;
+    padding: 6px 10px;
+    border-radius: 0px;
+    margin: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'Raleway-bold';
+    font-size: 15px;
+}
 
 
 
@@ -674,7 +700,7 @@ a{cursor: pointer;}
 
 .bx-wrapper {
     position: relative;
-    margin: 0 auto 60px;
+    margin: 0 0 60px 0;
     padding: 0;
     *zoom: 1;
 }
@@ -905,9 +931,10 @@ a{cursor: pointer;}
     padding: 0 0 18px 0;
     width: 90%;
     float: left;
+    font-family: 'raleway-regular';
 }
 .shopproduct_gallery_contain{ width: 100%;}
-.shopproduct_gallery_contain .shopproduct_box2{ width: 99.25%; margin: 2px 0.2%; padding: 1px; border: solid 1px #c3c2c2; float: left; padding: 20px 0; position: relative;}
+.shopproduct_gallery_contain .shopproduct_box2{ width: 98%; margin: 0px 0.2%; padding: 1px; border: solid 1px #c3c2c2; float: left; padding: 20px 0; position: relative;}
 .shopproduct_gallery_contain .shopproduct_box2 .shopproimg2{ width: 282px; height: 300px; display: table-cell; text-align: center; vertical-align: middle;}
 .shopproduct_gallery_contain .shopproduct_box2 .shopproimg2 img {
     max-width: 100%;
@@ -916,8 +943,20 @@ a{cursor: pointer;}
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-height: 100%;
 }
-.shopprocartbtn2{ width: 190px; height: 47px; background: #ededed; text-align: center; line-height: 47px; display: block; margin: 0 auto; font-family:'Raleway-Bold'; font-size: 24px; color: #be4622!important; text-transform: uppercase;}
+.shopprocartbtn2{background-color: #be4622;
+    width: 165px;
+    text-align: center;
+    font-family: 'Raleway-bold';
+    font-size: 24px;
+    padding: 6px 10px;
+    color: #fff !important;
+    text-transform: uppercase;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;}
 .shopproprice2{ background: url("../images/pricebg.png"); width: 90px; height: 90px; border-radius: 100px; position: absolute; left: 50px; top: 200px; text-align: center; line-height: 90px; font-size: 24px;    font-family: 'playfair_displayitalic'; color: #fff; }
 
 
@@ -946,6 +985,7 @@ a{cursor: pointer;}
 .maDownloadstable .box-body{background-color: #f4f4f4;}
 .maDownloadstable .box-footer{background-color: #f8f8f8;height:auto; padding: 10px;}
 .maDownloadstable .box-footer .btn-primary{margin-top: 0px; margin-bottom: 0px;}
+
 
 
 .editprofileblock .form-control {background: #fff; height: 50px; padding: 5px; border: solid 1px #9f9f9f!important; border-radius: 0px; color: #333; font-family: 'OpenSans-Regular'; font-size: 14px; resize: none; line-height: 1.42857143;  width: 100%;}
@@ -1266,7 +1306,7 @@ table td .pinkgradcenter a {
     width: 95% !important;
 
 }
-.chakeout_blog2 .form-group label:last-of-type{line-height: 26px;}
+.chakeout_blog2 .form-group label:last-of-type{line-height: 41px;}
 
 .has-error{color: rgb(221, 75, 57) !important;}
 
@@ -1291,6 +1331,19 @@ table td .pinkgradcenter a {
 
 
 .reviewsblock2wrapper content{display: inline !important;}
-.viewmorewrraper{width: 196px; display: block; margin-left: auto; margin-right: auto;}
+.viewmorewrraper{width: 290px; display: block; margin-left: auto; margin-right: auto;}
 .viewmorewrraper a, .viewmorewrraper a img{display: inline-block;}
-.viewmorewrraper a img{margin-left: 10px;}
+.viewmorewrraper a img{margin-left: 10px;margin-top: -30px;}
+
+.pinkgradleft p{color:#f5f5f5;}
+
+
+/*.checkoutconfirmation_table .chkconfirm,.reviewpurchase .chkconfirm{text-transform: uppercase !important;}*/
+.checkoutconfirmation_table .totalbg, .reviewpurchase .totalbg {
+    background: #95a8a1 !important;
+    font-size: 22px !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    font-family: 'Raleway-bold' !important;
+}
+
