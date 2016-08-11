@@ -320,65 +320,69 @@ app.post('/addadmin', function (req, resp) {
                                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
                                 <meta name="viewport" content="width=device-width, initial-scale=1" />\
                                 <title>Access Code</title>\
+                        <style>\
+                        @font-face{\
+                        @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900);\
+                        }\
+                        </style>\
                             </head>\
-                            <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;  -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
+                            <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;  -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;font-family: \'Raleway\';" bgcolor="#eeebeb">\
                             <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                                 <tr>\
-                                <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
+                                <td align="center" valign="top" style="background-color:#eeebeb;font-family:Raleway-Regular;" width="100%">\
                                 <table cellspacing="0" cellpadding="0" width="600" class="w320" style="width:600px; margin:0 auto;">\
                                 <tr>\
                                 <td align="center" valign="top">\
-                                <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
+                                <table style="margin:0 auto;font-family: \'Raleway\';" cellspacing="0" cellpadding="0" width="100%">\
                                 <tr>\
-                                <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
+                                <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;font-family:Raleway-Regular;">\
                                 <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                                 </td>\
                                 </tr>\
                                 </table>\
                                 <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
                                 <tr>\
-                                <td style="background-color:#ffffff; padding-top: 15px;">\
-                                <center>\
+                                <td style="background-color:#ffffff; padding-top: 15px;font-family:Raleway-Regular;">\
                                 <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
                                 <tr>\
-                                <td style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                                <td style="text-align: center;vertical-align: top; font-family: \'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                                 Welcome to Hands of Healing\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                            <td style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
                                 Please verify your email address by clicking the link below:\
                                 </td>\
                             </tr>\
                             <tr>\
-                            <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 20px; padding-top:6px; padding-bottom:10px;">\
+                            <td style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 20px; padding-top:6px; padding-bottom:10px;">\
                                 <span style="font-size:16px; color:#c89f2d;"><a href="' + link + '">' + link + '</a></span>\
                                 </td>\
                                 </tr>\
                                 <tr>\
-                                <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
+                                <td style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
                                 Thanks for being a Hands of Healing Customer\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif;">\
+                            <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
                                 -- Hands of Healing Team\
                             </td>\
                             </tr>\
                             </table>\
                             <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                                 <tr>\
-                                <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">\
+                                <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
                                 <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                                 </td>\
                                 </tr>\
                                 <tr>\
-                                <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: Arial, Helvetica, sans-serif;">\
-                                <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.png" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.png" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.png" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.png" alt="#"></a>\
+                                <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                                <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
                                 </td>\
                                 </tr>\
                                 <tr>\
-                                <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">\
+                                <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
                     © Copyright 2016 Hands of Healing. All Rights Reserved.\
                             </td>\
                             </tr>\
@@ -627,12 +631,16 @@ app.post('/userupdatestatus', function (req, resp) {
                           <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
                           <meta name="viewport" content="width=device-width, initial-scale=1" />\
                           <title>Sign Up Activation</title>\
+                        <style>\
+                        @font-face{\
+                        @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900);\
+                        }\
+                        </style>\
                       </head>\
-                      <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
+                      <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;font-family: \'Raleway\';" bgcolor="#eeebeb">\
                       <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                           <tr>\
                           <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
-                          <center>\
                           <table cellspacing="0" cellpadding="0" width="600" class="w320">\
                           <tr>\
                           <td align="center" valign="top">\
@@ -645,38 +653,37 @@ app.post('/userupdatestatus', function (req, resp) {
                           </table>\
                           <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
                           <tr>\
-                          <td style="background-color:#ffffff; padding-top: 15px;">\
-                          <center>\
+                          <td style="background-color:#ffffff; padding-top: 15px;font-family: \'Raleway\';">\
                           <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
                           <tr>\
-                          <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 24px;">\
+                          <td style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 24px;">\
                           Your account have been\
                       </td>\
                       </tr>\
                       <tr>\
-                      <td style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                      <td style="text-align: center;vertical-align: top; font-family: \'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                           activated successfully !\
                       </td>\
                       </tr>\
                       <tr>\
-                      <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif;">\
+                      <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
                           -- Hands of Healing Team\
                       </td>\
                       </tr>\
                       </table>\
                       <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                           <tr>\
-                          <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">\
+                          <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
                           <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products/0" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                           </td>\
                           </tr>\
                           <tr>\
-                          <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: Arial, Helvetica, sans-serif;">\
-                          <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.png" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.png" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.png" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.png" alt="#"></a>\
+                          <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                          <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
                           </td>\
                           </tr>\
                           <tr>\
-                          <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">\
+                          <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
                     © Copyright 2016 Hands of Healing. All Rights Reserved.\
                       </td>\
                       </tr>\
@@ -692,7 +699,6 @@ app.post('/userupdatestatus', function (req, resp) {
                       </td>\
                       </tr>\
                       </table>\
-                      </center>\
                       </td>\
                       </tr>\
                       </table>\
@@ -775,19 +781,22 @@ app.post('/forgotpassword', function (req, resp) {
                             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
                             <meta name="viewport" content="width=device-width, initial-scale=1" />\
                             <title>Access Code</title>\
+                        <style>\
+                        @font-face{\
+                        @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900);\
+                        }\
+                        </style>\
                         </head>\
-                        <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;\
-                            -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
+                        <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb;font-family: \'Raleway\'; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
                         <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                             <tr>\
-                            <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
-                            <center>\
+                            <td align="center" valign="top" style="background-color:#eeebeb;font-family: \'Raleway\';" width="100%">\
                             <table cellspacing="0" cellpadding="0" width="600" class="w320">\
                             <tr>\
                             <td align="center" valign="top">\
                             <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                             <tr>\
-                            <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
+                            <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;font-family: \'Raleway\';">\
                             <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                             </td>\
                             </tr>\
@@ -795,42 +804,41 @@ app.post('/forgotpassword', function (req, resp) {
                             <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
                             <tr>\
                             <td style="background-color:#ffffff; padding-top: 15px;">\
-                            <center>\
-                            <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
+                            <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;font-family: \'Raleway\';" cellspacing="0" cellpadding="0">\
                             <tr>\
-                            <td style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                            <td style="text-align: center;vertical-align: top; font-family: \'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                             Welcome to Hands of Healing\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                        <td style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
                             The access code to change your password is <span style="color: #000;font-size: 20px;">'+randomValue+'</span>\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
+                            <td style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
                             Thanks for being a Hands of Healing Customer.\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif;">\
+                        <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
                             -- Hands of Healing Team\
                         </td>\
                         </tr>\
                         </table>\
                         <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                             <tr>\
-                            <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">\
+                            <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
                             <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: Arial, Helvetica, sans-serif;">\
-                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.png" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.png" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.png" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.png" alt="#"></a>\
+                            <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">\
+                            <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
                     © Copyright 2016 Hands of Healing. All Rights Reserved.\
                         </td>\
                         </tr>\
@@ -846,7 +854,6 @@ app.post('/forgotpassword', function (req, resp) {
                         </td>\
                         </tr>\
                         </table>\
-                        </center>\
                         </td>\
                         </tr>\
                         </table>\
@@ -970,13 +977,16 @@ app.post('/changepasswords',function(req,resp){
                              <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
                             <meta name="viewport" content="width=device-width, initial-scale=1" />\
                             <title>Password have been changed successfully</title>\
+                        <style>\
+                        @font-face{\
+                        @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900);\
+                        }\
+                        </style>\
                         </head>\
-                        <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;\
-                            -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
+                        <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;font-family: \'Raleway\';" bgcolor="#eeebeb">\
                         <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                             <tr>\
                             <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
-                            <center>\
                             <table cellspacing="0" cellpadding="0" width="600" class="w320">\
                             <tr>\
                             <td align="center" valign="top">\
@@ -990,37 +1000,36 @@ app.post('/changepasswords',function(req,resp){
                             <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
                             <tr>\
                             <td style="background-color:#ffffff; padding-top: 15px;">\
-                            <center>\
                             <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
                             <tr>\
-                            <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 24px;">\
+                            <td style="text-align:center; vertical-align:top;raleway-regular;color: #4c4c4c;font-size: 18px;line-height: 24px;" valign="center">\
                             You have changed your\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                        <td style="text-align: center;vertical-align: top; font-family: \'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                             password successfully !\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif;">\
+                        <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
                             -- Hands of Healing Team\
                         </td>\
                         </tr>\
                         </table>\
                         <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                             <tr>\
-                            <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">\
+                            <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
                             <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: Arial, Helvetica, sans-serif;">\
-                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.png" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.png" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.png" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.png" alt="#"></a>\
+                            <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">\
+                            <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
                     © Copyright 2016 Hands of Healing. All Rights Reserved.\
                         </td>\
                         </tr>\
@@ -1036,7 +1045,6 @@ app.post('/changepasswords',function(req,resp){
                         </td>\
                         </tr>\
                         </table>\
-                        </center>\
                         </td>\
                         </tr>\
                         </table>\
@@ -1129,13 +1137,16 @@ app.post('/userchangepassword',function(req,resp){
                              <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
                             <meta name="viewport" content="width=device-width, initial-scale=1" />\
                             <title>Password have been changed successfully</title>\
+                        <style>\
+                        @font-face{\
+                        @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900);\
+                        }\
+                        </style>\
                         </head>\
-                        <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;\
-                            -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
+                        <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;font-family: \'Raleway\';" bgcolor="#eeebeb">\
                         <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                             <tr>\
                             <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
-                            <center>\
                             <table cellspacing="0" cellpadding="0" width="600" class="w320">\
                             <tr>\
                             <td align="center" valign="top">\
@@ -1149,37 +1160,36 @@ app.post('/userchangepassword',function(req,resp){
                             <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
                             <tr>\
                             <td style="background-color:#ffffff; padding-top: 15px;">\
-                            <center>\
                             <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
                             <tr>\
-                            <td style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 24px;"\
+                            <td style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 24px;font-family: \'Raleway\';">\
                             You have changed your\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                        <td style="text-align: center;vertical-align: top; font-family: \'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                             password changed successfully !\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif;">\
+                        <td style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
                             -- Hands of Healing Team\
                         </td>\
                         </tr>\
                         </table>\
                         <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                             <tr>\
-                            <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">\
+                            <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
                             <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: Arial, Helvetica, sans-serif;">\
-                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.png" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.png" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.png" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.png" alt="#"></a>\
+                            <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
                             </td>\
                             </tr>\
                             <tr>\
-                            <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">\
+                            <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
                     © Copyright 2016 Hands of Healing. All Rights Reserved.\
                         </td>\
                         </tr>\
@@ -1195,7 +1205,6 @@ app.post('/userchangepassword',function(req,resp){
                         </td>\
                         </tr>\
                         </table>\
-                        </center>\
                         </td>\
                         </tr>\
                         </table>\
@@ -2197,11 +2206,11 @@ app.post('/addorder', function (req, resp) {
                         for(x in orderProduct){
                             subtotal = parseFloat(subtotal)+parseFloat(parseFloat(orderProduct[x].product_price)*parseFloat(orderProduct[x].quantity));
                             product +='<tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">'+i+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">'+orderProduct[x].cat_name+' - '+orderProduct[x].product_name+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">'+orderProduct[x].quantity+'</td>\
-                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%">$'+orderProduct[x].product_price.toFixed(2)+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">'+i+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">'+orderProduct[x].cat_name+' - '+orderProduct[x].product_name+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">'+orderProduct[x].quantity+'</td>\
+                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%">$'+orderProduct[x].product_price.toFixed(2)+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
                     </tr>';
                             i++;
                         }
@@ -2214,13 +2223,16 @@ app.post('/addorder', function (req, resp) {
                         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
                         <meta name="viewport" content="width=device-width, initial-scale=1" />\
                         <title>Order Details</title>\
+                        <style>\
+                        @font-face{\
+                        @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900);\
+                        }\
+                        </style>\
                     </head>\
-                    <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;\
-                        -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
+                    <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;font-family: \'Raleway\';" bgcolor="#eeebeb">\
                     <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                         <tr>\
                         <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
-                        <center>\
                         <table cellspacing="0" cellpadding="0" width="600" class="w320">\
                         <tr>\
                         <td align="center" valign="top">\
@@ -2234,19 +2246,18 @@ app.post('/addorder', function (req, resp) {
                         <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
                         <tr>\
                         <td style="background-color:#ffffff; padding-top: 15px;">\
-                        <center>\
                         <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;" cellspacing="0" cellpadding="0">\
                         <tr>\
-                        <td colspan="2" style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                        <td colspan="2" style="text-align: center;vertical-align: top; font-family: \'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                         Your Order Details\
                     </td>\
                     </tr>\
                     <tr>\
-                    <td style="text-align:left; vertical-align:top;font-family: Arial, Helvetica, sans-serif; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                    <td style="text-align:left; vertical-align:top;font-family: \'Raleway\'; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
                         <span style="font-size: 24px; line-height:26px; color: #000;">Invoice 00'+retstatus.id+'</span><br>\
                     <span>'+timeConverter(retstatus.order_time)+'</span>\
                     </td>\
-                    <td style="text-align:right; vertical-align:top;font-family: Arial, Helvetica, sans-serif; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                    <td style="text-align:right; vertical-align:top;font-family: \'Raleway\'; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
                         <span>Order ID: '+retstatus.id+'</span><br>\
                     <span>Order Date: '+timeConverter(retstatus.order_time)+'</span>\
                     </td>\
@@ -2256,95 +2267,96 @@ app.post('/addorder', function (req, resp) {
                         <table style="margin:5px auto; width: 100% !important;padding: 0px 10px; background:#f3f3f3;" cellspacing="0" cellpadding="0">\
                         <tr>\
                         <td style="width:48%;padding:25px 0 0 2%;" align="left" valign="top">\
-                        <span style="background:#e59205;width:89%;padding:8px 0 7px 5%; text-transform: uppercase;font-weight: bold; font-size:18px;color:#fff;display:block">Billed To</span>\
+                        <span style="background:#e59205;width:89%;padding:8px 0 7px 5%; text-transform: uppercase;font-weight: bold; font-size:18px;color:#fff;display:block;font-family: \'Raleway\';">Billed To</span>\
                     </td>\
                     <td style="width:48%;padding:25px 2% 0 0;" align="right" valign="top">\
-                        <span style="background:#e59205; text-transform: uppercase;font-weight: bold;width:89%;padding:8px 0 7px 5%;font-size:18px;color:#fff;text-align:left;display:block">Shipped To</span>\
+                        <span style="background:#e59205; text-transform: uppercase;font-weight: bold;width:89%;padding:8px 0 7px 5%;font-size:18px;color:#fff;text-align:left;display:block;font-family: \'Raleway\';">Shipped To</span>\
                     </td>\
                     </tr>\
                     <tr>\
                     <td style="width:48%;padding:0px 0 0 2%;" align="left" valign="top">\
-                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="5" width="94%">\
+                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="5" width="94%">\
                         <tbody><tr>\
-                        <td style="background:#fff;width:90%;padding:6px">Name : '+retstatus.bill_name+'</td>\
+                        <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Name : '+retstatus.bill_name+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Address : '+retstatus.bill_address+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Address : '+retstatus.bill_address+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">City : '+retstatus.bill_city+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">City : '+retstatus.bill_city+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">State : '+retstatus.billstate+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">State : '+retstatus.billstate+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Zip : '+retstatus.bill_zip+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Zip : '+retstatus.bill_zip+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Email : <a href="mailto:'+retstatus.bill_email+'" target="_blank">'+retstatus.bill_email+'</a></td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Email : <a href="mailto:'+retstatus.bill_email+'" target="_blank">'+retstatus.bill_email+'</a></td>\
                     </tr>\
                     </tbody></table>\
                     </td>\
-                    <td style="width:48%;padding:0px 2% 0 0;" align="right" valign="top">\
-                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="5" width="94%">\
+                    <td style="width:48%;padding:0px 2% 0 0;font-family: \'Raleway\';" align="right" valign="top">\
+                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="5" width="94%">\
                         <tbody><tr>\
-                        <td style="background:#fff;width:90%;padding:6px">Name : '+retstatus.ship_name+'</td>\
+                        <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Name : '+retstatus.ship_name+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Address : '+retstatus.ship_address+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Address : '+retstatus.ship_address+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">City : '+retstatus.ship_city+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">City : '+retstatus.ship_city+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">State : '+retstatus.shipstate+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">State : '+retstatus.shipstate+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Zip : '+retstatus.ship_zip+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Zip : '+retstatus.ship_zip+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">&nbsp;</td>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">&nbsp;</td>\
                     </tr>\
                     </tbody></table>\
                     </td>\
                     </tr>\
                     <tr>\
                     <td colspan="2" align="center" valign="middle">\
-                        <table style="margin:25px 0;border:solid 1px #c6c6c6;border-bottom:none;font-size:13px; color:#4c4c4c; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="0" width="96%">\
+                        <table style="margin:25px 0;border:solid 1px #c6c6c6;border-bottom:none;font-size:13px; color:#4c4c4c; background:#fff; background-color:#fff;font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="0" width="96%">\
                         <tbody><tr>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="15%">Item</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="40%">Name</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="10%">Qty</th>\
-                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="15%">Price</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="20%">Amount</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="left" valign="middle" width="15%">Item</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="left" valign="middle" width="40%">Name</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="10%">Qty</th>\
+                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="15%">Price</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="20%">Amount</th>\
                         </tr>'+product+'\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% ">\                        \
+                    <span style="display:inline-block;text-align:right;width:76px;font-family: \'Raleway\';"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
+                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
                     </tr>\
                     </tbody>\
                         </table>\
@@ -2354,29 +2366,29 @@ app.post('/addorder', function (req, resp) {
                     </td>\
                     </tr>\
                     <tr>\
-                    <td colspan="2" style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
-                        Thanks for your order\
+                    <td colspan="2" style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
+                        <a style="font-family: \'Raleway\';color: #4c4c4c;" href="http://handsofhealing.influxiq.com/appointment">Book Your Appointment Online Now!</a>\
                     </td>\
                     </tr>\
                     <tr>\
-                    <td colspan="2" style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif;">\
+                    <td colspan="2" style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
                         -- Hands of Healing Team\
                     </td>\
                     </tr>\
                     </table>\
                     <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                         <tr>\
-                        <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">\
+                        <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
                         <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: Arial, Helvetica, sans-serif;">\
-                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.png" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.png" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.png" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.png" alt="#"></a>\
+                        <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
                         </td>\
                         </tr>\
                        <tr>\
-                        <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">\
+                        <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
                     © Copyright 2016 Hands of Healing. All Rights Reserved.\
                     </td>\
                     </tr>\
@@ -2392,7 +2404,6 @@ app.post('/addorder', function (req, resp) {
                     </td>\
                     </tr>\
                     </table>\
-                    </center>\
                     </td>\
                     </tr>\
                     </table>\
@@ -2524,11 +2535,11 @@ app.post('/duplicatemail', function (req, resp) {
                     for(x in orderProduct){
                         subtotal = parseFloat(subtotal)+parseFloat(parseFloat(orderProduct[x].product_price)*parseFloat(orderProduct[x].quantity));
                         product +='<tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">'+i+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">'+orderProduct[x].cat_name+' - '+orderProduct[x].product_name+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">'+orderProduct[x].quantity+'</td>\
-                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%">$'+orderProduct[x].product_price.toFixed(2)+'</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="left" valign="middle" width="15%">'+i+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="left" valign="middle" width="40%">'+orderProduct[x].cat_name+' - '+orderProduct[x].product_name+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="right" valign="middle" width="10%">'+orderProduct[x].quantity+'</td>\
+                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="right" valign="middle" width="15%">$'+orderProduct[x].product_price.toFixed(2)+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
                     </tr>';
                         i++;
                     }
@@ -2541,12 +2552,18 @@ app.post('/duplicatemail', function (req, resp) {
                         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
                         <meta name="viewport" content="width=device-width, initial-scale=1" />\
                         <title>Order Details</title>\
+                        <style>\
+                        @font-face{\
+                        @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900);\
+                        }\
+                        </style>\
+                        </style>\
                     </head>\
-                    <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;\
+                    <body class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;\
                         -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;" bgcolor="#eeebeb">\
                     <table align="center" cellpadding="0" cellspacing="0" width="100%">\
                         <tr>\
-                        <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
+                        <td align="center" valign="top" style="background-color:#eeebeb; font-family:\'Raleway\';" width="100%">\
                         <table cellspacing="0" cellpadding="0" width="600" class="w320">\
                         <tr>\
                         <td align="center" valign="top">\
@@ -2562,16 +2579,16 @@ app.post('/duplicatemail', function (req, resp) {
                         <td style="background-color:#ffffff; padding-top: 15px;">\
                         <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;"cellspacing="0" cellpadding="0">\
                         <tr>\
-                        <td colspan="2" style="text-align: center;vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                        <td colspan="2" style="text-align: center;vertical-align: top; font-family:\'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
                         Your Order Details\
                     </td>\
                     </tr>\
                     <tr>\
-                    <td style="text-align:left; vertical-align:top;font-family: Arial, Helvetica, sans-serif; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                    <td style="text-align:left; vertical-align:top;font-family: \'Raleway\'; font-weight: 400; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
                         <span style="font-size: 24px; line-height:26px; color: #000;">Invoice 00'+retstatus.id+'</span><br>\
                     <span>'+timeConverter(retstatus.order_time)+'</span>\
                     </td>\
-                    <td style="text-align:right; vertical-align:top;font-family: Arial, Helvetica, sans-serif; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                    <td style="text-align:right; vertical-align:top; font-family: \'Raleway\'; font-weight: 400; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
                         <span>Order ID: '+retstatus.id+'</span><br>\
                     <span>Order Date: '+timeConverter(retstatus.order_time)+'</span>\
                     </td>\
@@ -2581,95 +2598,95 @@ app.post('/duplicatemail', function (req, resp) {
                         <table style="margin:5px auto; width: 100% !important;padding: 0px 10px; background:#f3f3f3;" cellspacing="0" cellpadding="0">\
                         <tr>\
                         <td style="width:48%;padding:25px 0 0 2%;" align="left" valign="top">\
-                        <span style="background:#e59205;width:89%;padding:8px 0 7px 5%; text-transform: uppercase;font-weight: bold; font-size:18px;color:#fff;display:block">Billed To</span>\
+                        <span style="background:#e59205;width:89%;padding:8px 0 7px 5%; text-transform: uppercase;font-weight: bold; font-size:18px;color:#fff;display:block; font-family: \'Raleway\'; font-weight: 400;">Billed To</span>\
                     </td>\
                     <td style="width:48%;padding:25px 2% 0 0;" align="right" valign="top">\
-                        <span style="background:#e59205; text-transform: uppercase;font-weight: bold;width:89%;padding:8px 0 7px 5%;font-size:18px;color:#fff;text-align:left;display:block">Shipped To</span>\
+                        <span style="background:#e59205; text-transform: uppercase;font-weight: bold;width:89%;padding:8px 0 7px 5%;font-size:18px;color:#fff;text-align:left;display:block; font-family: \'Raleway\'; font-weight: 400;">Shipped To</span>\
                     </td>\
                     </tr>\
                     <tr>\
                     <td style="width:48%;padding:0px 0 0 2%" align="left" valign="top">\
-                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="5" width="94%">\
+                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff; font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="5" width="94%">\
                         <tbody><tr>\
-                        <td style="background:#fff;width:90%;padding:6px">Name : '+retstatus.bill_name+'</td>\
+                        <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">Name : '+retstatus.bill_name+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Address : '+retstatus.bill_address+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">Address : '+retstatus.bill_address+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">City : '+retstatus.bill_city+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: font-family: \'Raleway\';">City : '+retstatus.bill_city+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">State : '+retstatus.billstate+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">State : '+retstatus.billstate+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Zip : '+retstatus.bill_zip+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">Zip : '+retstatus.bill_zip+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Email : <a href="mailto:'+retstatus.bill_email+'" target="_blank">'+retstatus.bill_email+'</a></td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">Email : <a href="mailto:'+retstatus.bill_email+'" target="_blank">'+retstatus.bill_email+'</a></td>\
                     </tr>\
                     </tbody></table>\
                     </td>\
                     <td style="width:48%;padding:0px 2% 0 0" align="right">\
-                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="5" width="94%">\
+                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff; font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="5" width="94%">\
                         <tbody><tr>\
-                        <td style="background:#fff;width:90%;padding:6px">Name : '+retstatus.ship_name+'</td>\
+                        <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">Name : '+retstatus.ship_name+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Address : '+retstatus.ship_address+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">Address : '+retstatus.ship_address+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">City : '+retstatus.ship_city+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">City : '+retstatus.ship_city+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">State : '+retstatus.shipstate+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">State : '+retstatus.shipstate+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">Zip : '+retstatus.ship_zip+'</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">Zip : '+retstatus.ship_zip+'</td>\
                     </tr>\
                     <tr>\
-                    <td style="background:#fff;width:90%;padding:6px">&nbsp;</td>\
+                    <td style="background:#fff;width:90%;padding:6px; font-family: \'Raleway\';">&nbsp;</td>\
                     </tr>\
                     </tbody></table>\
                     </td>\
                     </tr>\
                     <tr>\
                     <td colspan="2" align="center" valign="middle">\
-                        <table style="margin:25px 0;border:solid 1px #c6c6c6;border-bottom:none;font-size:13px; color:#4c4c4c; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="0" width="96%">\
+                        <table style="margin:25px 0;border:solid 1px #c6c6c6;border-bottom:none;font-size:13px; color:#4c4c4c; background:#fff; background-color:#fff;font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="0" width="96%">\
                         <tbody><tr>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="15%">Item</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="left" valign="middle" width="40%">Name</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="10%">Qty</th>\
-                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="15%">Price</th>\
-                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;" align="right" valign="middle" width="20%">Amount</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="left" valign="middle" width="15%">Item</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="left" valign="middle" width="40%">Name</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="10%">Qty</th>\
+                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="15%">Price</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="20%">Amount</th>\
                         </tr>'+product+'\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%; font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
                     </tr>\
                     <tr>\
-                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="15%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="left" valign="middle" width="40%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="10%">&nbsp;</td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
-                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
+                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
                     </tr>\
                     </tbody>\
                         </table>\
@@ -2679,29 +2696,29 @@ app.post('/duplicatemail', function (req, resp) {
                     </td>\
                     </tr>\
                     <tr>\
-                    <td colspan="2" style="text-align:center; vertical-align:top;font-family: Arial, Helvetica, sans-serif;color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
-                        Thanks for your order\
+                    <td colspan="2" style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
+                        <a style="font-family: \'Raleway\';color: #4c4c4c;" href="http://handsofhealing.influxiq.com/appointment">Book Your Appointment Online Now!</a>\
                     </td>\
                     </tr>\
                     <tr>\
-                    <td colspan="2" style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif;">\
+                    <td colspan="2" style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
                         -- Hands of Healing Team\
                     </td>\
                     </tr>\
                     </table>\
                     <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                         <tr>\
-                        <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;">\
+                        <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
                         <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                         </td>\
                         </tr>\
                         <tr>\
-                        <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: Arial, Helvetica, sans-serif;">\
-                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.png" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.png" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.png" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.png" alt="#"></a>\
+                        <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
                         </td>\
                         </tr>\
                        <tr>\
-                        <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: Arial, Helvetica, sans-serif;">\
+                        <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
                     © Copyright 2016 Hands of Healing. All Rights Reserved.\
                     </td>\
                     </tr>\
@@ -2717,7 +2734,6 @@ app.post('/duplicatemail', function (req, resp) {
                     </td>\
                     </tr>\
                     </table>\
-                    </center>\
                     </td>\
                     </tr>\
                     </table>\
@@ -2751,6 +2767,277 @@ app.post('/duplicatemail', function (req, resp) {
                     return;
                    // resp.send(JSON.stringify(retstatus.bill_email));
                    // return;
+
+                });
+
+
+
+
+
+
+            }else{
+
+                stat = {'error':1,'msg':'Failed internal error.'};
+                resp.send(JSON.stringify(stat));
+                return;
+            }
+
+        }
+
+    });
+});
+app.post('/printpdf', function (req, resp) {
+    var  stat={};
+    var extend = require('extend');
+    connection.query("SELECT od.*,sb.s_st_name as billstate,ss.s_st_name as shipstate FROM order_details  od join state sb  on sb.id=od.bill_state join state ss on ss.id=od.ship_state   WHERE od.id = ?",[req.body.order_id],function(error,rows,fields){
+        console.log(error);
+        if(!!error) console.log('error in db call ');
+        else{
+
+            if (rows.length  > 0) {
+                var orderDet = rows[0];
+
+                connection.query("SELECT opd.*,p.category_id,c.cat_name FROM order_product_details AS opd INNER JOIN product AS p ON p.id = opd.product_id INNER JOIN category AS c ON c.id = p.category_id WHERE order_id = ?",[req.body.order_id],function(error2,rows2,fields2){
+                    if(rows2.length > 0){
+                        var orderProduct = rows2;
+
+                    }else{
+                        var orderProduct = [];
+                    }
+
+                    extend(orderDet, orderDet, {orderProduct:orderProduct});
+
+                    retstatus = orderDet;
+
+                    var  product='';
+                    var subtotal=0.00;
+                    var i=1;
+                    for(x in orderProduct){
+                        subtotal = parseFloat(subtotal)+parseFloat(parseFloat(orderProduct[x].product_price)*parseFloat(orderProduct[x].quantity));
+                        product +='<tr>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">'+i+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">'+orderProduct[x].cat_name+' - '+orderProduct[x].product_name+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">'+orderProduct[x].quantity+'</td>\
+                    \<td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%">$'+orderProduct[x].product_price.toFixed(2)+'</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(orderProduct[x].product_price*orderProduct[x].quantity).toFixed(2)+'</span></td>\
+                    </tr>';
+                        i++;
+                    }
+
+
+                    var html;
+                    html ='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitio.dtd">\
+                        <html xmlns="http://www.w3.org/1999/xhtml">\
+                        <head>\
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\
+                        <meta name="viewport" content="width=device-width, initial-scale=1" />\
+                        <title>Order Details</title>\
+                        <link href=\'https://fonts.googleapis.com/css?family=Raleway:400,600,700,500,800,900\'>\
+                        <style>\
+                        @media screen{\
+                         .webfont {\
+                         font-family: ‘Raleway’, Arial, sans-serif !important;\
+                         }\
+                         }\
+                        </style>\
+                        </head>\
+                    <body  class="body" style="padding:0; margin:0; display:block; background:#eeebeb; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none;width: 100%; height: 100%; color: #6f6f6f; font-weight: 400; font-size: 18px;font-family: \'Raleway\';" bgcolor="#eeebeb">\
+                    <table align="center" cellpadding="0" cellspacing="0" width="100%">\
+                        <tr>\
+                        <td align="center" valign="top" style="background-color:#eeebeb" width="100%">\
+                        <table cellspacing="0" cellpadding="0" width="600" class="w320">\
+                        <tr>\
+                        <td align="center" valign="top">\
+                        <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
+                        <tr>\
+                        <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
+                        <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                        </td>\
+                        </tr>\
+                        </table>\
+                        <table cellspacing="0" cellpadding="0" class="force-full-width" bgcolor="#ffffff" >\
+                        <tr>\
+                        <td style="background-color:#ffffff; padding-top: 15px;">\
+                        <table style="margin:0 auto; width: 100% !important;padding: 0px 10px;"cellspacing="0" cellpadding="0">\
+                        <tr>\
+                        <td colspan="2" style="text-align: center;vertical-align: top; font-family: \'Raleway\'; font-size: 30px;color: #be4622;text-transform: uppercase;font-weight: bold;padding-top: 9px;">\
+                        Your Order Details\
+                    </td>\
+                    </tr>\
+                    <tr>\
+                    <td style="text-align:left; vertical-align:top;font-family: \'Raleway\'; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                        <span style="font-size: 24px; line-height:26px; color: #000;">Invoice 00'+retstatus.id+'</span><br>\
+                    <span>'+timeConverter(retstatus.order_time)+'</span>\
+                    </td>\
+                    <td style="text-align:right; vertical-align:top;font-family: \'Raleway\'; color: #4c4c4c;font-size: 16px;line-height: 24px; padding-top:10px; padding-bottom:10px;">\
+                        <span>Order ID: '+retstatus.id+'</span><br>\
+                    <span>Order Date: '+timeConverter(retstatus.order_time)+'</span>\
+                    </td>\
+                    </tr>\
+                    <tr>\
+                    <td colspan="2">\
+                        <table style="font-family: \'Raleway\'; margin:5px auto; width: 100% !important;padding: 0px 10px; background:#f3f3f3;" cellspacing="0" cellpadding="0">\
+                        <tr>\
+                        <td style="width:48%;padding:25px 0 0 2%;font-family: \'Raleway\';" align="left" valign="top">\
+                        <span style="background:#e59205;width:89%;padding:8px 0 7px 5%; text-transform: uppercase;font-weight: bold; font-size:18px;color:#fff;display:block">Billed To</span>\
+                    </td>\
+                    <td style="width:48%;padding:25px 2% 0 0;font-family: \'Raleway\';" align="right" valign="top">\
+                        <span style="background:#e59205; text-transform: uppercase;font-weight: bold;width:89%;padding:8px 0 7px 5%;font-size:18px;color:#fff;text-align:left;display:block">Shipped To</span>\
+                    </td>\
+                    </tr>\
+                    <tr>\
+                    <td style="width:48%;padding:0px 0 0 2%;font-family: \'Raleway\';" align="left" valign="top">\
+                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;" border="0" cellpadding="0" cellspacing="5" width="94%">\
+                        <tbody><tr>\
+                        <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Name : '+retstatus.bill_name+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Address : '+retstatus.bill_address+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">City : '+retstatus.bill_city+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">State : '+retstatus.billstate+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Zip : '+retstatus.bill_zip+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Email : <a href="mailto:'+retstatus.bill_email+'" target="_blank">'+retstatus.bill_email+'</a></td>\
+                    </tr>\
+                    </tbody></table>\
+                    </td>\
+                    <td style="width:48%;padding:0px 2% 0 0" align="right">\
+                        <table style="border:solid 1px #e0e0e0;font-size:14px;color:#4c4c4c;padding:0%; background:#fff; background-color:#fff;font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="5" width="94%">\
+                        <tbody><tr>\
+                        <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Name : '+retstatus.ship_name+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Address : '+retstatus.ship_address+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">City : '+retstatus.ship_city+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">State : '+retstatus.shipstate+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">Zip : '+retstatus.ship_zip+'</td>\
+                    </tr>\
+                    <tr>\
+                    <td style="background:#fff;width:90%;padding:6px;font-family: \'Raleway\';">&nbsp;</td>\
+                    </tr>\
+                    </tbody></table>\
+                    </td>\
+                    </tr>\
+                    <tr>\
+                    <td colspan="2" align="center" valign="middle">\
+                        <table style="margin:25px 0;border:solid 1px #c6c6c6;border-bottom:none;font-size:13px; color:#4c4c4c; background:#fff; background-color:#fff;font-family: \'Raleway\';" border="0" cellpadding="0" cellspacing="0" width="96%">\
+                        <tbody><tr>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%;text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="left" valign="middle" width="15%">Item</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="left" valign="middle" width="40%">Name</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="10%">Qty</th>\
+                        \<th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="15%">Price</th>\
+                        <th style="background:#e59205;color:#fff;font-size:14px;padding:10px 2%; text-transform: uppercase;font-weight: bold;font-family: \'Raleway\';" align="right" valign="middle" width="20%">Amount</th>\
+                        </tr>'+product+'\
+                    <tr>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px">Sub total</span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+subtotal.toFixed(2)+'</span></td>\
+                    </tr>\
+                    <tr>\
+                      <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Shipping </span> </td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% ">\                        <span style="display:inline-block;text-align:right;width:76px"> $'+parseFloat(retstatus.shipping_charge).toFixed(2)+'</span></td>\
+                    </tr>\
+                    <tr>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Tax Rate </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "><span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.tax).toFixed(2)+'</span></td>\
+                    </tr>\
+                    <tr>\
+                     <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="15%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="left" valign="middle" width="40%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="10%">&nbsp;</td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="15%"><span style="display:inline-block;padding-right:5px;text-align:right;width:76px"> Total </span></td>\
+                    <td style="border-bottom:solid 1px #c6c6c6;padding:8px 2%;font-family: \'Raleway\';" align="right" valign="middle" width="20% "> <span style="display:inline-block;text-align:right;width:76px">$'+parseFloat(retstatus.order_total).toFixed(2)+'</span></td>\
+                    </tr>\
+                    </tbody>\
+                        </table>\
+                    </td>\
+                    </tr>\
+                    </table>\
+                    </td>\
+                    </tr>\
+                    <tr>\
+                    <td colspan="2" style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
+                        Thanks for your order\
+                    </td>\
+                    </tr>\
+                    <tr>\
+                    <td colspan="2" style="text-align:right;vertical-align:top;padding-top: 7px; padding-bottom: 15px; font-family: \'Raleway\';">\
+                        -- Hands of Healing Team\
+                    </td>\
+                    </tr>\
+                    </table>\
+                    <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
+                        <tr>\
+                        <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
+                        <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                        </td>\
+                        </tr>\
+                        <tr>\
+                        <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
+                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                        </td>\
+                        </tr>\
+                       <tr>\
+                        <td style="color:#f0f0f0; font-size: 14px; text-align:center; padding-bottom:4px;padding-top: 10px; font-family: \'Raleway\';">\
+                    © Copyright 2016 Hands of Healing. All Rights Reserved.\
+                    </td>\
+                    </tr>\
+                    <tr>\
+                    <td style="font-size:12px;">\
+                        &nbsp;\
+                    </td>\
+                    </tr>\
+                    </table>\
+                    </td>\
+                    </tr>\
+                    </table>\
+                    </td>\
+                    </tr>\
+                    </table>\
+                    </td>\
+                    </tr>\
+                    </table>\
+                    </body>\
+                    </html>'
+
+
+
+                   /* var wkhtmltopdf = require('wkhtmltopdf');
+
+                    var fs = require('fs-extra');
+// URL
+                    var conversion = require("phantom-html-to-pdf")();
+                    conversion({ html: "<h1>Hello World</h1>" }, function(err, pdf) {
+                        console.log(pdf.logs);
+                        console.log(pdf.numberOfPages);
+                        pdf.stream.pipe(res);
+                    });*/
+                    stat = {'error':0};
+                    resp.send(JSON.stringify(html));
+                    return;
+                    // resp.send(JSON.stringify(retstatus.bill_email));
+                    // return;
 
                 });
 

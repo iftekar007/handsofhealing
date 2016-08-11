@@ -1,3 +1,4 @@
+<script src="../js/app.js"></script>
 <div class="container-fluid mainbanner">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
@@ -153,10 +154,10 @@
                         <div class="form-group checkbox">
                             <div class="form-group radiobox2">
                                 <!--<span><input type="radio" value=""> <img src="images/chakeout_icon2.png" alt="#" ></span>-->
-                                <span><input ng-model="cartform.card_type" name="card_type"  type="radio" value="1">  <img src="images/chakeout_icon3.png" alt="#" ></span>
-                                <span><input ng-model="cartform.card_type"  name="card_type"  type="radio" value="2">  <img src="images/chakeout_icon4.png" alt="#" ></span>
-                                <span><input ng-model="cartform.card_type"  name="card_type"  type="radio" value="3">  <img src="images/chakeout_icon5.png" alt="#" ></span>
-                                <span> <input ng-model="cartform.card_type"  name="card_type"  type="radio" value="4"> <img src="images/chakeout_icon6.png" alt="#" ></span>
+                                <span><input ng-model="cartform.card_type" name="card_type"  type="radio" value="1">  <img src="images/chakeout_icon3.jpg" alt="#" ></span>
+                                <span><input ng-model="cartform.card_type"  name="card_type"  type="radio" value="2">  <img src="images/chakeout_icon4.jpg" alt="#" ></span>
+                                <span><input ng-model="cartform.card_type"  name="card_type"  type="radio" value="3">  <img src="images/chakeout_icon5.jpg" alt="#" ></span>
+                                <span> <input ng-model="cartform.card_type"  name="card_type"  type="radio" value="4"> <img src="images/chakeout_icon6.jpg" alt="#" ></span>
                             </div>
                         </div>
 
@@ -185,7 +186,7 @@
                             </select>
                             <select tabindex="20" class="form-control-date2" name="card_exp_year" ng-model="cartform.card_exp_year" required-mesage="'Card expired year cannot be blank'">
                                 <option value="">Select Year</option>
-                                <option ng-repeat="year in cardyear" value="{{year}}">{{year}}</option>
+                                <option ng-selected="year == cartform.card_exp_year" ng-repeat="year in cardyear" value="{{year}}" >{{year}}</option>
 
                             </select>
                             <div class="clearfix"></div>
@@ -240,7 +241,7 @@
                     </div>
                     <div class="form-button-group">
                         <!--<a href="javascript:void(0)" class="chakeoutbtn"> PLACE ORDER </a>-->
-                        <input type="submit"  class="btn btn-primary chakeoutbtn" value="PLACE Your ORDER" >
+                        <input type="submit"  class="btn btn-primary continueshoppingbtn" value="view your order" >
                         <a ui-sref="cart" class="btn btn-primary backtocartbtn"> back to cart </a>
                         <a ui-sref="productlisting({id:0})" class="btn btn-primary continueshoppingbtn"> continue shopping </a>
                         <div class="clearfix"></div>

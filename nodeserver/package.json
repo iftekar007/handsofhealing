@@ -11,10 +11,12 @@
     "express": "4.13.3",
     "extend": "3.0.0",
     "fs": "0.0.2",
+    "html-pdf": "2.0.1",
     "method-override": "2.3.5",
     "multer": "1.1.0",
     "mysql": "2.10.1",
     "nodemailer": "0.7.1",
+    "phantom": "^2.1.14",
     "yelp": "^1.0.1"
   }
 }

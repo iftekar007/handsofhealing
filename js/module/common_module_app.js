@@ -674,9 +674,14 @@ common_module_app.controller('productdetails', function($scope,$state,$cookieSto
 
         if(data[0].addfile != '')
             $scope.productimage=JSON.parse(data[0].addfile);
-//console.log($scope.productimage);
-        $scope.productimage.splice(0, 0, data[0].product_file);
+
+
+            $scope.productimage.splice(0, 0, data[0].product_file);
+           // $scope.productimage.push(data[0].product_file);
+
+
         $scope.bigimage = data[0].product_file;
+        console.log($scope.productimage);
 
     });
 
@@ -745,12 +750,17 @@ common_module_app.controller('productdetails', function($scope,$state,$cookieSto
         });
 
         $('.imggalbxslider').bxSlider({
-            minSlides: 3,
-            maxSlides: 3,
-            slideWidth: 63,
-            slideheight: 63,
+            minSlides: 2,
+            maxSlides: 2,
+            slideWidth: 110,
             slideMargin: 10,
-            auto: true
+            moveSlides: 2,
+            auto: true,
+            mode: 'horizontal',
+            autoDelay: 0,
+            randomStart: false,
+            preloadImages: 'all',
+            infiniteLoop: false
         });
         //
     },2000);
@@ -1043,7 +1053,7 @@ common_module_app.controller('checkout', function($scope,$state,$http,$sce,$stat
 
     }
 
-
+console.log($cookieStore.get('checkoutform'));
 });
 
 common_module_app.controller('checkoutconfirmation', function($scope,$state,$cookieStore,$rootScope,contentservice,$http,$uibModal,$timeout) {
@@ -1267,7 +1277,30 @@ common_module_app.controller('ordersuccess', function($scope,$state,$cookieStore
         }
         return stat;
     }
+$scope.printpdf=function() {
 
+   $http({
+        method: 'POST',
+        async: false,
+        url: $scope.adminUrl + 'printpdf',
+        data    : $.param({'order_id':$scope.orderid.order_id}),
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    }).success(function (data) {
+        //$cookieStore.remove('checkoutform');
+       // $cookieStore.put('orderid', data);
+
+ // var divContents = $("#dvContainer").html();
+ // var divContents = data;
+     //  console.log(divContents);
+  // var printWindow = window.open('', '', 'height=400,width=800');
+  //      printWindow.document.write('<html><head><title>DIV Contents</title>');
+  //      printWindow.document.write('</head><body >');
+  //      printWindow.document.write(divContents);
+  //      printWindow.document.write('</body></html>');
+  //      printWindow.document.close();
+       window.print(data);
+    })
+}
 });
 
 

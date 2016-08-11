@@ -65,7 +65,7 @@
                             <a ng-show="cartitem.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:cartitem.category_id,name:caturl(cartitem.cat_name)})"><h2  ng-bind="cartitem.cat_name+' - '+cartitem.product_name"></h2></a>
                             <div class="stockpriceqty">
                                 <div class="stock-price">
-                                    UNIT PRICE : ${{cartitem.price}}
+                                    UNIT PRICE : ${{cartitem.price.toFixed(2)}}
                                 </div>
                                 <div class="stock-qty">
                                     <label>Quantity</label>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="stockvalue">
                                 <div class="stock-subtotal-price">
-                                    SUBTOTAL : <span>${{subtotal(cartitem.qty,cartitem.price)}}</span>
+                                    SUBTOTAL : <span>${{subtotal(cartitem.qty,cartitem.price).toFixed(2)}}</span>
                                 </div>
                                 <div  class="stock-action">
                                     <a ng-click="removecart(cartitem.pid)">delete</a>
@@ -144,7 +144,7 @@
         </div>
         <div class="shopproduct_gallery_contain">
           <ul class="bxslider">
-                <li  ng-repeat="product in products">
+                <li  ng-repeat="product in products| filter:{status:1} | orderBy:priority:reverse">
                     <div class="shopproduct_box2">
                         <div class="shopproimg2">
                             <img src="nodeserver/uploads/{{product.product_file}}" >

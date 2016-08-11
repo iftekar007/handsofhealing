@@ -237,7 +237,7 @@ body{ background:#fff; margin:0; padding:0;}
 .topphoneblock h3{ margin:0; padding:0; font-size:34px; color:#ff7c00; text-transform:uppercase; font-weight:normal; font-family:'Raleway-ExtraBold';line-height: 36px;}
 
 
-.homebannerblock{ background:url(../images/tophomebanner.png) no-repeat center top; background-size:1920px; height:925px; margin-top:-142px; padding-top:142px;}
+.homebannerblock{ background:url(../images/tophomebanner.jpg) no-repeat center top; background-size:1920px; height:925px; margin-top:-142px; padding-top:142px;}
 
 .homebannerlogo{ width:550px; margin:67px 0 0 73px; float:left;}
 
@@ -944,7 +944,7 @@ textarea:focus, input:focus , select:focus, option:focus{
 .carthome .dropdown-menu .itemtotal,
 .carthome .dropdown-menu .items,
 .carthome .dropdown-menu .totalprice{padding-right: 0px; padding-left: 0px;}
-.carthome .dropdown-menu .itemprice{width:30.3333%;}
+.carthome .dropdown-menu .itemprice{width:29.3333%;}
 .carthome .dropdown-menu .itemimg{background-color: #fff; border: 1px solid #d1d1d1; padding: 3px; width: 50px; height: 30px; float: left; overflow: hidden; }
 .carthome .dropdown-menu .itemimg img{height: 100%; width: 100%;}
 .carthome .dropdown-menu .iteminfo h4{font-family: 'raleway-regular'; font-size: 14px; line-height: 20px; color:#000000; margin: 0px;padding-left: 10px; text-transform: capitalize;}
@@ -1223,12 +1223,34 @@ textarea:focus, input:focus , select:focus, option:focus{
 .checkoutpopup a:last-of-type{margin-right: 0px !important;}
 
 
-.prodetail_left_smallimg .bx-wrapper .bx-prev {
-    left: 0px;
-    background: url("../images/controls.png") no-repeat 0 -32px;
+.gallerysilder .bx-wrapper .bx-prev {left: -35px;background: url("../images/controls.png") no-repeat 0 -32px;}
+.gallerysilder .bx-wrapper .bx-next {right: -35px; background: url("../images/controls.png") no-repeat -43px -32px;}
+.gallerysilder .bx-wrapper{margin-left: auto;  margin-right: auto;}
+.imggalbxslider li {vertical-align: middle; display: inline-block; float: none !important; height: 68px; overflow: hidden; border: solid 1px #cfcdcd;}
+.gallerysilder li img {margin: 0 !important; padding: 0;  border:none; cursor: pointer;}
+.imagewrapper{position: relative; display: table-cell; text-align: center; vertical-align: middle; height: 68px;}
+
+
+.printpdf {
+    float: none;
+    background: #be4622;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Raleway-bold';
+    text-transform: uppercase;
+    margin-top: 28px;
+    margin-bottom: 9px;
+    display: block;
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.prodetail_left_smallimg .bx-wrapper .bx-next {
-    right: 0px;
-    background: url("../images/controls.png") no-repeat -43px -32px;
-}
+.printpdf:hover{color:#fff !important;}
+
+.footertopcon .div3 h3 a{font-size: 14px; color: #0b000c; font-family: 'OpenSans-Semibold';}
+.footertopcon .div3 h3 a:hover{font-size: 14px; color: #0b000c; font-family: 'OpenSans-Semibold';}
+
+#externalBookingPluginContainer{margin-left: auto; margin-right: auto;}

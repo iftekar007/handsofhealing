@@ -1,0 +1,274 @@
+<!-- saved from url=(0040)http://handsofhealing.influxiq.com/index -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<base href="/">-->
+    <base href=".">
+    <title>::Hands of Healing ::</title>
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/ionicons.min.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" type="text/css" rel="stylesheet">
+    <link href="css/AdminLTE.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style1.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/media.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/media1.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/font-awesome.css" rel="stylesheet">
+</head>
+<body >
+<!-- uiView: header -->
+<div ui-view="header" class="ng-scope">
+    <!--navbar-->
+    <div class="container-fluid topblock ng-scope">
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 homelogo">
+                    <a href="http://handsofhealing.influxiq.com/index">
+                        <!--<img src="images/logo.png" alt="#"> -->
+                        <img src="../images/logo.png">
+                        <div class="clearfix"></div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 topphoneblock">
+                    <h2>
+                        <!--Book An apointment-->
+                        Book An apointment
+                        <div class="clearfix"></div>
+                    </h2>
+                    <h3>
+                        <!--510.533.8487-->
+                        510.533.8487
+                        <div class="clearfix"></div>
+
+                    </h3>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 menublock">
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <span class="responsivemenu">MENU</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a ui-sref="index" href="http://handsofhealing.influxiq.com/index"> Home </a></li>
+                                <li> <a ui-sref="treatmentandservices" href="http://handsofhealing.influxiq.com/treatmentandservices">Treatments and Services</a> </li>
+                                <li> <a ui-sref="products" href="http://handsofhealing.influxiq.com/products"> Products   </a> </li>
+                                <li><a ui-sref="aboutus" href="http://handsofhealing.influxiq.com/aboutus"> About the Spa</a> </li>
+                                <li> <a ui-sref="reviews" href="http://handsofhealing.influxiq.com/reviews">  Reviews    </a> </li>
+                                <li><a ui-sref="newsletter" href="http://handsofhealing.influxiq.com/newsletter"> Newsletter</a> </li>
+                                <li><a ui-sref="locations" href="http://handsofhealing.influxiq.com/locations"> Locations   </a></li>
+                                <li><a ui-sref="contactus" href="http://handsofhealing.influxiq.com/contactus"> Contact   </a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </nav>
+                    <div class="carthome">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <div class="cart"><label class="ng-binding">0</label></div>
+                        </a>
+                        <div class="dropdown-menu">
+                            <h2>Shopping Bag</h2>
+                            <div class="divider"></div>
+                            <div class="clearfix"></div>
+                            <!-- item in cart -->
+                            <!-- ngRepeat: item in cartarray --><!-- end item in cart -->
+                            <div class="clearfix"></div>
+                            <div class="divider"></div>
+                            <div class="clearfix"></div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 itemtotal">
+                                    <span>Total</span>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 items text-center">
+                                    <span class="ng-binding">0 Items</span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 totalprice">
+                                    <span class="ng-binding">$0</span>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <a class="btn btn-default btn-block btnshoppingbag" ui-sref="shoppingcart" href="http://handsofhealing.influxiq.com/shoppingcart">shopping bag</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!--navbar end -->
+</div>
+
+<!-- uiView: content -->
+<div ui-view="content" class="ng-scope">
+    <div class="container-fluid mainbanner ng-scope" ng-mouseleave="editbannerhide($event)">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!--<ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              </ol>-->
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <!--<content name='homebanner210' id='10' > </content>-->
+                    <div class="mainimg">
+                        <div class="mainimgbg">
+                            <a ng-mouseover="editlogo($event)">
+                                    <img src="../images/tophomebanner.jpg">
+                                    <div class="clearfix" style="top: 55px; display: block;"></div>
+                            </a>
+                            <!---<img src="images/tophomebanner.jpg" alt="tophomebanner">--->
+                        </div>
+                        <div class="mainannercontent">
+                            <div class="mainannercontentleft">
+                                <div class="mainannercontentleftimage">
+                                     <img src="../images/bannerlogo.png">
+                                     <div class="clearfix"></div>
+                                </div>
+                                <!--<img src="images/homebannerleftlogo.png" alt="logohomemainbannerleft">-->
+                            </div>
+                            <div class="mainannercontentright">
+                                <h2>
+                                    Book An Appointment
+                                    <div class="clearfix"></div>
+                                </h2>
+                                <h4>
+                                   <span>ONLINE BOOKING</span>
+                                   <div class="clearfix"></div>
+                                </h4>
+                                <div class="bannerbuttons">
+                                    <!--<a ui-sref="productdetails({id:11,name:caturl('BRONZE')})" class="btn btn-primary btnbronz"><span><content name='bannerbuttonsone199' id='199' > </content></span></a>-->
+                                    <a ui-sref="treatmentandservicesinnerpage({id:16,name:caturl(&#39;spa packages&#39;)})" class="btn btn-primary btnbronz" href="http://handsofhealing.influxiq.com/treatmentandservicesinnerpage/16/spa-packages"><span>BUY BRONZE PACKAGE NOW <div class="clearfix"></div></span>
+                        </a>
+                                    <a ui-sref="treatmentandservices" class="btn btn-primary btnsellserv" href="http://handsofhealing.influxiq.com/treatmentandservices">
+                        <span>
+                            SEE FULL SERVICES
+                            <div class="clearfix"></div>
+                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid appointmentblock1 ng-scope">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <script type="text/javascript">
+                        daysmart_acc = "9f81d4c2-168d-4657-9a83-a6c5927eea63";
+                        daysmart_iframe_width = 900;
+                        daysmart_iframe_height = 0;
+                    </script>
+                    <script type="text/javascript" src="http://plugin.mysalononline.com/Scripts/external/bookingplugin.js"></script>
+                  <!--  <div class="poploader">
+                        <img src="../images/loading.gif">
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- uiView: footer -->
+<div ui-view="footer" class="ng-scope">
+
+
+    <div class="footersociallink ng-scope">
+        <div class="footerbody">
+            <div class="footertopcon">
+                <div class="div1">
+                    <h2>
+                        100% Satisfaction
+                        <div class="clearfix"></div>
+                    </h2>
+                    <h3>
+                        Guaranteed
+                        <div class="clearfix"></div>
+                    </h3>
+                </div>
+                <div class="div2">
+                    <h2>
+                        Professional Staff
+                        <div class="clearfix"></div>
+                    </h2>
+                    <h3>
+                        Friendly Service
+                        <div class="clearfix"></div>
+                    </h3>
+                </div>
+                <div class="div3">
+                    <h2>
+                        Call Anytime
+                        <div class="clearfix"></div>
+                    </h2>
+                    <h3>
+                        <a href="tel:510-533-8487">
+                            Tel: 510-533-8487
+                            <div class="clearfix"></div>
+                        </a>
+                    </h3>
+                </div>
+                <div class="div4">
+                    <a ng-click="appointment()">
+                        <h2>
+                            Book An Appointment
+                            <div class="clearfix"></div>
+                        </h2>
+                    </a>
+                    <a href="http://handsofhealing.influxiq.com/appointment">
+                        <h3>
+                            Online Booking
+                            <div class="clearfix"></div>
+                        </h3>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="container footerwrapper">
+                <div class="footerlogo">
+                    <a  href="http://handsofhealing.influxiq.com/index">
+                            <img src="../images/footerlogo.png">
+                            <div class="clearfix"></div>
+                    </a>
+                </div>
+                <div class="footermenu">
+                    <a  href="http://handsofhealing.influxiq.com/treatmentandservices">Treatments and Services</a>  •
+                    <a  href="http://handsofhealing.influxiq.com/products">Products</a>  •
+                    <a  href="http://handsofhealing.influxiq.com/aboutus">About the Spa</a>   •
+                    <a  href="http://handsofhealing.influxiq.com/reviews">Reviews</a>   •
+                    <a  href="http://handsofhealing.influxiq.com/newsletter">Newsletter</a>   •
+                    <a  href="http://handsofhealing.influxiq.com/locations">Locations</a>   •
+                    <a  href="http://handsofhealing.influxiq.com/contactus">Contact</a>   •
+                    <a  href="http://handsofhealing.influxiq.com/login">Login   •</a>
+                    <a  href="http://handsofhealing.influxiq.com/signup">Signup</a>
+                    <a  href="http://handsofhealing.influxiq.com/dashboard" class="ng-hide">Dashboard   •</a>
+                    <a  href="http://handsofhealing.influxiq.com/profile" class="ng-hide">Profile</a>
+                   <!-- <a href="javascript:void(0)" ng-show="userid!=0" ng-click="logout();" class="ng-hide">Logout</a>-->
+                </div>
+                <a href="https://twitter.com/hohspa" target="_blank"><img src="images/tink.jpg" alt="#"></a>
+                <a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="images/fink.jpg" alt="#"></a>
+                <a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="images/yink.jpg" alt="#"></a>
+                <a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="images/gink.jpg" alt="#"></a>
+                <div class="footercopyright">
+                        © Copyright 2016 Hands of Healing. All Rights Reserved.
+                        <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

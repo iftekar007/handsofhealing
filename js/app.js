@@ -2496,6 +2496,12 @@ r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookie
     $rootScope.saletax=0.00;
     $rootScope.cartarray='';
 
+    $rootScope.test=function(){
+      $window.location.href='http://handsofhealing.influxiq.com/online-booking.html';
+    }
+
+
+
     if (typeof($cookieStore.get('userrole')) != 'undefined' && $cookieStore.get('userrole') > 0) {
         $rootScope.userrole = $cookieStore.get('userrole');
 

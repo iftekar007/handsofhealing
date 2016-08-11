@@ -177,7 +177,7 @@ a{cursor: pointer;}
 .reviewsblock2{padding-top: 0px; padding-bottom: 36px;}
 .reviewsblock2wrapper{padding: 3px 0px; border: 1px solid #c9c9c9; max-width: 100%; margin-left: auto !important; margin-right: auto !important; float: none;margin-top: 75px;}
 .reviewsblock2wrapper:first-of-type{margin-top: 46px;}
-.upper_center {width: 84px; height: 78px; position: absolute; top: -47px; left: 50%; background-image: url("../images/upper-center.png"); background-repeat: no-repeat;
+.upper_center {width: 84px; height: 78px; position: absolute; top: -47px; left: 50%; background-image: url("../images/upper-center.jpg"); background-repeat: no-repeat;
     background-color: #fff;  margin-left: -42px;}
 
 .reviewsblock2sample1 .col-lg-3.col-md-3.col-sm-12.col-xs-12{float: left;}
@@ -906,7 +906,7 @@ a{cursor: pointer;}
 .bx-wrapper .bx-pager{display: none;}
 .outside #slider-prev {
     left: 50px;
-    background: url(../images/slideprev.png) no-repeat 0 0px;
+    background: url(../images/slideprev.jpg) no-repeat 0 0px;
     width: 34px;
     height: 32px;
     display: inline-block;
@@ -914,7 +914,7 @@ a{cursor: pointer;}
 
 .outside #slider-next {
     right: 10px;
-    background: url(../images/slidenext.png) no-repeat 0px 0px;
+    background: url(../images/slidenext.jpg) no-repeat 0px 0px;
     width: 34px;
     height: 32px;
     display: inline-block;

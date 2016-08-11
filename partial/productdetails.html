@@ -69,9 +69,13 @@
                <!--<img src="../images/proimg2.png">-->
             </div>
 
-            <div class="prodetail_left_smallimg">
+            <div class="prodetail_left_smallimg gallerysilder">
                 <ul class="imggalbxslider">
-                    <li  ng-repeat="item in productimage" ng-click="showImage(item)"><img   src="nodeserver/uploads/{{item}}" /></li>
+                    <li  ng-repeat="item in productimage" ng-click="showImage(item)">
+                      <div class="imagewrapper">
+                        <img   src="nodeserver/uploads/{{item}}" />
+                      </div>
+                    </li>
                    <!-- <li><img src="/images/170_200/tree_root.jpg" /></li>
                     <li><img src="/images/170_200/houses.jpg" /></li>
                     <li><img src="/images/170_200/hill_road.jpg" /></li>
@@ -94,7 +98,7 @@
 
             <div class="product_detailname">
                 <h2><span>Name:</span>  <span ng-bind="productdetails.product_name"></span></h2>
-                <h3>Price : ${{productdetails.price}}</h3>
+                <h3>Price : ${{productdetails.price.toFixed(2)}}</h3>
 
 
             </div>
@@ -106,8 +110,8 @@
 
 
                   <div class="proqty_arrowbtn">
-                <a href="javascript:void(0)"  ng-click="addquan()"><img src="../images/pro_qta_top.png"></a>
-                <a href="javascript:void(0)" ng-click="removequan()"><img src="../images/pro_qta_bottom.png"></a>
+                <a href="javascript:void(0)"  ng-click="addquan()"><img src="../images/pro_qta_top.jpg"></a>
+                <a href="javascript:void(0)" ng-click="removequan()"><img src="../images/pro_qta_bottom.jpg"></a>
 
                    </div>
                 <div class="clearfix"></div>
@@ -133,14 +137,14 @@
 
     </div>
 
-        <div class="product_bottom_gallery_wrapper">
+         <div class="product_bottom_gallery_wrapper">
             <h4>We think you'll love these too ...</h4>
             <div class="outside">
                 <span id="slider-prev"></span> <span id="slider-next"></span>
             </div>
             <div class="shopproduct_gallery_contain">
                 <ul class="bxslider">
-                    <li  ng-repeat="product in products">
+                    <li  ng-repeat="product in products| filter:{status:1} | orderBy:priority:reverse">
                         <div class="shopproduct_box2">
                             <div class="shopproimg2">
                                 <img src="nodeserver/uploads/{{product.product_file}}" >

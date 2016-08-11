@@ -628,6 +628,14 @@
     .matopblock .topblock .container{ position:relative; width:100%;}
 }
 
+@media (max-width: 1100px){
+    .contactusblock2right .form-inline .form-control {
+        width: 46%;
+        display: inline-block;
+    }
+}
+
+
 @media (max-width: 1024px){
     .adminleft ul {
         padding: 0 10px 25px 10px;
@@ -731,10 +739,14 @@
     }
 
     .contactusblock2right .form-inline .form-control {
-        width: 62%;
+        width: 54%;
         display: inline-block;
     }
-
+    .contactusform .form-inline .capturecont {
+        float: none;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
     .contactusform .form-inline label {
         margin-left: 0;
         display: inline-block;
@@ -1046,6 +1058,12 @@
 
 }
 
+@media(max-width:800px) {
+    .contactusblock2right .form-inline .form-control {
+        width: 84%;
+        display: inline-block;
+    }
+}
 @media(max-width:767px) {
 
     .location_left {

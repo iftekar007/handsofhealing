@@ -996,6 +996,7 @@
 }
 
 @media(max-width:991px) {
+
     .doc-list .product_box2 {
         width: 32.5% !important;
         float: left;
@@ -1112,12 +1113,31 @@
         width: 234px !important;
         margin-right: 6px !important;
     }
+
 }
 
 @media(max-width:768px) {
     .shopproduct_gallery_contain ul li {
         width: 225px !important;
         margin-right: 6px !important;
+    }
+    .form-button-group .chakeoutbtn {
+        display: block;
+        padding: 6px 0px;
+        margin: 0 auto 10px auto;
+        width: 280px;
+    }
+    .form-button-group .backtocartbtn {
+        display: block;
+        padding: 6px 0px;
+        margin: 0 auto 10px auto;
+        width: 280px;
+    }
+    .form-button-group .continueshoppingbtn {
+        display: block;
+        padding: 6px 0px;
+        margin: 0 auto 10px auto;
+        width: 280px;
     }
 }
 
