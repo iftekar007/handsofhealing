@@ -54,7 +54,7 @@
                                     <div class="progress" ng-show="picturupload[0].progress >= 0"> <div style="width:{{picturupload[0].progress}}%; background:#00c0ef;" ng-bind="picturupload[0].progress + '%'"></div></div>
                                    <!--<div ng-if="loader=='show'"><img src="images/progress.gif"></div>-->
                                     <div class="clearfix"></div>
-                                    <div ng-if="form.file"><img src="nodeserver/uploads/{{form.file}}" style="max-width:100%;" /></div>
+                                    <div ng-if="form.file"><img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{form.file}}" style="max-width:100%;" /></div>
                                     <div class="clearfix"></div>
                                     <input type="hidden" class="form-control"  name="picture"
                                            ng-model="form.file"

@@ -43,8 +43,8 @@
                         <!-- item in cart -->
                         <div class="row itemlist ng-scope" ng-repeat="item in cartarray">
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 itemimg">
-                                <a ng-if="item.parent_cat!=12" ui-sref="productdetails({id:item.id,name:caturl(item.product_name)})" ><img src="nodeserver/uploads/{{item.product_file}}"></a>
-                                <a ng-if="item.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:item.category_id,name:caturl(item.cat_name)})" ><img src="nodeserver/uploads/{{item.product_file}}"></a>
+                                <a ng-if="item.parent_cat!=12" ui-sref="productdetails({id:item.id,name:caturl(item.product_name)})" ><img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{item.product_file}}"></a>
+                                <a ng-if="item.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:item.category_id,name:caturl(item.cat_name)})" ><img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{item.product_file}}"></a>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 iteminfo">
                                 <a ng-if="item.parent_cat!=12" ui-sref="productdetails({id:item.id,name:caturl(item.product_name)})" ><h4 ng-bind="item.product_name"></h4></a>

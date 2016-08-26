@@ -58,7 +58,7 @@
                           <td ng-if="contenttype[item.id]=='html' || contenttype[item.id]=='text' " >
                               <div ng-repeat=" item1 in conf[item.id] track by $index" ng-bind-html="item1 |sanitizelimit"></div> ..
                           </td>
-                          <td ng-if="contenttype[item.id]=='image' "> <img src="nodeserver/uploads/{{conf[item.id]}}"></td>
+                          <td ng-if="contenttype[item.id]=='image' "> <img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{conf[item.id]}}"></td>
                           <td> {{contenttype[item.id]}} </td>
                           <td> {{item.description |sanitizelimit}} </td>
                           <!--<td>{{item.description}}</td>-->

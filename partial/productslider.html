@@ -8,7 +8,7 @@
             </li>-->
 		<div class="product_box2" ng-repeat="doc in docs" bx-slider-item style="height: 375px;">
             <div class="proimg2">
-                <img src="nodeserver/uploads/{{doc.product_file}}" >
+                <img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{doc.product_file}}" >
             </div>
             <div class="proprice2">${{doc.price.toFixed(2)}}</div>
             <a href="javascript:void(0)" class="procartbtn2" ng-click="addtocart5(doc.id)">Add to Cart</a>

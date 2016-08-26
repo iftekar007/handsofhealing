@@ -27,7 +27,7 @@ ExpiresByType image/x-icon "access plus 1 year"
 ExpiresByType https://www.youtube.com/iframe_api "access plus 1 month"
 
 
-    <FilesMatch "\.(gif¦jpe?g¦png¦ico¦css¦js¦swf)$">
+    <FilesMatch "\.(gifÂ¦jpe?gÂ¦pngÂ¦icoÂ¦cssÂ¦jsÂ¦swf)$">
     Header set Cache-Control "public"
     </FilesMatch>
 

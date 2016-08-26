@@ -2,10 +2,18 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="0729b538-9ad4-4660-b85e-6e95cce8a9d1" name="handsofhealing" url="http://influxiq.com">
+      <webServer id="5f45ce3b-d87f-424f-9985-9900c377acc1" name="handsofhealinglive" url="http://ftp.hohspastudio.com">
+        <fileTransfer host="ftp.hohspastudio.com" port="21" password="df8cdff0dfc7dfe7df8cdffedfecdfdbdfc8df9adfc9df89" username="handsofhealing@hohspastudio.com">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="338a9d05-3140-4d5a-8e97-e78b012ef7e2" name="handsofhealinginflux" url="http://influxiq.com">
         <fileTransfer host="influxiq.com" port="22" rootFolder="/home/influxiq" accessType="SFTP" password="dfeedfcfdfdcdfcfdfc6dffadf9ddfea" username="influxiq">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="3000000" muteSftpMessages="true" />
+            <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
           <option name="port" value="22" />
         </fileTransfer>

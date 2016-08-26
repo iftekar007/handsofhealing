@@ -171,7 +171,9 @@ r1headzappvar.run(['$rootScope','$cookieStore','$state','contentservice','$uibMo
                         $rootScope.tempval.content = $rootScope.contentvalue;
                     }
                     else {
-                        $rootScope.tempval.content = "<img src = nodeserver/uploads/" + value.content + " /> ";
+                        $rootScope.tempval.content = "<img src = http://handsofhealing.influxiq.com/nodeserver/uploads/" + value.content + " /> ";
+
+                        //console.log($rootScope.tempval.content);
                     }
                     $rootScope.contentlist.splice(value.id, 0, $rootScope.tempval);
                     $rootScope.conf[value.id] = $rootScope.tempval.content;
@@ -2372,7 +2374,8 @@ r1headzappvar.controller('editcontent', function(contentservice,$compile,$scope,
         }
         if($scope.cimage == true ){
 
-            $scope.previewcontent="<img src=nodeserver/uploads/"+$scope.form.image_url_url+" /> ";
+            $scope.previewcontent="<img src=http://handsofhealing.influxiq.com/nodeserver/uploads/"+$scope.form.image_url_url+" /> ";
+            //console.log($scope.previewcontent);
 
         }
     }
@@ -2426,7 +2429,8 @@ r1headzappvar.controller('editcontent', function(contentservice,$compile,$scope,
             $scope.ctext=false;
             $scope.chtml=false;
             $scope.form.ismultiple='no';
-            $scope.previewcontent="<img src=nodeserver/uploads/"+$scope.form.image_url_url+" /> ";
+            $scope.previewcontent="<img src=http://handsofhealing.influxiq.com/nodeserver/uploads/"+$scope.form.image_url_url+" /> ";
+            //console.log($scope.previewcontent);
         }
     }
 });
@@ -2629,6 +2633,7 @@ r1headzappvar.controller('header', function($compile,$scope,$state,$http,$cookie
             })
             $rootScope.totalquantity=totalquantity;
             $rootScope.totalprice=totalprice;
+            $rootScope.alltotalprice=totalprice+$rootScope.shippingprice+$rootScope.saletax;
            $('html, body').animate({ scrollTop: 0 }, 1000);
 
 

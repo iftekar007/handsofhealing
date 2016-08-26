@@ -112,7 +112,7 @@
                                             <h2 ng-bind="categorydetails[0].cat_name"></h2>
                                             <p ng-bind-html="trustAsHtml(categorydetails[0].cat_desc)"></p>
                                             <!--<img src="../images/spamessagetherapyinnerpage.jpg" alt="spa messgae therapy">-->
-                                            <img src="nodeserver/uploads/{{categorydetails[0].cat_image}}" alt="spa messgae therapy">
+                                            <img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{categorydetails[0].cat_image}}" alt="spa messgae therapy">
 
                                             <div class="col-md-4_textcon">
                                                 <div class="single_col-md-4_textcon" ng-repeat="itemproduct in  servicecategorywiseproductlist | orderBy:priority:reverse">

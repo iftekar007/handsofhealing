@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="handsofhealing">
+  <component name="PublishConfigData">
     <serverData>
-      <paths name="handsofhealing">
+      <paths name="handsofhealinginflux">
         <serverdata>
           <mappings>
             <mapping deploy="/public_html/projects/handsofhealing" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
+      <paths name="handsofhealinglive">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

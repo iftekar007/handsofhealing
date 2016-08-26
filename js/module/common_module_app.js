@@ -796,6 +796,7 @@ common_module_app.controller('shoppingcart', function($scope,$state,$http,$sce,$
                 $rootScope.totalquantity=totalquantity1;
                 $rootScope.totalprice=totalprice1;
                 $rootScope.alltotalprice=totalprice1+$rootScope.shippingprice+$rootScope.saletax;
+                //console.log($rootScope.alltotalprice);
             });
 
          }
@@ -1157,7 +1158,8 @@ common_module_app.controller('checkoutconfirmation', function($scope,$state,$coo
             $http({
                 method:'POST',
                 async:false,
-                url:'http://authorize.influxiq.com',
+                //url:'http://authorize.influxiq.com', // for sand box
+                url:'http://hhauthorize.influxiq.com/', //for live
                 data    : $.param($scope.form),
                 headers :   { 'Content-Type': 'application/x-www-form-urlencoded' }
             }).success(function(data){

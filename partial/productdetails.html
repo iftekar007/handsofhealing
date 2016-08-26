@@ -65,7 +65,7 @@
         <div class="prodetail_left">
 
             <div class="prodetail_left_bigimg">
-               <img src="nodeserver/uploads/{{bigimage}}" style="max-width:294px;max-height:259px;">
+               <img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{bigimage}}" style="max-width:294px;max-height:259px;">
                <!--<img src="../images/proimg2.png">-->
             </div>
 
@@ -73,7 +73,7 @@
                 <ul class="imggalbxslider">
                     <li  ng-repeat="item in productimage" ng-click="showImage(item)">
                       <div class="imagewrapper">
-                        <img   src="nodeserver/uploads/{{item}}" />
+                        <img   src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{item}}" />
                       </div>
                     </li>
                    <!-- <li><img src="/images/170_200/tree_root.jpg" /></li>
@@ -147,7 +147,7 @@
                     <li  ng-repeat="product in products| filter:{status:1} | orderBy:priority:reverse">
                         <div class="shopproduct_box2">
                             <div class="shopproimg2">
-                                <img src="nodeserver/uploads/{{product.product_file}}" >
+                                <img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{product.product_file}}" >
                             </div>
                             <div class="shopproprice2">${{product.price.toFixed(2)}}</div>
                             <a href="javascript:void(0)" ng-click="addtocart(product.id)" class="shopprocartbtn2">Add to Cart</a>

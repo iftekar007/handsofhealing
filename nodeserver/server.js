@@ -222,7 +222,7 @@ connection.query('INSERT INTO contentmanager SET ?', value1, function (err,resul
 
 app.post('/addadmin', function (req, resp) {
 
-    var url= 'http://handsofhealing.influxiq.com/signupactivate/';
+    var url= 'http://hohspastudio.com/signupactivate/';
     var addtime=Date.now();
 
     var retstatus = {};
@@ -336,7 +336,7 @@ app.post('/addadmin', function (req, resp) {
                                 <table style="margin:0 auto;font-family: \'Raleway\';" cellspacing="0" cellpadding="0" width="100%">\
                                 <tr>\
                                 <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;font-family:Raleway-Regular;">\
-                                <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                                <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                                 </td>\
                                 </tr>\
                                 </table>\
@@ -373,12 +373,12 @@ app.post('/addadmin', function (req, resp) {
                             <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                                 <tr>\
                                 <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                                <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                                <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                                 </td>\
                                 </tr>\
                                 <tr>\
                                 <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                                <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                                <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                                 </td>\
                                 </tr>\
                                 <tr>\
@@ -647,7 +647,7 @@ app.post('/userupdatestatus', function (req, resp) {
                           <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                           <tr>\
                           <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
-                          <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                          <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                           </td>\
                           </tr>\
                           </table>\
@@ -674,12 +674,12 @@ app.post('/userupdatestatus', function (req, resp) {
                       <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                           <tr>\
                           <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                          <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products/0" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                          <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products/0" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                           </td>\
                           </tr>\
                           <tr>\
                           <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                          <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                          <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                           </td>\
                           </tr>\
                           <tr>\
@@ -797,7 +797,7 @@ app.post('/forgotpassword', function (req, resp) {
                             <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                             <tr>\
                             <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;font-family: \'Raleway\';">\
-                            <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                            <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                             </td>\
                             </tr>\
                             </table>\
@@ -829,12 +829,12 @@ app.post('/forgotpassword', function (req, resp) {
                         <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                             <tr>\
                             <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                            <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                            <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                             </td>\
                             </tr>\
                             <tr>\
                             <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                             </td>\
                             </tr>\
                             <tr>\
@@ -993,7 +993,7 @@ app.post('/changepasswords',function(req,resp){
                             <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                             <tr>\
                             <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
-                            <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                            <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                             </td>\
                             </tr>\
                             </table>\
@@ -1020,12 +1020,12 @@ app.post('/changepasswords',function(req,resp){
                         <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                             <tr>\
                             <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                            <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                            <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                             </td>\
                             </tr>\
                             <tr>\
                             <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                             </td>\
                             </tr>\
                             <tr>\
@@ -1153,7 +1153,7 @@ app.post('/userchangepassword',function(req,resp){
                             <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                             <tr>\
                             <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
-                            <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                            <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                             </td>\
                             </tr>\
                             </table>\
@@ -1180,12 +1180,12 @@ app.post('/userchangepassword',function(req,resp){
                         <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                             <tr>\
                             <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                            <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                            <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                             </td>\
                             </tr>\
                             <tr>\
                             <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                            <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                             </td>\
                             </tr>\
                             <tr>\
@@ -2239,7 +2239,7 @@ app.post('/addorder', function (req, resp) {
                         <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                         <tr>\
                         <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
-                        <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                        <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                         </td>\
                         </tr>\
                         </table>\
@@ -2367,7 +2367,7 @@ app.post('/addorder', function (req, resp) {
                     </tr>\
                     <tr>\
                     <td colspan="2" style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
-                        <a style="font-family: \'Raleway\';color: #4c4c4c;" href="http://handsofhealing.influxiq.com/appointment">Book Your Appointment Online Now!</a>\
+                        <a style="font-family: \'Raleway\';color: #4c4c4c;" href="http://hohspastudio.com/appointment">Book Your Appointment Online Now!</a>\
                     </td>\
                     </tr>\
                     <tr>\
@@ -2379,12 +2379,12 @@ app.post('/addorder', function (req, resp) {
                     <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                         <tr>\
                         <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                        <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                        <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                         </td>\
                         </tr>\
                         <tr>\
                         <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                         </td>\
                         </tr>\
                        <tr>\
@@ -2570,7 +2570,7 @@ app.post('/duplicatemail', function (req, resp) {
                         <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                         <tr>\
                         <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
-                        <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                        <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                         </td>\
                         </tr>\
                         </table>\
@@ -2697,7 +2697,7 @@ app.post('/duplicatemail', function (req, resp) {
                     </tr>\
                     <tr>\
                     <td colspan="2" style="text-align:center; vertical-align:top;font-family: \'Raleway\';color: #4c4c4c;font-size: 18px;line-height: 30px; text-transform:uppercase;">\
-                        <a style="font-family: \'Raleway\';color: #4c4c4c;" href="http://handsofhealing.influxiq.com/appointment">Book Your Appointment Online Now!</a>\
+                        <a style="font-family: \'Raleway\';color: #4c4c4c;" href="http://hohspastudio.com/appointment">Book Your Appointment Online Now!</a>\
                     </td>\
                     </tr>\
                     <tr>\
@@ -2709,12 +2709,12 @@ app.post('/duplicatemail', function (req, resp) {
                     <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                         <tr>\
                         <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                        <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                        <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                         </td>\
                         </tr>\
                         <tr>\
                         <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                         </td>\
                         </tr>\
                        <tr>\
@@ -2851,7 +2851,7 @@ app.post('/printpdf', function (req, resp) {
                         <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">\
                         <tr>\
                         <td style="text-align: center; padding-top: 10px; padding-bottom: 10px;">\
-                        <a href="#"><img class="w320" width="311"  src="http://handsofhealing.influxiq.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
+                        <a href="#"><img class="w320" width="311"  src="http://hohspastudio.com/images/img-emaillogohandsoghealing.png" alt="company logo" /></a>\
                         </td>\
                         </tr>\
                         </table>\
@@ -2990,12 +2990,12 @@ app.post('/printpdf', function (req, resp) {
                     <table cellspacing="0" cellpadding="0" bgcolor="#1a1a1a" style="width: 100% !important;">\
                         <tr>\
                         <td style="font-size: 13px; text-align: center; padding: 15px 10px; color: rgb(255, 255, 255); font-family: \'Raleway\';">\
-                        <a href="http://handsofhealing.influxiq.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://handsofhealing.influxiq.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://handsofhealing.influxiq.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://handsofhealing.influxiq.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://handsofhealing.influxiq.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://handsofhealing.influxiq.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://handsofhealing.influxiq.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
+                        <a href="http://hohspastudio.com/treatmentandservices" style="color: #fff; text-decoration: none;">Treatments and Services</a> | <a href="http://hohspastudio.com/products" style="color: #fff; text-decoration: none;">Products</a> | <a href="http://hohspastudio.com/aboutus" style="color: #fff; text-decoration: none;">About the Spa</a> | <a href="http://hohspastudio.com/reviews" style="color: #fff; text-decoration: none;">Reviews</a> | <a href="http://hohspastudio.com/newsletter" style="color: #fff; text-decoration: none;">Newsletter</a> | <a href="http://hohspastudio.com/locations" style="color: #fff; text-decoration: none;">Locations</a> | <a href="http://hohspastudio.com/contactus" style="color: #fff; text-decoration: none;">Contact</a>\
                         </td>\
                         </tr>\
                         <tr>\
                         <td style="width: 100%;text-align: center; margin: 16px auto;margin-top: 26px; font-family: \'Raleway\';">\
-                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://handsofhealing.influxiq.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://handsofhealing.influxiq.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://handsofhealing.influxiq.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://handsofhealing.influxiq.com/images/gink.jpg" alt="#"></a>\
+                        <a href="https://twitter.com/hohspa" target="_blank"><img src="http://hohspastudio.com/images/tink.jpg" alt="#"></a><a href="https://www.facebook.com/HandsofHealingMassageandSpaStudio/" target="_blank"><img src="http://hohspastudio.com/images/fink.jpg" alt="#"></a><a href="http://www.yelp.com/biz/hands-of-healing-massage-and-spa-studio-hayward" target="_blank"><img src="http://hohspastudio.com/images/yink.jpg" alt="#"></a><a href="https://plus.google.com/101955857908281504686" target="_blank"><img src="http://hohspastudio.com/images/gink.jpg" alt="#"></a>\
                         </td>\
                         </tr>\
                        <tr>\

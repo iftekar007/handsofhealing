@@ -54,8 +54,8 @@
                        <div class="shopproductdetaillist" ng-repeat="cartitem in cartarray">
                            <div class="shopproductwrapper">
                                <!--<a ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})"><img src="nodeserver/uploads/{{cartitem.product_file}}">-->
-                                   <a ng-show="cartitem.parent_cat!=12" ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})" ><img src="nodeserver/uploads/{{cartitem.product_file}}"></a>
-                                   <a ng-show="cartitem.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:cartitem.category_id,name:caturl(cartitem.cat_name)})" ><img src="nodeserver/uploads/{{cartitem.product_file}}"></a>
+                                   <a ng-show="cartitem.parent_cat!=12" ui-sref="productdetails({id:cartitem.id,name:caturl(cartitem.product_name)})" ><img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{cartitem.product_file}}"></a>
+                                   <a ng-show="cartitem.parent_cat==12" ui-sref="treatmentandservicesinnerpage({id:cartitem.category_id,name:caturl(cartitem.cat_name)})" ><img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{cartitem.product_file}}"></a>
                             <!--<img src="../images/img-shopcartlist.jpg">-->
                                    </a>
                         </div>
@@ -147,7 +147,7 @@
                 <li  ng-repeat="product in products| filter:{status:1} | orderBy:priority:reverse">
                     <div class="shopproduct_box2">
                         <div class="shopproimg2">
-                            <img src="nodeserver/uploads/{{product.product_file}}" >
+                            <img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{product.product_file}}" >
                         </div>
                         <div class="shopproprice2">${{product.price.toFixed(2)}}</div>
                         <a href="javascript:void(0)" ng-click="addtocart(product.id)" class="shopprocartbtn2">Add to Cart</a>

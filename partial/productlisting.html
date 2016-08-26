@@ -59,7 +59,7 @@
 
         <div class="product_box" ng-repeat="itemproduct in  productlist| filter:{status:1} | orderBy:priority:reverse" >
             <a ui-sref="productdetails({id:itemproduct.id,name:caturl(itemproduct.product_name)})"><div class="proimg">
-                <img src="nodeserver/uploads/{{itemproduct.product_file}}" >
+                <img src="http://handsofhealing.influxiq.com/nodeserver/uploads/{{itemproduct.product_file}}" >
                <!-- <img src="../images/proimg1.png" >-->
             </div></a>
 
